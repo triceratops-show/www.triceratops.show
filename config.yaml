@@ -1,7 +1,6 @@
 baseURL: "https://www.triceratops.show"
 languageCode: "pt-BR"
 title: "Tricerátops Show"
-theme: "castanet"
 ignorefiles: [ "docs" ]
 
 Menu:
