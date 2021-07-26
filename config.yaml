@@ -1,0 +1,39 @@
+baseURL: "https://www.triceratops.show"
+languageCode: "pt-BR"
+title: "Tricerátops Show"
+theme: "castanet"
+ignorefiles: [ "docs" ]
+
+Menu:
+  Main: []
+
+  #Menu:
+  #  Main:
+  #  - name: "Sobre Nos"
+  #    identifier: "sobre-nos"
+  #    url: "sobre-nos"
+  #
+
+params:
+  episode_number_style: brackets
+  media_prefix: "https://www.triceratops.show"
+
+  authors:
+  - name: eduardo aleixo
+  - name: luiz terra
+
+  itunes_subscribe: "https://podcasts.apple.com/us/podcast/tricer%C3%A1tops-show/id1574767544"
+  google_play_subscribe: "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cudHJpY2VyYXRvcHMuc2hvdy9lcGlzb2Rlcy9pbmRleC54bWw"
+  pocketcasts_subscribe: "https://pca.st/v9i0ubfg"
+  spotify_subscribe: "https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1"
+
+  feed:
+    copyright: "2021 triceratops show"
+    itunes_author: "Eduardo Aleixo e Luiz Terra"
+    itunes_summary: "podcast pra falar de musica alternativa e o que der na telha"
+    itunes_owner_email: contato@triceratops.show
+    itunes_owner_name: triceratops show
+    itunes_image: https://www.triceratops.show/cover-itunes.jpg
+    itunes_top_category: Music
+    explicit: true
+

@@ -1,0 +1,100 @@
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+    >
+  <channel>
+    <title>Tricerátops Show</title>
+    <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.triceratops.show</link>
+    <description>podcast pra falar de musica alternativa e o que der na telha</description>
+    <lastBuildDate>Thu, 22 Jul 2021 22:45:18 -0300</lastBuildDate>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <language>pt-BR</language>
+    <copyright>2021 triceratops show</copyright>
+    
+    <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+    <itunes:type>episodic</itunes:type>
+    <googleplay:author>Eduardo Aleixo e Luiz Terra</googleplay:author>
+    <googleplay:email>contato@triceratops.show</googleplay:email>
+    <itunes:summary>podcast pra falar de musica alternativa e o que der na telha</itunes:summary>
+    <googleplay:description>podcast pra falar de musica alternativa e o que der na telha</googleplay:description>
+    <itunes:owner>
+      <itunes:name>triceratops show</itunes:name>
+      <itunes:email>contato@triceratops.show</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://www.triceratops.show/cover-itunes.jpg" />
+    <googleplay:image href="https://www.triceratops.show/cover-itunes.jpg"></googleplay:image>
+    <image>
+      <url>https://www.triceratops.show/cover-itunes.jpg</url>
+      <title>Tricerátops Show</title>
+      <link>https://www.triceratops.show</link>
+    </image>
+    <itunes:category text="Music">
+      </itunes:category><itunes:explicit>true</itunes:explicit>
+    <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>          
+          
+            
+              <title>&#34;Se Meu Pai Assiste O Corinthians, Então Eu Posso Ouvir Pixies&#34; [Episódio 1]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/1/</link>
+          <pubDate>Thu, 22 Jul 2021 22:45:18 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>Episódio 1</itunes:episode>
+          
+        <itunes:title>&#34;Se Meu Pai Assiste O Corinthians, Então Eu Posso Ouvir Pixies&#34;</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        falamos de como é morar em sp, a atual cena britanica e sobre o capista do pixies...
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>falamos de como é morar em sp, a atual cena britanica e sobre o capista do pixies...</itunes:summary>
+        <description>falamos de como é morar em sp, a atual cena britanica e sobre o capista do pixies...</description>
+        <googleplay:description>falamos de como é morar em sp, a atual cena britanica e sobre o capista do pixies...</googleplay:description>
+        <content:encoded><![CDATA[<p>tocamos</p>
+<ul>
+<li>kassidat el hakka - sexwitch</li>
+<li>march day - shame</li>
+<li>the next fix - crack cloud</li>
+<li>into the white - pixies</li>
+</ul>
+]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3" length="1535036" type="audio/mpeg" /><itunes:duration>34:55</itunes:duration></item>
+        <item>          
+          
+            
+              <title>0 - Apresentação [0]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/0-apresentacao/</link>
+          <pubDate>Wed, 07 Jul 2021 22:45:18 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-0.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>0</itunes:episode>
+          
+        <itunes:title>0 - Apresentação</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</itunes:summary>
+        <description>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</description>
+        <googleplay:description>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</googleplay:description>
+        <content:encoded><![CDATA[]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-0.mp3" length="1535036" type="audio/mpeg" /></item></channel>
+</rss>

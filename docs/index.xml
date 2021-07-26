@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tricerátops Show</title>
+    <link>https://www.triceratops.show/</link>
+    <description>Recent content on Tricerátops Show</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 22 Jul 2021 22:45:18 -0300</lastBuildDate><atom:link href="https://www.triceratops.show/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;se meu pai assiste o corinthians, então eu posso ouvir pixies&#34;</title>
+      <link>https://www.triceratops.show/episodes/1/</link>
+      <pubDate>Thu, 22 Jul 2021 22:45:18 -0300</pubDate>
+      
+      <guid>https://www.triceratops.show/episodes/1/</guid>
+      <description>tocamos
+ kassidat el hakka - sexwitch march day - shame the next fix - crack cloud into the white - pixies  </description>
+    </item>
+    
+    <item>
+      <title>0 - Apresentação</title>
+      <link>https://www.triceratops.show/episodes/0-apresentacao/</link>
+      <pubDate>Wed, 07 Jul 2021 22:45:18 -0300</pubDate>
+      
+      <guid>https://www.triceratops.show/episodes/0-apresentacao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.triceratops.show/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.triceratops.show/about/</guid>
+      <description>bla   </description>
+    </item>
+    
+  </channel>
+</rss>
