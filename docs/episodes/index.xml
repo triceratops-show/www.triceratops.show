@@ -71,5 +71,30 @@
 <li>into the white - pixies</li>
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
-          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3" length="1535036" type="audio/mpeg" /><itunes:duration>34:55</itunes:duration></item></channel>
+          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3" length="1535036" type="audio/mpeg" /><itunes:duration>34:55</itunes:duration></item>
+        <item>          
+          
+            
+              <title>0 - Apresentação [0]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/0-apresentacao/</link>
+          <pubDate>Wed, 07 Jul 2021 22:45:18 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-0.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>0</itunes:episode>
+          
+        <itunes:title>0 - Apresentação</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</itunes:summary>
+        <description>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</description>
+        <googleplay:description>luiz terra e eduardo aleixo apresentam o tricerátops show. podcast de música alternativa e o que der na telha.</googleplay:description>
+        <content:encoded><![CDATA[]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-0.mp3" length="1535036" type="audio/mpeg" /></item></channel>
 </rss>
