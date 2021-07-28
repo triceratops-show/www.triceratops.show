@@ -14,7 +14,7 @@
     <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>https://www.triceratops.show</link>
     <description>podcast pra falar de musica alternativa e o que der na telha</description>
-    <lastBuildDate>Thu, 22 Jul 2021 22:45:18 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jul 2021 10:00:00 -0300</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>pt-BR</language>
@@ -40,6 +40,45 @@
     <itunes:category text="Music">
       </itunes:category><itunes:explicit>true</itunes:explicit>
     <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>          
+          
+            
+              <title>&#34;Não Sou Sommellier De Vacina, Mas Ouvi Dizer Que Astrazeneca Dá Um Barato Mais Forte&#34; [Episódio 2]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/2/</link>
+          <pubDate>Wed, 28 Jul 2021 10:00:00 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-2.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>Episódio 2</itunes:episode>
+          
+        <itunes:title>&#34;Não Sou Sommellier De Vacina, Mas Ouvi Dizer Que Astrazeneca Dá Um Barato Mais Forte&#34;</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        falamos do miado dia do rock; trocar ideia com edgar scandurra no instagram e outros
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>falamos do miado dia do rock; trocar ideia com edgar scandurra no instagram e outros</itunes:summary>
+        <description>falamos do miado dia do rock; trocar ideia com edgar scandurra no instagram e outros</description>
+        <googleplay:description>falamos do miado dia do rock; trocar ideia com edgar scandurra no instagram e outros</googleplay:description>
+        <content:encoded><![CDATA[<h2 id="disclaimer">disclaimer</h2>
+<p>episódio gravado na semana do dia 13 de julho de 2021</p>
+<h2 id="tocamos">tocamos</h2>
+<ul>
+<li>correnteza - ira</li>
+<li>morgengruss ii - popol vuh</li>
+<li>el condor pasa (if i could) - simon and garfunkel</li>
+<li>querubim - baby carpets</li>
+</ul>
+<h2 id="recomendações">recomendações</h2>
+<ul>
+<li>aguirre, a cólera dos deuses (filme)</li>
+<li>krautrock, the rebirth of germany (documentário)</li>
+</ul>
+]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/2.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/episodios/2.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-2.mp3" length="75154541" type="audio/mpeg" /><itunes:duration>31:18</itunes:duration></item>
         <item>          
           
             
