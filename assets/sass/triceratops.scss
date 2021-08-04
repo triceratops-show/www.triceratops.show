@@ -7,6 +7,12 @@ h1, h2, h3, h4 {
   font-family: ComicZine;
 }
 
+// add underscore to all links, 
+// except those children of header tags or are buttons
+*:not(h1, h2, h3, h4) > a:not(.btn) {
+  text-decoration: underline;
+}
+
 // https://codepen.io/yangg/pen/mJBWPG
 @mixin saw-tooth-vertical($width: 12px, $bg: #fff) {
   background-image:
