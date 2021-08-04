@@ -14,7 +14,7 @@
     <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>https://www.triceratops.show</link>
     <description>podcast pra falar de musica alternativa e o que der na telha</description>
-    <lastBuildDate>Wed, 28 Jul 2021 10:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 4 Aug 2021 10:00:00 -0300</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>pt-BR</language>
@@ -40,6 +40,59 @@
     <itunes:category text="Music">
       </itunes:category><itunes:explicit>true</itunes:explicit>
     <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>          
+          
+            
+              <title>&#34;O Brasil É Um País Essencialmente Gótico&#34; [Episódio 3]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/3/</link>
+          <pubDate>Wed, 04 Aug 2021 10:00:00 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-3.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>Episódio 3</itunes:episode>
+          
+        <itunes:title>&#34;O Brasil É Um País Essencialmente Gótico&#34;</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        falamos do frio, experência vivendo num país com inverno rigoroso, ser gótico no brasil e outros
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>falamos do frio, experência vivendo num país com inverno rigoroso, ser gótico no brasil e outros</itunes:summary>
+        <description>falamos do frio, experência vivendo num país com inverno rigoroso, ser gótico no brasil e outros</description>
+        <googleplay:description>falamos do frio, experência vivendo num país com inverno rigoroso, ser gótico no brasil e outros</googleplay:description>
+        <content:encoded><![CDATA[<p>episódio gravado na semana do dia 20 de julho de 2021</p>
+<h2 id="tocamos">tocamos</h2>
+<ul>
+<li>TBFS - belladonna of sadness</li>
+<li>david sylvian - wave</li>
+<li>robert plant - monkey</li>
+<li>indian love song - dirty three</li>
+</ul>
+<h2 id="recomendações">recomendações</h2>
+<ul>
+<li>belladonna of sadness (1973) (filme)</li>
+</ul>
+<h2 id="escusas-clarificações-etc">&ldquo;escusas&rdquo;, clarificações etc</h2>
+<ul>
+<li>
+<p>&ldquo;civilização avançada&rdquo; é um termo disputável, o que eduardo quis dizer foi desenvolvimento de tecnologias e estruturas sociais mais complexas. evidentemente eh reducionismo dizer que as estacoes sao o unico ou um dos maiores fatores na construcao da dinamica de sociedades eurasianas, porem ainda eh um fator importante comocatalisador de outros fenomenos, como migracao, comercio etc.</p>
+</li>
+<li>
+<p>artigo sobre a pratice de <em>jus primae noctis</em> conhecido como &ldquo;o direito da primeira noite&rdquo;:
+<a href="https://gizmodo.com/true-or-false-noblemen-had-the-right-to-sleep-with-any-5944619">True or False: Noblemen had the right to sleep with any woman on her wedding night</a></p>
+</li>
+<li>
+<p>animerama é o nome da trilogia, não um termo genérico (como ficou implícito)</p>
+</li>
+<li>
+<p>o filme belladonna of sadness não toca a musica tbsf, mas o mesmo tema é aludido em outras canções</p>
+</li>
+</ul>
+]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/3.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/episodios/3.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-3.mp3" length="114686084" type="audio/mpeg" /><itunes:duration>47:47</itunes:duration></item>
         <item>          
           
             
@@ -76,6 +129,7 @@
 <ul>
 <li>aguirre, a cólera dos deuses (filme)</li>
 <li>krautrock, the rebirth of germany (documentário)</li>
+<li>a primeira noite de um homem (the graduate), filme com trilha de simon and garfunkel</li>
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/2.jpg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/episodios/2.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-2.mp3" length="75154541" type="audio/mpeg" /><itunes:duration>31:18</itunes:duration></item>
