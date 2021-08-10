@@ -14,7 +14,7 @@
     <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>https://www.triceratops.show</link>
     <description>podcast pra falar de musica alternativa e o que der na telha</description>
-    <lastBuildDate>Wed, 4 Aug 2021 10:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 10 Aug 2021 10:00:00 -0300</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>pt-BR</language>
@@ -40,6 +40,48 @@
     <itunes:category text="Music">
       </itunes:category><itunes:explicit>true</itunes:explicit>
     <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>          
+          
+            
+              <title>&#34;Levar O Celular Na Assistência É Um Exercício De Confiança&#34; [Episódio 4]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/4/</link>
+          <pubDate>Tue, 10 Aug 2021 10:00:00 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>Episódio 4</itunes:episode>
+          
+        <itunes:title>&#34;Levar O Celular Na Assistência É Um Exercício De Confiança&#34;</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        falamos de segurança digital, uzumaki de junji ito e outros
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>falamos de segurança digital, uzumaki de junji ito e outros</itunes:summary>
+        <description>falamos de segurança digital, uzumaki de junji ito e outros</description>
+        <googleplay:description>falamos de segurança digital, uzumaki de junji ito e outros</googleplay:description>
+        <content:encoded><![CDATA[<p>episódio gravado na semana do dia 30 de junho de 2021</p>
+<h2 id="tocamos">tocamos</h2>
+<ul>
+<li>dj krush - slit of cloud</li>
+<li>maquinas - meia memoria</li>
+<li>emiko kirisute gome - otemoyan pt 4</li>
+<li>cocteau twins - blue bell knoll</li>
+</ul>
+<h2 id="recomendações">recomendações</h2>
+<ul>
+<li>oddtaxi (anime)</li>
+<li>uzumaki (mangá de junji ito)</li>
+</ul>
+<h1 id="escusas">escusas</h1>
+<ul>
+<li>como gravamos esse epi antes dos outros, o áudio tá um pouco zoado e a edição corrida, sorry</li>
+</ul>
+]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3" length="1535036" type="audio/mpeg" /><itunes:duration>34:55</itunes:duration></item>
         <item>          
           
             
