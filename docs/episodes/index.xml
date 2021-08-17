@@ -14,7 +14,7 @@
     <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>https://www.triceratops.show</link>
     <description>podcast pra falar de musica alternativa e o que der na telha</description>
-    <lastBuildDate>Tue, 10 Aug 2021 10:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 17 Aug 2021 10:00:00 -0300</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>pt-BR</language>
@@ -40,6 +40,48 @@
     <itunes:category text="Music">
       </itunes:category><itunes:explicit>true</itunes:explicit>
     <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
+        <item>          
+          
+            
+              <title>Especial Eletrônico Experimental Anos 60 [#5]</title>
+            
+          
+          <link>https://www.triceratops.show/episodes/5/</link>
+          <pubDate>Tue, 17 Aug 2021 10:00:00 -0300 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://www.triceratops.show/episodios/episodio-5.mp3</guid>
+          <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
+          
+          <itunes:episode>#5</itunes:episode>
+          
+        <itunes:title>Especial Eletrônico Experimental Anos 60</itunes:title>
+        <itunes:subtitle><![CDATA[
+        
+        um breve overview de algumas bandas dos anos 60 que flertavam com experimental eletrônico
+        
+        ]]></itunes:subtitle>
+        <itunes:summary>um breve overview de algumas bandas dos anos 60 que flertavam com experimental eletrônico</itunes:summary>
+        <description>um breve overview de algumas bandas dos anos 60 que flertavam com experimental eletrônico</description>
+        <googleplay:description>um breve overview de algumas bandas dos anos 60 que flertavam com experimental eletrônico</googleplay:description>
+        <content:encoded><![CDATA[<h2 id="tocamos">tocamos</h2>
+<ul>
+<li>dr who opening - bbc radiophonic</li>
+<li>white noise - love without sound</li>
+<li>silver apples - oscillations</li>
+<li>pierre henry - psyche rock</li>
+<li>fifty foot hose - fantasy</li>
+</ul>
+<h2 id="mencionados">mencionados</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fsvMieabNtI">Pierre Henry - Psyché Rock Fatboy Slim Remix</a></li>
+<li><a href="https://www.theguardian.com/music/2019/apr/09/silver-apples-electro-stars-hendrix-stereolab-portishead-john-lennon">The great 60s electro-pop plane crash: how pioneers Silver Apples fell out of the sky | Electronic music | The Guardian</a></li>
+</ul>
+<h2 id="relatados">relatados</h2>
+<ul>
+<li><a href="https://www.dailymotion.com/video/x5579ti">documentário sobre a BBC radiophonic: &ldquo;the alchemists of sound&rdquo;</a></li>
+</ul>
+]]></content:encoded><itunes:image href="https://www.triceratops.show/5-cover.jpg"></itunes:image>
+          <googleplay:image href="https://www.triceratops.show/5-cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/episodio-5.mp3" length="86394382" type="audio/mpeg" /><itunes:duration>35:59</itunes:duration></item>
         <item>          
           
             
