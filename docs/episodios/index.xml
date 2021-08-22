@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tricerátops Show</title>
-    <link>https://www.triceratops.show/</link>
-    <description>Recent content on Tricerátops Show</description>
+    <title>Episodios on Tricerátops Show</title>
+    <link>https://www.triceratops.show/episodios/</link>
+    <description>Recent content in Episodios on Tricerátops Show</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 17 Aug 2021 10:00:00 -0300</lastBuildDate><atom:link href="https://www.triceratops.show/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Aug 2021 10:00:00 -0300</lastBuildDate><atom:link href="https://www.triceratops.show/episodios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>especial eletrônico experimental anos 60</title>
       <link>https://www.triceratops.show/episodios/5/</link>
@@ -63,15 +63,6 @@ tocamos  correnteza - ira morgengruss ii - popol vuh el condor pasa (if i could)
       
       <guid>https://www.triceratops.show/episodios/0/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.triceratops.show/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.triceratops.show/about/</guid>
-      <description>bla   </description>
     </item>
     
   </channel>

@@ -14,7 +14,7 @@
     <atom:link href="https://www.triceratops.show/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>https://www.triceratops.show</link>
     <description>podcast pra falar de musica alternativa e o que der na telha</description>
-    <lastBuildDate>Tue, 17 Aug 2021 10:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 1 Jan 0001 00:00:00 &#43;0000</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>pt-BR</language>
@@ -40,19 +40,15 @@
     <itunes:category text="Music">
       </itunes:category><itunes:explicit>true</itunes:explicit>
     <googleplay:explicit>true</googleplay:explicit><generator>Hugo -- gohugo.io</generator>
-        <item>          
-          
-            
-              <title>Especial Eletrônico Experimental Anos 60 [#5]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/5/</link>
+        <item>
+          <title>#5 Especial Eletrônico Experimental Anos 60</title>
+          <link>https://www.triceratops.show/episodios/5/</link>
           <pubDate>Tue, 17 Aug 2021 10:00:00 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/5.mp3</guid>
           <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
           
-          <itunes:episode>#5</itunes:episode>
+          <itunes:episode>5</itunes:episode>
           
         <itunes:title>Especial Eletrônico Experimental Anos 60</itunes:title>
         <itunes:subtitle><![CDATA[
@@ -82,19 +78,15 @@
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/cover-5.jpg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/episodios/cover-5.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/5.mp3" length="86394382" type="audio/mpeg" /><itunes:duration>35:59</itunes:duration></item>
-        <item>          
-          
-            
-              <title>&#34;Levar O Celular Na Assistência É Um Exercício De Confiança&#34; [Episódio 4]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/4/</link>
+        <item>
+          <title>#4 &#34;Levar O Celular Na Assistência É Um Exercício De Confiança&#34;</title>
+          <link>https://www.triceratops.show/episodios/4/</link>
           <pubDate>Tue, 10 Aug 2021 10:00:00 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/4.mp3</guid>
           <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
           
-          <itunes:episode>Episódio 4</itunes:episode>
+          <itunes:episode>4</itunes:episode>
           
         <itunes:title>&#34;Levar O Celular Na Assistência É Um Exercício De Confiança&#34;</itunes:title>
         <itunes:subtitle><![CDATA[
@@ -124,19 +116,15 @@
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/4-cover.jpg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/episodios/4-cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/4.mp3" length="78601262" type="audio/mpeg" /><itunes:duration>46:21</itunes:duration></item>
-        <item>          
-          
-            
-              <title>&#34;O Brasil É Um País Essencialmente Gótico&#34; [Episódio 3]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/3/</link>
+        <item>
+          <title>#3 &#34;O Brasil É Um País Essencialmente Gótico&#34;</title>
+          <link>https://www.triceratops.show/episodios/3/</link>
           <pubDate>Wed, 04 Aug 2021 10:00:00 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/triceratops-show-3.mp3</guid>
           <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
           
-          <itunes:episode>Episódio 3</itunes:episode>
+          <itunes:episode>3</itunes:episode>
           
         <itunes:title>&#34;O Brasil É Um País Essencialmente Gótico&#34;</itunes:title>
         <itunes:subtitle><![CDATA[
@@ -177,19 +165,15 @@
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/3-cover.jpeg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/episodios/3-cover.jpeg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-3.mp3" length="84105818" type="audio/mpeg" /><itunes:duration>47:47</itunes:duration></item>
-        <item>          
-          
-            
-              <title>&#34;Não Sou Sommellier De Vacina, Mas Ouvi Dizer Que Astrazeneca Dá Um Barato Mais Forte&#34; [Episódio 2]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/2/</link>
+        <item>
+          <title>#2 &#34;Não Sou Sommellier De Vacina, Mas Ouvi Dizer Que Astrazeneca Dá Um Barato Mais Forte&#34;</title>
+          <link>https://www.triceratops.show/episodios/2/</link>
           <pubDate>Wed, 28 Jul 2021 10:00:00 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-2.mp3</guid>
           <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
           
-          <itunes:episode>Episódio 2</itunes:episode>
+          <itunes:episode>2</itunes:episode>
           
         <itunes:title>&#34;Não Sou Sommellier De Vacina, Mas Ouvi Dizer Que Astrazeneca Dá Um Barato Mais Forte&#34;</itunes:title>
         <itunes:subtitle><![CDATA[
@@ -217,19 +201,15 @@
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/episodios/2.jpg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/episodios/2.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-2.mp3" length="75154541" type="audio/mpeg" /><itunes:duration>31:18</itunes:duration></item>
-        <item>          
-          
-            
-              <title>&#34;Se Meu Pai Assiste O Corinthians, Então Eu Posso Ouvir Pixies&#34; [Episódio 1]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/1/</link>
+        <item>
+          <title>#1 &#34;Se Meu Pai Assiste O Corinthians, Então Eu Posso Ouvir Pixies&#34;</title>
+          <link>https://www.triceratops.show/episodios/1/</link>
           <pubDate>Thu, 22 Jul 2021 22:45:18 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3</guid>
           <itunes:author>Eduardo Aleixo e Luiz Terra</itunes:author>
           
-          <itunes:episode>Episódio 1</itunes:episode>
+          <itunes:episode>1</itunes:episode>
           
         <itunes:title>&#34;Se Meu Pai Assiste O Corinthians, Então Eu Posso Ouvir Pixies&#34;</itunes:title>
         <itunes:subtitle><![CDATA[
@@ -249,13 +229,9 @@
 </ul>
 ]]></content:encoded><itunes:image href="https://www.triceratops.show/cover.jpg"></itunes:image>
           <googleplay:image href="https://www.triceratops.show/cover.jpg"></googleplay:image><enclosure url="https://www.triceratops.show/episodios/triceratops-show-episodio-1.mp3" length="1535036" type="audio/mpeg" /><itunes:duration>34:55</itunes:duration></item>
-        <item>          
-          
-            
-              <title>0 - Apresentação [0]</title>
-            
-          
-          <link>https://www.triceratops.show/episodes/0/</link>
+        <item>
+          <title>#0 0 - Apresentação</title>
+          <link>https://www.triceratops.show/episodios/0/</link>
           <pubDate>Wed, 07 Jul 2021 22:45:18 -0300 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://www.triceratops.show/episodios/triceratops-show-episodio-0.mp3</guid>
