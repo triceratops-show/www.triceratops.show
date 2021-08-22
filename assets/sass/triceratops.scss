@@ -3,6 +3,10 @@
   src: url(/fonts/comic_zine_ot.otf);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4 {
   font-family: ComicZine;
 }
@@ -59,6 +63,11 @@ body {
   position: relative;
 }
 
+
+.middle_container .featured-title {
+  position: absolute;
+}
+
 // the idea here is to not use position relative
 // so that we don't have to account for the extra space
 // when it breaks into 2 lines
@@ -73,7 +82,8 @@ body {
 }
 
 .middle_container .featured-title + div {
-  margin-top: calc(-3rem/2);
+//  margin-top: calc(-3rem/2);
+  margin-top: 32px;
 }
 
 .navbar .logo {
@@ -138,4 +148,9 @@ body {
   a {
     text-decoration: none;
   }
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none !important;
 }

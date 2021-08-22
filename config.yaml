@@ -4,19 +4,17 @@ title: "Tricerátops Show"
 ignorefiles: [ "docs" ]
 
 Menu:
-  Main: []
+  #Main: []
 
   #Menu:
-  #  Main:
-  #  - name: "Sobre Nos"
-  #    identifier: "sobre-nos"
-  #    url: "sobre-nos"
+  Main:
+  - name: "Episódios"
+    identifier: "episodios"
+    url: "episodios"
   #
 
 params:
   media_prefix: "https://www.triceratops.show"
-
-  paginate: 2
 
   authors:
   - name: eduardo aleixo
