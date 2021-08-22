@@ -1,6 +1,6 @@
 <!-- /Featured -->
-  <div class="row hero_container">
-    <div class="col-md-12 last-episode">
+  <div class="row hero_container middle_container">
+    <div class="col-md-12 featured-title">
       <h1><span>Último Episódio</span></h1>
     </div>
     <div class="col-md-12">
@@ -13,3 +13,47 @@
 </div>
 <!-- /Featured -->
 
+
+<!-- rest of episodes -->
+
+<section class="episode-list middle_container">
+<!-- rest of episodes -->
+{{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+{{- $paginator := .Paginate (after 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true )) 2 }}
+{{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
+{{- $len := (len $list) -}}
+<div class="main_container last-episodes">
+  <div class="row">
+    <div class="col-md-12 featured-title">
+      <h1><span>Episódios Anteriores</span></h1>
+    </div>
+  </div>
+  <div class="row">
+{{- if gt $len 1 -}}
+    {{- range $paginator.Pages -}}
+      <div class = "col-md-6 episode">
+        <a href="{{ .Permalink }}">
+          <img class = "img-fluid" src = "{{ .Params.episode_image | absURL }}" />
+          <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
+        </a>
+      </div>
+    {{- end -}}
+  {{- end -}}
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-md-12">
+{{- if gt $paginator.TotalPages 1 -}}
+<div class = "row">
+<div class = "col">
+
+
+</div>
+</div>
+{{- end -}}
+</div>
+{{- end -}}
+</div>
+</section> <!-- end section -->

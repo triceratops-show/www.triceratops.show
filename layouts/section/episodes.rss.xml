@@ -52,20 +52,8 @@
     <generator>Hugo -- gohugo.io</generator>
     {{- range (where ( where .Site.Pages "Type" "episodes") ".Params.upcoming" "!=" true) -}}
       {{ if isset .Params "podcast_file" }}
-        <item>          
-          {{ if and (isset .Site.Params "episode_number_style") (.Params.episode) }}
-            {{ if eq .Site.Params.episode_number_style "parens" }}
-              <title>{{ title .Title }} ({{ with .Site.Params.episode_number_prefix }}{{ . }}{{ end }}{{ .Params.episode }})</title>
-            {{ else if eq .Site.Params.episode_number_style "brackets" }}
-              <title>{{ title .Title }} [{{ with .Site.Params.episode_number_prefix }}{{ . }}{{ end }}{{ .Params.episode }}]</title>
-            {{ else if eq .Site.Params.episode_number_style "dash" }}
-              <title>{{ title .Title }} - {{ with .Site.Params.episode_number_prefix }}{{ . }}{{ end }}{{ .Params.episode }}</title>
-            {{ else }}
-              <title>{{ title .Title }}</title>
-            {{ end }}
-          {{ else }}
-            <title>{{ title .Title }}</title>
-          {{ end }}
+        <item>
+          <title>#{{ .Params.episode }} {{ title .Title }}</title>
           <link>{{ .Permalink }}</link>
           <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
           <dc:creator>{{ .Site.Params.itunes_author }}</dc:creator>

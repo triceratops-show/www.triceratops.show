@@ -37,9 +37,6 @@ h1, h2, h3, h4 {
 //  @include saw-tooth-vertical();
 }
 
-h1.last-episode {
-}
-
 body {
 //  background: url('/morte-ao-rei.png');
 //  background: url('/videos/video-4-1.gif');
@@ -58,14 +55,14 @@ body {
   padding: 16px;
 }
 
-.hero_container {
+.middle_container {
   position: relative;
 }
 
 // the idea here is to not use position relative
 // so that we don't have to account for the extra space
 // when it breaks into 2 lines
-.hero_container .last-episode h1{
+.middle_container .featured-title h1{
   font-size: 3.5rem;
   text-align: center;
   position: relative;
@@ -75,7 +72,7 @@ body {
   }
 }
 
-.hero_container .last-episode + div {
+.middle_container .featured-title + div {
   margin-top: calc(-3rem/2);
 }
 
@@ -118,11 +115,27 @@ body {
 // at this point "ultimo episodio" is going to break into 2 words
 // so we give it enough space
 @media screen and (max-width: 530px){
-  .hero_container .last-episode h1 {
+  .middle_container .featured-title h1 {
     font-size: 3rem;
   }
   .middle_container {
     // give enough room from the navbar
     margin-top: 100px;
+  }
+}
+
+
+
+
+
+
+
+// Last Episodes
+.last-episodes .episode {
+  margin: 32px 0px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
   }
 }
