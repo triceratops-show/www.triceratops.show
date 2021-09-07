@@ -8,11 +8,7 @@ website based on the ![Castanet](https://github.com/mattstratton/castanet) theme
 
 requires: go, hugo, node
 
-install dependencies: `npm ci`
-
-run dev server: `hugo serve`
-
-build site: `make docs`
+everything you need should be in the `Makefile`
 
 ## structure
 
