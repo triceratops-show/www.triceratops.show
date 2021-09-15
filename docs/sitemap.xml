@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.triceratops.show/episodios/8/</loc>
-    <lastmod>2021-09-07T10:00:00-03:00</lastmod>
-  </url><url>
     <loc>https://www.triceratops.show/episodios/</loc>
-    <lastmod>2021-09-07T10:00:00-03:00</lastmod>
+    <lastmod>2021-09-15T10:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://www.triceratops.show/episodios/9/</loc>
+    <lastmod>2021-09-15T10:00:00-03:00</lastmod>
   </url><url>
     <loc>https://www.triceratops.show/</loc>
+    <lastmod>2021-09-15T10:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://www.triceratops.show/episodios/8/</loc>
     <lastmod>2021-09-07T10:00:00-03:00</lastmod>
   </url><url>
     <loc>https://www.triceratops.show/episodios/7/</loc>
