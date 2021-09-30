@@ -2,10 +2,10 @@
 Description = "lemos o email do andré carvalho de pelotas"
 Date = 2021-09-30T20:00:00-03:00
 PublishDate = 2021-09-30T20:00:00-03:00
-podcast_file = "/episodios/leitura-comentarios-1.mp3"
+podcast_file = "/episodios/leitura-de-comentarios-1.mp3"
 podcast_duration = "12:32"
 podcast_bytes = 30030800
-episode_image = "/episodios/email.jpg"
+episode_image = "/episodios/emails.jpg"
 title = 'leitura de comentários'
 youtube = "mma-RJ0FGqk"
 episode = "1"
