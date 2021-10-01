@@ -16,10 +16,14 @@
   {{- if .Content }}
   <div class="row description-content">
     <div class="col">
+      {{- if .Description }}
       <div style="margin-bottom: 32px">
+        <h2>cabeça</h2>
         {{ .Description }}
       </div>
+      {{- end }}
       <div>
+        <h2>corpo</h2>
         {{ .Content }}
       </div>
     </div>
