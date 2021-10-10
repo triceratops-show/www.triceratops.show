@@ -2,6 +2,7 @@ baseURL: "https://www.triceratops.show"
 languageCode: "pt-BR"
 title: "Tricerátops Show"
 ignorefiles: [ "docs" ]
+googleAnalytics: G-MEPFJYBLXC
 
 Menu:
   #Main: []
@@ -36,4 +37,3 @@ params:
     itunes_image: https://www.triceratops.show/cover-itunes.jpg
     itunes_top_category: Music
     explicit: true
-
