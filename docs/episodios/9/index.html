@@ -190,8 +190,6 @@
 
   
 
-
-
       
       <div class="row">
         <div class="col-md-12">
@@ -199,13 +197,24 @@
 
 <script type="text/javascript">
 
+
+
+
+var disqus_config = function () {
+    this.page.title = "Setembro Chove";
+    this.page.url = "https://www.triceratops.show/episodios/9/";
+    this.page.identifier = "https://www.triceratops.show/episodios/9/";
+};
+
 (function() {
     
     
     if (window.location.hostname == "localhost")
         return;
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript'; dsq.async = true;
     var disqus_shortname = 'triceratops-show';
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -217,6 +226,8 @@
         </div>
       </div>
       
+
+
 </div>
 
 </div> 
