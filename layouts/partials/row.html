@@ -20,6 +20,7 @@
 <!-- rest of episodes -->
 {{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
 {{- $paginator := .Paginate (after 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true )) 2 }}
+
 {{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
 {{- $len := (len $list) -}}
 <div class="main_container last-episodes">
@@ -30,7 +31,7 @@
   </div>
   <div class="row">
 {{- if gt $len 1 -}}
-    {{- range $paginator.Pages -}}
+    {{- range $list -}}
       <div class = "col-md-6 episode">
         <a href="{{ .Permalink }}">
           <img class = "img-fluid" src = "{{ .Params.episode_image | absURL }}" />
