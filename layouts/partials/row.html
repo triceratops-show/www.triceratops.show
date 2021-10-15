@@ -31,7 +31,7 @@
   </div>
   <div class="row">
 {{- if gt $len 1 -}}
-    {{- range $list -}}
+    {{- range $paginator.Pages -}}
       <div class = "col-md-6 episode">
         <a href="{{ .Permalink }}">
           <img class = "img-fluid" src = "{{ .Params.episode_image | absURL }}" />
