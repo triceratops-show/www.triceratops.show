@@ -68,14 +68,18 @@
 
         <!-- transcript POC begin-->
         {{- with .Params.transcript -}}
+
+        
+        <!--
+          TODO: fix these buttons
         <p>
-          <!-- <a class="btn btn-default" href="/"><i class="fab fa-spotify"></i>&nbsp;Spotify</a> -->
           <button class="hide_transcript btn btn-secondary">Hide Transcript</button>
           <button class="show_transcript btn btn-secondary">Display Transcript</button>
-          </p> 
+          </p>
+        -->
         <div class="row transcript">
           <div class="col-md-12">
-            <h2>Transcript</h2>
+            <h2>Transcrição</h2>
             {{ (readFile .) | markdownify}}
           </div>
         </div>

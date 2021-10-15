@@ -16,6 +16,7 @@ Menu:
 
 params:
   media_prefix: "https://www.triceratops.show"
+  transcript: true
 
   authors:
   - name: eduardo aleixo
