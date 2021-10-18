@@ -15,6 +15,7 @@ Menu:
   #
 
 params:
+  description: "podcast pra falar de musica alternativa e o que der na telha"
   media_prefix: "https://www.triceratops.show"
   transcript: true
 
