@@ -31,7 +31,7 @@
 {{- else -}}
 <meta property="og:type" content="website" />
 {{ end }}
-<meta property="og:url" content="{{ .Permalink | relURL }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
 {{ with .Params.images }}{{ range first 1 . }}
     <meta name="twitter:card" content="summary_large_image" />
     {{ if (eq (slicestr . 0 4) "http") }}
