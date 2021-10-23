@@ -15,6 +15,10 @@ Menu:
   #
 
 params:
+  description: "podcast pra falar de musica alternativa e o que der na telha"
+  image: "https://www.triceratops.show/cover.jpg"
+  locale: "pt-BR"
+
   media_prefix: "https://www.triceratops.show"
   transcript: true
 
