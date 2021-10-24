@@ -53,7 +53,7 @@
     {{- range (where ( where .Site.Pages "Type" "episodios") ".Params.upcoming" "!=" true) -}}
       {{ if isset .Params "podcast_file" }}
         <item>
-          <title>#{{ .Params.episode }} {{ title .Title }}</title>
+          <title>{{ partial "episode/title.html" . }}</title>
           <link>{{ .Permalink }}</link>
           <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
           <dc:creator>{{ .Site.Params.itunes_author }}</dc:creator>
@@ -86,7 +86,7 @@
           {{ with .Params.episode }}
           <itunes:episode>{{ . }}</itunes:episode>
           {{ end }}
-        <itunes:title>{{ title .Title }}</itunes:title>
+        <itunes:title>{{ partial "episode/title.html" . }}</itunes:title>
         {{"<itunes:subtitle><![CDATA[" | safeHTML }}
         {{ with .Params.subtitle }}
         {{ . | plainify | truncate 243 "..." }}

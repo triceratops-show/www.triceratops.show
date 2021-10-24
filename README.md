@@ -10,6 +10,13 @@ requires: go, hugo, node
 
 everything you need should be in the `Makefile`
 
+## content
+
+general guidelines:
+
+- title: 60 characters maximum
+- description: 160 characters maximum
+
 ## structure
 
 - `misc` contains helper scripts

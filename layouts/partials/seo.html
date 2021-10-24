@@ -1,7 +1,17 @@
 <!-- SEO: title -->
-<meta property="og:title" content="{{ title .Title }}" />
+{{- if .IsHome -}}
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ .Site.Title }}"/>
+<meta itemprop="name" content="{{ .Site.Title }}">
+{{- else if and (eq .Type "episodios") (.IsPage) -}}
+<meta property="og:title" content='{{ partial "episode/title.html" . }}' />
+<meta name="twitter:title" content='{{ partial "episode/title.html" . }}'/>
+<meta itemprop="name" content='{{ partial "episode/title.html" . }}'>
+{{- else -}}
+<meta property="og:title" content="{{ .Title }}" />
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta itemprop="name" content="{{ .Title }}">
+{{ end }}
 
 <!-- SEO: description -->
 {{- if .IsHome -}}

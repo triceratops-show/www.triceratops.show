@@ -1,11 +1,12 @@
 {{ partial "meta.html" . }}
 {{ partial "seo.html" . }}
 <title>
-{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
-{{- if eq $url "/" -}}
+{{- if .IsHome -}}
     {{ .Site.Title }}
+{{- else if and (eq .Type "episodios") (.IsPage) -}}
+    {{ partial "episode/title.html" . }}
 {{- else -}}
-    {{ if .Params.Heading }}{{ .Params.Heading }}{{ else }}{{ .Title }}{{ end }}
+    {{ .Title }}
 {{- end -}}
 </title>
 <link rel="canonical" href="{{ .Permalink }}">
