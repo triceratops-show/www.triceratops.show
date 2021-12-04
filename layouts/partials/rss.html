@@ -1,0 +1,28 @@
+  <div class="row rss">
+    <div class = "col-md-12 subscribe_buttons">
+      {{ if (isset .Site.Params "spotify_subscribe") }}
+        <a class="btn btn-default" href="{{ .Site.Params.spotify_subscribe}}"><i class="fab fa-spotify"></i>&nbsp;Spotify</a>
+      {{ end }}
+
+      {{ if (isset .Site.Params "itunes_subscribe") }}
+          <a class="btn btn-default" href="{{ .Site.Params.itunes_subscribe}}"><i class="fa fa-podcast"></i>&nbsp;Apple Podcasts</a>
+      {{ end }}
+
+      {{ if (isset .Site.Params "android_subscribe") }}
+          <a class="btn btn-default subscribe_buttons" href="{{ .Site.Params.android_subscribe }}"><i class="fab fa-android"></i>&nbsp;Android</a>
+      {{ end }}
+      {{ if (isset .Site.Params "google_play_subscribe") }}
+          <a class="btn btn-default" href="{{ .Site.Params.google_play_subscribe }}"><i class="fab fa-google-play"></i>&nbsp;Google Podcasts</a>
+      {{ end }}
+      {{ with .Site.Params.stitcher_subscribe }}
+          <a class="btn btn-default" href="{{ . }}"><i class="fa fa-podcast"></i>&nbsp;Stitcher</a>
+      {{ end }}
+      {{ if (isset .Site.Params "soundcloud_subscribe") }}
+          <a class="btn btn-default" href="{{ .Site.Params.soundcloud_subscribe }}"><i class="fab fa-soundcloud"></i>&nbsp;Soundcloud</a>
+      {{ end }}
+      {{ if (isset .Site.Params "pocketcasts_subscribe") }}
+          <a class="btn btn-default" href="{{ .Site.Params.pocketcasts_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
+      {{ end }}
+        <a class="btn btn-default" href="{{"episodes/index.xml" | absURL }}"><i class="fa fa-rss"></i>&nbsp;Subscribe via RSS</a>
+    </div>
+  </div>
