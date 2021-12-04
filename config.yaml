@@ -50,7 +50,7 @@ deployment:
     URL: "s3://www.triceratops.show?region=sa-east-1"
 
     # invalidate cache
-    #    cloudFrontDistributionID: E2KO2KRGLDS09K
+    cloudFrontDistributionID: E2KO2KRGLDS09K
 
   matchers:
   - pattern: "^.+\\.(js|css|svg|ttf)$"
