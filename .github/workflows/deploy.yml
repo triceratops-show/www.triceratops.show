@@ -1,0 +1,39 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master
+        uses: actions/checkout@v2
+          #  with:
+          #    lfs: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.87.0'
+          extended: true
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+            #      - name: Cache dependencies
+            #        uses: actions/cache@v2
+            #        with:
+            #          path: ~/.npm
+            #          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            #          restore-keys: |
+            #            ${{ runner.os }}-node-
+      - run: npm ci
+      - name: Build
+        run: hugo --minify
+      - name: Deploy site
+        run: hugo deploy
+        env:
+          AWS_REGION: 'sa-east-1'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

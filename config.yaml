@@ -1,0 +1,71 @@
+baseURL: "https://www.triceratops.show"
+languageCode: "pt-BR"
+title: "Tricerátops Show"
+ignorefiles: [ "docs" ]
+googleAnalytics: G-MEPFJYBLXC
+
+Menu:
+  #Main: []
+
+  #Menu:
+  Main:
+  - name: "Episódios"
+    identifier: "episodios"
+    url: "episodios"
+  #
+
+params:
+  description: "podcast pra falar de musica alternativa e o que der na telha"
+  image: "https://www.triceratops.show/cover.jpg"
+  locale: "pt-BR"
+
+  media_prefix: "https://www.triceratops.show"
+  transcript: true
+
+  authors:
+  - name: eduardo aleixo
+  - name: luiz terra
+
+  itunes_subscribe: "https://podcasts.apple.com/us/podcast/tricer%C3%A1tops-show/id1574767544"
+  google_play_subscribe: "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cudHJpY2VyYXRvcHMuc2hvdy9lcGlzb2Rlcy9pbmRleC54bWw"
+  pocketcasts_subscribe: "https://pca.st/v9i0ubfg"
+  spotify_subscribe: "https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1"
+
+  disqusShortname: triceratops-show
+
+  feed:
+    copyright: "2021 triceratops show"
+    itunes_author: "Eduardo Aleixo e Luiz Terra"
+    itunes_summary: "podcast pra falar de musica alternativa e o que der na telha"
+    itunes_owner_email: contato@triceratops.show
+    itunes_owner_name: triceratops show
+    itunes_image: https://www.triceratops.show/cover-itunes.jpg
+    itunes_top_category: Music
+    explicit: true
+
+
+deployment:
+  targets:
+    name: website
+    URL: "s3://www.triceratops.show?region=sa-east-1"
+
+    # invalidate cache
+    #    cloudFrontDistributionID: E2KO2KRGLDS09K
+
+  matchers:
+  - pattern: "^.+\\.(js|css|svg|ttf)$"
+    cacheControl: "max-age=31536000, no-transform, public"
+    gzip: true
+
+  - pattern : "^.+\\.(png|jpg)$"
+    cacheControl : "max-age=31536000, no-transform, public"
+    gzip : false
+
+  # Set custom content type for /sitemap.xml
+  - pattern: "^sitemap\\.xml$"
+    contentType: "application/xml"
+    gzip: true
+
+  - pattern: "^.+\\.(html|xml|json)$"
+    gzip: true
+

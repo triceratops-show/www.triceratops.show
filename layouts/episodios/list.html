@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<section class="episode-list middle_container">
+<div class="main_container last-episodes">
+  <div class="row">
+    <div class="col-md-12 featured-title">
+      <h1><span>Todos Episódios</span></h1>
+    </div>
+  </div>
+  <div class="row">
+  {{ range (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
+  <!-- Skip episode 0 -->
+  {{- if ne .Params.Episode "0" }}
+      <div class = "col-md-6 episode">
+        <a href="{{ .Permalink }}">
+          <img class = "img-fluid" src = "{{ .Params.episode_image | absURL }}" />
+          <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
+          <small>Publicado em {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
+          </h4>
+        </a>
+      </div>
+  {{- end }}
+  {{- end -}}
+</div>
+
+{{- end }}
