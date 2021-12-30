@@ -1,10 +1,13 @@
 logo_url: https://www.triceratops.show/images/logo-400px.png
 display_url: https://www.triceratops.show
-media_folder: static/episodios/
-public_folder: /episodios/
+media_folder: static/episodios
+public_folder: /episodios
+locale: 'pt'
+
 collections:
   - name: 'episodios'
     label: 'Episódios'
+    label_singular: 'Episódio'
     folder: 'content/episodios'
     create: true
     slug: '{{episode}}'
