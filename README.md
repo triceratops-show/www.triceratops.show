@@ -13,3 +13,11 @@ everything you need should be in the `Makefile`
 ## structure
 
 - `misc` contains helper scripts
+
+## develop
+
+```
+make serve
+```
+
+will start hugo + netlify cms server
