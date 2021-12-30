@@ -1,0 +1,26 @@
+logo_url: https://www.triceratops.show/images/logo-400px.png
+display_url: https://www.triceratops.show
+media_folder: static/episodios/
+public_folder: /episodios/
+collections:
+  - name: 'episodios'
+    label: 'Episódios'
+    folder: 'content/episodios'
+    create: true
+    slug: '{{episode}}'
+    delete: false
+    sortable_fields: ['episode']
+    editor:
+      preview: false
+    fields:
+      - { label: 'Episódio (número)', name: 'episode', widget: 'number' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'episode_image', widget: 'image' }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
+      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Arquivo', name: 'podcast_file', widget: 'string' }
+      - { label: 'Duração', name: 'podcast_duration', widget: 'string' }
+      - { label: 'Tamanho (em bytes)', name: 'podcast_bytes', widget: 'string' }
+      - { label: 'Publicado', name: 'published', widget: 'boolean' }
+      - { label: 'Youtube', name: 'youtube', widget: 'string' }
+      - { label: 'Corpo', name: 'body', widget: 'markdown' }
