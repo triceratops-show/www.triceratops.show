@@ -1,7 +1,6 @@
 +++
 Description = "lemos o email do andré carvalho de pelotas"
-Date = 2021-09-30T20:00:00-03:00
-PublishDate = 2021-09-30T20:00:00-03:00
+publishDate= 2021-09-30T20:00:00.335Z
 podcast_file = "/episodios/leitura-de-comentarios-1.mp3"
 podcast_duration = "12:32"
 podcast_bytes = 30030800
