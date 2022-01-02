@@ -8,8 +8,7 @@ podcast_bytes = 99211945
 episode_image = "/episodios/apresenta/senoma.jpg"
 youtube= "752oGxvZyXE"
 published = true
-Date = 2021-12-08T10:00:00-03:00
-PublishDate = 2021-12-08T10:00:00-03:00
+publishDate = 2021-12-08T10:00:00.335Z
 +++
 
 ---
