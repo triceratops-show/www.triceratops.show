@@ -22,10 +22,10 @@
 
 <!-- SEO: image -->
 <meta name="twitter:card" content="summary_large_image" />
-{{ if .Params.episode_image }}
-<meta property="og:image" content="{{ $.Site.BaseURL}}{{ .Params.episode_image }}" />
-<meta name="twitter:image" content="{{ $.Site.BaseURL}}{{ .Params.episode_image }}"/>
-<meta itemprop="image" content="{{ $.Site.BaseURL}}{{ .Params.episode_image }}" />
+{{ if .Params.image }}
+<meta property="og:image" content="{{ $.Site.BaseURL}}{{ .Params.image }}" />
+<meta name="twitter:image" content="{{ $.Site.BaseURL}}{{ .Params.image }}"/>
+<meta itemprop="image" content="{{ $.Site.BaseURL}}{{ .Params.image }}" />
 {{ else if .Site.Params.image }}
 <meta property="og:image" content="{{ .Site.Params.image }}" />
 <meta name="twitter:image" content="{{ .Site.Params.image }}"/>
