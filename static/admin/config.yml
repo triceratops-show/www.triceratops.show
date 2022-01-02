@@ -5,22 +5,6 @@ public_folder: /episodios
 locale: 'pt'
 
 collections:
-  - name: 'test'
-    label: 'teeeeeeeeest'
-    label_singular: 'test'
-    folder: 'content/test'
-    create: true
-    slug: '{{episode}}'
-    delete: false
-      #    sortable_fields: ['episode']
-    editor:
-      preview: false
-    fields:
-      - { label: 'Episódio (número)', name: 'episode', widget: 'number' }
-      - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
-      - {label: "My Custom Widget", name: "mywidgetname", widget: "mywidget"}
-
   - name: 'episodios'
     label: 'Episódios'
     label_singular: 'Episódio'
@@ -33,14 +17,14 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Episódio (número)', name: 'episode', widget: 'number' }
-      - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Image', name: 'episode_image', widget: 'image' }
-      - { label: 'Descrição', name: 'description', widget: 'string' }
-      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
-      - { label: 'Arquivo', name: 'podcast_file', widget: 'string' }
-      - { label: 'Duração', name: 'podcast_duration', widget: 'string' }
-      - { label: 'Tamanho (em bytes)', name: 'podcast_bytes', widget: 'string' }
-      - { label: 'Publicado', name: 'published', widget: 'boolean' }
-      - { label: 'Youtube', name: 'youtube', widget: 'string' }
-      - { label: 'Corpo', name: 'body', widget: 'markdown' }
+      - { label: 'Episódio (número)', name: 'episode', widget: 'number', required: false }
+      - { label: 'Título', name: 'title', widget: 'string', required: false }
+      - { label: 'Image', name: 'episode_image', widget: 'image', required: false }
+      - { label: 'Descrição', name: 'description', widget: 'string', required: false }
+      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
+      - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
+      - { label: 'Duração', name: 'podcast_duration', widget: 'string', required: false }
+      - { label: 'Tamanho (em bytes)', name: 'podcast_bytes', widget: 'string', required: false }
+      - { label: 'Publicado', name: 'published', widget: 'boolean', required: false }
+      - { label: 'Youtube', name: 'youtube', widget: 'string', required: false }
+      - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
