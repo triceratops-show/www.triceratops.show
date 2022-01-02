@@ -2,11 +2,11 @@ module triceratops-show
 
 go 1.16
 
+replace github.com/awslabs/aws-lambda-go-api-proxy => github.com/eh-am/aws-lambda-go-api-proxy v0.12.1-0.20220102142205-492eda2bdf94
+
 require (
 	github.com/aws/aws-lambda-go v1.27.1
-	github.com/davyzhang/agw v0.0.0-20200908000401-cd09bf93af20
-	github.com/go-zoo/bone v1.3.0 // indirect
+	github.com/awslabs/aws-lambda-go-api-proxy v0.12.0
 	github.com/gorilla/mux v1.8.0
-	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/justinas/alice v1.2.0 // indirect
+	github.com/markbates/goth v1.68.0
 )
