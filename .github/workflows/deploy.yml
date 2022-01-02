@@ -32,6 +32,7 @@ jobs:
       - name: Build
         run: hugo --minify
       - name: Deploy site
+        if: github.ref == 'refs/heads/main'
         # https://stackoverflow.com/questions/59511859/how-to-skip-deleting-some-files-when-doing-hugo-deploy
         run: hugo deploy --maxDeletes 0
         env:

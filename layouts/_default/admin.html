@@ -16,7 +16,8 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.10.183/dist/netlify-cms.js"></script>
+    {{- $app := resources.Get "scripts/app.jsx" | js.Build (dict "sourceMap" "inline" "target" "es2015") | fingerprint -}}
+    <script src="{{ $app.RelPermalink }}"></script>
     <script src="script.js"></script>
   </body>
 </html>
