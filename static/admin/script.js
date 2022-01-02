@@ -20,7 +20,6 @@ if (localDomains.includes(window.location.hostname)) {
   // Otherwise, push to our github repo
   init({
     config: {
-      publish_mode: "editorial_workflow",
       backend: {
         name: "github",
         repo: "triceratops-show/www.triceratops.show",
