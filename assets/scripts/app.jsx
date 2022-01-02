@@ -1,4 +1,4 @@
-const { CMS, initCMS: init } = window;
+import CMS from "netlify-cms-app";
 
 // Dirty but works
 //const localDomains = ["localhost", "office"];
@@ -6,7 +6,7 @@ const localDomains = ["localhost"];
 
 // When running locally, commit to the same repository
 if (localDomains.includes(window.location.hostname)) {
-  init({
+  CMS.init({
     config: {
       backend: {
         name: "git-gateway",
@@ -18,7 +18,7 @@ if (localDomains.includes(window.location.hostname)) {
   });
 } else {
   // Otherwise, push to our github repo
-  init({
+  CMS.init({
     config: {
       backend: {
         name: "github",
