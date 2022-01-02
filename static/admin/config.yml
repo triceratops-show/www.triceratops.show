@@ -19,7 +19,7 @@ collections:
     fields:
       - { label: 'Episódio (número)', name: 'episode', widget: 'number', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
-      - { label: 'Image', name: 'episode_image', widget: 'image', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Descrição', name: 'description', widget: 'string', required: false }
       - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
       - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
