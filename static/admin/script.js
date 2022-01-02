@@ -25,6 +25,7 @@ if (localDomains.includes(window.location.hostname)) {
         name: "github",
         repo: "triceratops-show/www.triceratops.show",
         base_url: "https://auth.triceratops.show",
+        branch: "main",
       },
     },
   });

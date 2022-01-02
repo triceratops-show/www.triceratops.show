@@ -5,6 +5,20 @@ public_folder: /episodios
 locale: 'pt'
 
 collections:
+  - name: 'test'
+    label: 'teeeeeeeeest'
+    label_singular: 'test'
+    folder: 'content/test'
+    create: true
+    slug: '{{episode}}'
+    delete: false
+    sortable_fields: ['episode']
+    editor:
+      preview: false
+    fields:
+      - { label: 'Episódio (número)', name: 'episode', widget: 'number' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+
   - name: 'episodios'
     label: 'Episódios'
     label_singular: 'Episódio'
