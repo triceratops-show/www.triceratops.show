@@ -34,7 +34,7 @@
     {{- range $paginator.Pages -}}
       <div class = "col-md-6 episode">
         <a href="{{ .Permalink }}">
-          <img class = "img-fluid" src = "{{ .Params.episode_image | absURL }}" />
+          <img class = "img-fluid" src = "{{ .Params.image | absURL }}" />
           <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
           <small>Publicado em {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
           </h4>
