@@ -13,7 +13,7 @@ collections:
     create: true
     slug: '{{episode}}'
     delete: false
-    sortable_fields: ['']
+    sortable_fields: ['publishDate']
     editor:
       preview: false
     fields:
