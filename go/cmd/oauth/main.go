@@ -49,6 +49,8 @@ func main() {
 		github.New(
 			githubKey, githubSecret,
 			fmt.Sprintf("https://%s/callback/github", host),
+			"user",
+			"repo",
 		),
 	)
 
