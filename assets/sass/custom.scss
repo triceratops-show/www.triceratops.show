@@ -136,6 +136,11 @@
 .youtube_row {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  .embed-responsive {
+    max-width: 500px;
+    text-align: center;
+  }
 }
 
 // Upcoming episode styles
@@ -504,3 +509,4 @@ a {
         width: auto;
     }
 }
+
