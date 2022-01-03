@@ -14,8 +14,8 @@ collections:
     slug: '{{episode}}'
     delete: false
     sortable_fields: ['publishDate']
-    editor:
-      preview: false
+      #    editor:
+      #      preview: false
     fields:
       - { label: 'Episódio (número)', name: 'episode', widget: 'number', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
