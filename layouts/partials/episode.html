@@ -33,10 +33,19 @@
 
       <div class = "row youtube_row">
         <div class = "col">
+          {{- if .Params.video_local }}
+          <h2>Veja o vídeo aqui no site porque o youtube deu copyright strike:</h2>
+          <div class="embed-responsive embed-responsive-1by1">
+            <video controls>
+              <source class="embed-responsive-item" src="{{ .Params.video_local }}" type="video/mp4" />
+            </video>
+          </div>
+          {{- else }}
           <h2>Escute no youtube:</h2>
           <div class="embed-responsive embed-responsive-1by1">
             <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen></iframe>
           </div>
+          {{- end }}
           <div>
             <h2>No seu agregador preferido:</h2>
             {{- partial "rss.html" . }}
