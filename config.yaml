@@ -1,8 +1,14 @@
 baseURL: "https://www.triceratops.show"
-languageCode: "pt-BR"
+languageCode: "pt-br"
+defaultContentLanguage: pt-br
 title: "Tricerátops Show"
 ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
+dateFormat: ':date_full'
+
+languages:
+  pt-br:
+    weight: 1
 
 Menu:
   #Main: []
@@ -12,12 +18,20 @@ Menu:
   - name: "Episódios"
     identifier: "episodios"
     url: "episodios"
-  #
+  - url: https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1&nd=1
+    pre: <img width="20" height="20" src="icons/spotify.svg" title="Spotify" />
+    identifier: Spotify
+  - url: https://www.instagram.com/triceratops.show
+    pre: <img width="20" height="20" src="icons/instagram.svg" title="Instagram" />
+    identifier: Instagram
+  - url: https://www.twitter.com/triceratopsshow
+    pre: <img width="20" height="20" src="icons/twitter.svg" title="Twitter" />
+    identifier: Twitter
 
 params:
   description: "podcast pra falar de musica alternativa e o que der na telha"
   image: "https://www.triceratops.show/cover.jpg"
-  locale: "pt-BR"
+  locale: "pt-br"
 
   media_prefix: "https://www.triceratops.show"
   transcript: true
