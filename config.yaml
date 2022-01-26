@@ -19,13 +19,13 @@ Menu:
     identifier: "episodios"
     url: "episodios"
   - url: https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1&nd=1
-    pre: <img width="20" height="20" src="icons/spotify.svg" title="Spotify" />
+    pre: <img width="20" height="20" src="/icons/spotify.svg" title="Spotify" />
     identifier: Spotify
   - url: https://www.instagram.com/triceratops.show
-    pre: <img width="20" height="20" src="icons/instagram.svg" title="Instagram" />
+    pre: <img width="20" height="20" src="/icons/instagram.svg" title="Instagram" />
     identifier: Instagram
   - url: https://www.twitter.com/triceratopsshow
-    pre: <img width="20" height="20" src="icons/twitter.svg" title="Twitter" />
+    pre: <img width="20" height="20" src="/icons/twitter.svg" title="Twitter" />
     identifier: Twitter
 
 params:
