@@ -6,6 +6,10 @@ ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
 dateFormat: ':date_full'
 
+taxonomies:
+  tags: ""
+  category: ""
+
 languages:
   pt-br:
     weight: 1
