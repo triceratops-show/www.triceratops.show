@@ -19,7 +19,7 @@
 <section class="episode-list middle_container">
 <!-- rest of episodes -->
 {{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-{{- $paginator := .Paginate (after 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true )) 2 }}
+{{- $previousEpisodes := where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true | first 2 }}
 
 {{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
 {{- $len := (len $list) -}}
@@ -31,32 +31,17 @@
   </div>
   <div class="row">
 {{- if gt $len 1 -}}
-    {{- range $paginator.Pages -}}
+    {{- range $previousEpisodes -}}
       <div class = "col-md-6 episode">
         <a href="{{ .Permalink }}">
           <img class = "img-fluid" src = "{{ .Params.image | absURL }}" />
           <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
-          <small>Publicado em {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
+          <small>Publicado em {{ .Date | time.Format ":date_full" }}</small>
           </h4>
         </a>
       </div>
     {{- end -}}
   {{- end -}}
 </div>
-
-</div>
-
-<div class="row">
-<div class="col-md-12">
-{{- if gt $paginator.TotalPages 1 -}}
-<div class = "row">
-<div class = "col">
-
-
-</div>
-</div>
 {{- end -}}
-</div>
-{{- end -}}
-</div>
 </section> <!-- end section -->
