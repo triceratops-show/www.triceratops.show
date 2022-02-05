@@ -51,8 +51,6 @@ params:
   pocketcasts_subscribe: "https://pca.st/v9i0ubfg"
   spotify_subscribe: "https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1"
 
-  disqusShortname: triceratops-show
-
   feed:
     copyright: "2021 triceratops show"
     itunes_author: "Eduardo Aleixo e Luiz Terra"
