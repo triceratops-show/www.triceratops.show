@@ -6,9 +6,9 @@
       {{ end }}
 
       {{- if ne $.Params.upcoming true -}}
-        <small>Posted on {{ dateFormat "Monday, Jan 2, 2006" .Date }} {{ partial "episode-metadata.html" .}}</small>
+        <small>Publicado em {{ dateFormat ":date_full" .Date }} {{ partial "episode-metadata.html" .}}</small>
       {{- else -}}
-        <small>Scheduled for {{ dateFormat "Monday, Jan 2, 2006" .Date }} {{ partial "episode-metadata.html" .}}</small>
+        <small>Estreia em {{ dateFormat ":date_full" .Date }} {{ partial "episode-metadata.html" .}}</small>
       {{- end -}}
     </div>
   </div>
