@@ -9,6 +9,7 @@
   "scripts": {
     "deploy": "cdk deploy",
     "ts-node": "ts-node",
+    "validate-rss": "ts-node hacks/validate-rss.ts",
     "dev": "./node_modules/.bin/netlify-cms-proxy-server"
   },
   "author": "Eduardo Aleixo",
@@ -32,6 +33,9 @@
   "devDependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7"
+    "@babel/preset-env": "^7.16.7",
+    "@types/xml2json": "^0.11.4",
+    "xml2json": "^0.12.0",
+    "zod": "^3.11.6"
   }
 }

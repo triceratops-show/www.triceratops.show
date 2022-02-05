@@ -31,6 +31,9 @@ jobs:
       - run: npm ci
       - name: Build
         run: hugo --minify
+      - name: check-rss
+        run: npm run validate-rss
+
       - name: Deploy site
         if: github.ref == 'refs/heads/main'
         # https://stackoverflow.com/questions/59511859/how-to-skip-deleting-some-files-when-doing-hugo-deploy
