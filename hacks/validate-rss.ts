@@ -39,7 +39,7 @@ const schema = z.object({
 });
 
 // Analyze each item so that we are not flodded with issues
-items.forEach((a: unknown) => {
+const parsedItems = items.map((a: unknown) => {
   const parsed = schema.safeParse(a);
 
   if (!parsed.success) {
@@ -47,4 +47,26 @@ items.forEach((a: unknown) => {
     console.error(parsed.error.issues);
     process.exit(-1);
   }
+
+  return parsed.data;
 });
+
+z.array(schema)
+  // validate enclosure.url is not duplicated
+  .refine(
+    (array) => {
+      console.log(array.map((a) => a.enclosure.url));
+      return (
+        new Set([...array.map((a) => a.enclosure.url)]).size === array.length
+      );
+    },
+    { message: "enclosure.url is duplicated" }
+  )
+  // validate guid
+  .refine(
+    (array) => {
+      return new Set([...array.map((a) => a.guid)]).size === array.length;
+    },
+    { message: "guid is duplicated" }
+  )
+  .parse(parsedItems);
