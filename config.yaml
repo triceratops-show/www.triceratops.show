@@ -1,18 +1,20 @@
 baseURL: "https://www.triceratops.show"
-languageCode: "pt-br"
-defaultContentLanguage: pt-br
 title: "Tricerátops Show"
 ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
-dateFormat: ':date_full'
 
 taxonomies:
   tags: ""
   category: ""
 
+# i18n
+# using pt because dateFormat doesn't work with pt-br
+# but with languageCode we can keep lang="pt-br" in the HTML
+defaultContentLanguage: pt
 languages:
-  pt-br:
+  pt:
     weight: 1
+languageCode: pt-br
 
 Menu:
   #Main: []
