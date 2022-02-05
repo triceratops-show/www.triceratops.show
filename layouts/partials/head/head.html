@@ -6,26 +6,66 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<!-- Generator meta tag -->
 {{ hugo.Generator }}
 
-<title>
-{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
-{{- if eq $url "/" -}}
-    {{ .Site.Title }}
-{{- else -}}
-    {{ if .Params.Heading }}{{ .Params.Heading }}{{ else }}{{ .Title }}{{ end }}
-{{- end -}}
-</title>
-
-{{ if .Description}}
-  <meta name="description" content="{{ .Description }}">
-{{ else }}
-  {{ if .Site.Params.Description }}<meta name="description" content="{{ .Site.Params.Description }}">
-  {{ end }}
+<!-- Title -->
+{{ $title := .Title }}
+{{ if .IsHome }}
+  {{ $title = .Site.Title }}
+{{ else if and (eq .Type "episodios") (not .IsNode) }}
+  {{ $title =  printf "#%d %s" .Params.episode (title .Title) }}
 {{ end }}
+
+<title>{{ $title }}</title>
+
+<!-- Description -->
+{{ $description := .Site.Params.Description }}
+{{ if .Description }}
+  {{ $description = .Description }}
+{{ end }}
+
+<meta name="description" content="{{ $description }}">
+
+<!-- Image -->
+{{ $image := .Site.Params.image }}
+{{ if .Params.image }}
+  {{ $image = absURL .Params.image }}
+{{ end }}
+
+<!-- Type -->
+{{ $type := "website" }}
+{{ if eq .Type "episodios" }}
+  {{ $type = "article" }}
+{{ else if .Params.type }}
+  {{ $type = .Params.type }}
+{{ end }}
+
+<!-- Sharing -->
+<meta itemprop="name" content="{{ $title }}">
+<meta itemprop="description" content="{{ $description }}">
+<meta itemprop="image" content="{{ $image }}">
+<meta property="article:published_time" content="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date }}">
+<meta property="article:modified_time" content="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Lastmod }}">
+
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:type" content="{{ $type }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:updated_time" content="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Lastmod }}">
+
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ $image }}">
 
 {{ partial "head/seo.html" . }}
 
+<!-- SEO -->
 <link rel="canonical" href="{{ .Permalink }}">
 
+<!-- Other -->
 {{ partial "head/includes.html" . }}
