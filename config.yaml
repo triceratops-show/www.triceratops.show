@@ -3,9 +3,9 @@ title: "Tricerátops Show"
 ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
 
-taxonomies:
-  tags: ""
-  category: ""
+  #taxonomies:
+  #  tags: ""
+  #  category: ""
 
 # i18n
 # using pt because dateFormat doesn't work with pt-br
