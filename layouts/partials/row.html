@@ -19,7 +19,7 @@
 <section class="episode-list middle_container">
 <!-- rest of episodes -->
 {{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-{{- $previousEpisodes := where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true | first 2 }}
+{{- $previousEpisodes := where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true | after 1 | first 2 }}
 
 {{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
 {{- $len := (len $list) -}}
