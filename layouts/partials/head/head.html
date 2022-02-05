@@ -1,0 +1,31 @@
+<!--
+  The following 2 meta tags *must* come first in the <head>
+  to consistently ensure proper document rendering.
+  Any other head element should come *after* these tags.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{{ hugo.Generator }}
+
+<title>
+{{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+{{- if eq $url "/" -}}
+    {{ .Site.Title }}
+{{- else -}}
+    {{ if .Params.Heading }}{{ .Params.Heading }}{{ else }}{{ .Title }}{{ end }}
+{{- end -}}
+</title>
+
+{{ if .Description}}
+  <meta name="description" content="{{ .Description }}">
+{{ else }}
+  {{ if .Site.Params.Description }}<meta name="description" content="{{ .Site.Params.Description }}">
+  {{ end }}
+{{ end }}
+
+{{ partial "head/seo.html" . }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ partial "head/head_includes.html" . }}
