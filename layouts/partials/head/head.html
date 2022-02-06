@@ -68,5 +68,30 @@
 <!-- SEO -->
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{ if and (eq .Type "episodios") (not .IsNode) }}
+<script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Episódios",
+          "item": {{ absURL "/episodios/" }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ $title }},
+          "item": {{ .Permalink }}
+        }
+      ]
+    }
+  ]
+</script>
+{{ end }}
+
 <!-- Other -->
 {{ partial "head/includes.html" . }}
