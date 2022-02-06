@@ -1,0 +1,11 @@
+<!-- Twitter -->
+{{ with .Site.Params.social.twitter }}<meta name="twitter:site" content="@{{ . }}"/>{{ end }}
+{{ with .Site.Params.social.twitter }}<meta name="twitter:creator" content="@{{ . }}"/>{{ end }}
+{{ with .Site.Params.social.twitter_domain }}<meta name="twitter:domain" content="{{ . }}"/>{{ end }}
+
+<!-- Facebook Page Admin ID for Domain Insights -->
+{{ with .Site.Params.social.facebook_admin }}
+  {{ range . }}
+    <meta property="fb:admins" content="{{ . }}" />
+  {{ end }}
+{{ end }}

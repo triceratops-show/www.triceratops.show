@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html itemscope lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}">
+
 <head>
-{{ partial "head.html" . }}
+{{ partial "head/head.html" . }}
 </head>
 
-<body lang="{{ .Site.Params.Lang }}">
+<body>
 {{ partial "header.html" . }}
 <div class="container">
   {{ block "main" . }}
@@ -12,3 +13,6 @@
   {{ end }}
 </div> <!-- end middle_container -->
 {{ partial "footer.html" . }}
+</body>
+
+</html>
