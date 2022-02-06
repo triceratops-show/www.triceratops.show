@@ -1,4 +1,6 @@
+.hugo_build.lock
 ai-art
 art
 node_modules
+public
 resources/_gen
