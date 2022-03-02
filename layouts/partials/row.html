@@ -37,7 +37,6 @@
           <img class = "img-fluid" src = "{{ .Params.image | absURL }}" />
           <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
           <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
-          </h4>
         </a>
       </div>
     {{- end -}}
