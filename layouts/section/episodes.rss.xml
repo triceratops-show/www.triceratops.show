@@ -52,8 +52,9 @@
     <generator>Hugo -- gohugo.io</generator>
     {{- range (where ( where .Site.Pages "Type" "episodios") ".Params.upcoming" "!=" true) -}}
       {{ if isset .Params "podcast_file" }}
+        {{ $title :=  printf "#%d %s" .Params.episode (title .Title) }}
         <item>
-          <title>#{{ .Params.episode }} {{ title .Title }}</title>
+          <title>{{ $title }}</title>
           <link>{{ .Permalink }}</link>
           <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
           <dc:creator>{{ .Site.Params.itunes_author }}</dc:creator>
@@ -86,7 +87,7 @@
           {{ with .Params.episode }}
           <itunes:episode>{{ . }}</itunes:episode>
           {{ end }}
-        <itunes:title>#{{ .Params.episode }} {{ title .Title }}</itunes:title>
+        <itunes:title>{{ $title }}</itunes:title>
         {{"<itunes:subtitle><![CDATA[" | safeHTML }}
         {{ with .Params.subtitle }}
         {{ . | plainify | truncate 243 "..." }}
@@ -97,7 +98,7 @@
         <itunes:summary>{{ .Description | plainify }}</itunes:summary>
         <description>{{ .Description  | plainify  }}</description>
         <googleplay:description>{{ .Description  | plainify }}</googleplay:description>
-        {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Content | safeHTML }}Veja o episódio no site: <a href="{{ .Permalink }}">{{ title .Title }}</a>{{"]]></content:encoded>" | safeHTML}}
+        {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Content | safeHTML }}veja o episódio no site: <a href="{{ .Permalink }}">{{ $title }}</a>{{"]]></content:encoded>" | safeHTML}}
           {{- with .Params.image -}}
           <itunes:image href="{{ . | absURL }}"></itunes:image>
           <googleplay:image href="{{ . | absURL }}"></googleplay:image>
