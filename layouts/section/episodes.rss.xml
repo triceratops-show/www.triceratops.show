@@ -86,7 +86,7 @@
           {{ with .Params.episode }}
           <itunes:episode>{{ . }}</itunes:episode>
           {{ end }}
-        <itunes:title>{{ title .Title }}</itunes:title>
+        <itunes:title>#{{ .Params.episode }} {{ title .Title }}</itunes:title>
         {{"<itunes:subtitle><![CDATA[" | safeHTML }}
         {{ with .Params.subtitle }}
         {{ . | plainify | truncate 243 "..." }}
