@@ -1,18 +1,19 @@
 {
-  "name": "triceratops-show-website",
+  "name": "www.triceratops.show",
+  "description": "website for the music podcast Tricerátops Show",
   "version": "1.0.0",
-  "description": "",
   "private": "true",
-  "repository": {
-    "type": "git"
-  },
-  "scripts": {
-    "deploy": "cdk deploy",
-    "ts-node": "ts-node",
-    "dev": "./node_modules/.bin/netlify-cms-proxy-server"
-  },
   "author": "Eduardo Aleixo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triceratops-show/www.triceratops.show.git"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/netlify-cms-proxy-server",
+    "deploy": "cdk deploy",
+    "ts-node": "ts-node"
+  },
   "dependencies": {
     "@aws-cdk/aws-apigatewayv2": "^1.137.0",
     "@aws-cdk/aws-apigatewayv2-integrations": "^1.137.0",
