@@ -7,7 +7,7 @@ podcast_bytes = 30030800
 image = "/episodios/emails.jpg"
 title = 'leitura de comentários'
 youtube = "mma-RJ0FGqk"
-episode = "1"
+episode = 1
 +++
 
 lemos o email do andré carvalho de pelotas num episódio de 12 minutos!!!:

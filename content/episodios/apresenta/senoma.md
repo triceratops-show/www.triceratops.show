@@ -1,6 +1,6 @@
 +++
 title = 'Tricerátops Apresenta: Senoma'
-episode = "1"
+episode = 1
 Description = "Herdeiros do Grunge, do Punk e do Noise, essa banda reuniu gente de São Paulo e Sorocaba e fez muito barulho, germinando bandas e projetos distintos. Hoje conheceremos um pouco mais da banda Senoma, na primeira edição do Tricerátops Apresenta, com a própria banda falando um pouco sobre a história e outros projetos."
 podcast_file = "/episodios/apresenta/senoma.mp3"
 podcast_duration = "1:08:52"
