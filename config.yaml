@@ -1,5 +1,7 @@
 baseURL: "https://www.triceratops.show"
 title: "Tricerátops Show"
+copyright: "© 2021-2022 Tricerátops Show"
+
 ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
 

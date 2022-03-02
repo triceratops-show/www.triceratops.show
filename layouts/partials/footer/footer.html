@@ -1,0 +1,8 @@
+<footer class="footer">
+  <span>{{ .Site.Copyright | markdownify}}</span>
+  {{ with .Site.Params.GitSHA }}
+    <br><span>Versão: {{ first 6 . }}</span>
+  {{ end }}
+</footer>
+{{ partial "footer/scripts.html" . }}
+  
