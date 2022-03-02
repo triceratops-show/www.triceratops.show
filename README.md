@@ -1,8 +1,10 @@
-# triceratops show
+# Tricerátops Show
 
-[triceratops.show](https://triceratops.show)
+website for the brazilian alternative music podcast Tricerátops Show
 
-website based on the ![Castanet](https://github.com/mattstratton/castanet) theme
+[www.triceratops.show](https://www.triceratops.show)
+
+based on the ![Castanet](https://github.com/mattstratton/castanet) theme
 
 ## setup
 
@@ -12,7 +14,7 @@ everything you need should be in the `Makefile`
 
 ## structure
 
-- `misc` contains helper scripts
+- `scripts` contains miscellaneous helper scripts
 
 ## develop
 
