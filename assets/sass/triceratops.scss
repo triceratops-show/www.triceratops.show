@@ -42,12 +42,14 @@ h1, h2, h3, h4 {
 }
 
 body {
-//  background: url('/morte-ao-rei.png');
-//  background: url('/videos/video-4-1.gif');
-//  background-size: contain;
-//  filter: grayscale(100%);
   background: url(/bg-bw.gif);
 }
+@media screen and (max-width: 530px){
+  body {
+    background: url(/bg-bw-small.gif);
+  }
+}
+
 
 .youtube-front {
 //  max-width: 400px;
