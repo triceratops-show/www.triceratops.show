@@ -14,9 +14,6 @@ $link-color:                     $brand-primary;
 $fa-font-path: "../fonts"; // point to the subset files
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../../node_modules/jssocials/styles/_shares.scss";
-@import "../../node_modules/jssocials/styles/jssocials.scss";
-@import "../../node_modules/jssocials/styles/jssocials-theme-plain.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
