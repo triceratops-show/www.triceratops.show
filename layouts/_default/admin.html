@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
-    {{- $app := resources.Get "scripts/app.jsx" | js.Build (dict "sourceMap" "inline" "target" "es2015") | fingerprint -}}
+    {{- $app := resources.Get "js/admin.jsx" | js.Build (dict "sourceMap" "inline" "target" "es2015") | fingerprint -}}
     <script src="{{ $app.RelPermalink }}"></script>
   </body>
 </html>
