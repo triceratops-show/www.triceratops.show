@@ -18,8 +18,19 @@ everything you need should be in the `Makefile`
 
 ## develop
 
+### live reload
+
 ```
 make serve
 ```
 
 will start hugo + netlify cms server
+
+### fontawesome icons
+
+the fontawesome files in `static/fonts` are subsets containing only the icons that are actually used.
+
+to include a new icon:
+1. [search](https://fontawesome.com/icons) the corresponding unicode for the icon
+2. add it to `scripts/fontawesome-subset.sh`
+3. run the script to generate the new font files
