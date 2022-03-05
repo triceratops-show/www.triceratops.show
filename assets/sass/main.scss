@@ -11,6 +11,8 @@ $castanet-middle-container-bg:   #fff;
 $castanet-sidebar-bg:            $brand-primary;
 $link-color:                     $brand-primary;
 
+$fa-font-path: "../fonts"; // point to the subset files
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/jssocials/styles/_shares.scss";
 @import "../../node_modules/jssocials/styles/jssocials.scss";
