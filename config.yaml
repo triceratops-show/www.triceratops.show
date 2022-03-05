@@ -77,7 +77,7 @@ deployment:
     cacheControl: "max-age=31536000, no-transform, public"
     gzip: true
 
-  - pattern : "^.+\\.(png|jpg)$"
+  - pattern : "^.+\\.(png|jpg|gif)$"
     cacheControl : "max-age=31536000, no-transform, public"
     gzip : false
 
