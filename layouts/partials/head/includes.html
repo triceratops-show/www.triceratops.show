@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{ end }}
 
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $styleOptions := (dict "targetPath" "css/main.css") }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <style>
