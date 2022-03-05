@@ -2,7 +2,7 @@
   "name": "www.triceratops.show",
   "description": "website for the music podcast Tricerátops Show",
   "version": "1.0.0",
-  "private": "true",
+  "private": true,
   "author": "Eduardo Aleixo",
   "license": "MIT",
   "repository": {
