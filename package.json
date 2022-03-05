@@ -23,7 +23,6 @@
     "@fortawesome/fontawesome-free": "^6.0.0",
     "aws-cdk": "^2.3.0",
     "bootstrap": "^4.3.1",
-    "jssocials": "^1.5.0",
     "netlify-cms-app": "^2.15.63",
     "netlify-cms-locales": "^1.38.1",
     "netlify-cms-proxy-server": "^1.3.23",
