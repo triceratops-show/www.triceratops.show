@@ -1,8 +1,10 @@
 // Config comes first
 @import "config";
 
+// Reset
+@import "reset";
+
 // Dependencies
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
@@ -29,8 +31,35 @@ body {
   }
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: ComicZine;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 a {
@@ -45,8 +74,15 @@ a {
 
 // Utilities
 @import "utilities/double-border";
+@import "utilities/fixed";
+@import "utilities/grid";
+@import "utilities/img";
+@import "utilities/margin";
 
 // Blocks
+@import "blocks/button";
+@import "blocks/dropdown";
+@import "blocks/embed";
 @import "blocks/episode";
 @import "blocks/episodes";
 @import "blocks/footer";
