@@ -1,0 +1,47 @@
+.description-content {
+  margin-top: 3rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// centralize
+.youtube_row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  .embed-responsive {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .rss {
+    @extend .justify-content-center;
+  }
+}
+
+.subscribe_buttons {
+  > a {
+    color: black;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  > div {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+
+.player_row {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+// guest
+.person_row {
+  padding-bottom: 20px;
+}

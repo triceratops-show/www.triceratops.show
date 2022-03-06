@@ -1,43 +1,57 @@
+// Config comes first
+@import "config";
 
-//** Color scheme via https://coolors.co
-
-$brand-primary:                 #000;
-$brand-secondary: #ffbc6b;
-
-$body-bg:                       lighten($brand-primary, 8%);
-//$castanet-main-container-bg:    #FFF9CC;
-$castanet-main-container-bg:    #000;
-$castanet-middle-container-bg:   #fff;
-$castanet-sidebar-bg:            $brand-primary;
-$link-color:                     $brand-primary;
-
-$fa-font-path: "../fonts"; // point to the subset files
-
+// Dependencies
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
-//== Pagination
-//
-//##
+// Global
+@font-face {
+  font-family: ComicZine;
+  src: url(/fonts/comic_zine_ot.otf);
+  font-display: swap;
+}
 
-$pagination-color:                     #fff;
-$pagination-bg:                        #fff;
-$pagination-border:                    #ddd;
+html, body {
+  overflow-x: clip;
+}
 
-$pagination-hover-color:               $link-hover-color;
-$pagination-hover-bg:                  $gray-500;
-$pagination-hover-border:              #ddd;
+body {
+  background: url(/bg-bw.gif);
+  padding-top: 70px;
+}
 
-$pagination-active-color:              #fff;
-$pagination-active-bg:                 $brand-primary;
-$pagination-active-border:             $brand-primary;
+@media screen and (max-width: 530px){
+  body {
+    background: url(/bg-bw-small.gif);
+  }
+}
 
-$pagination-disabled-color:            $gray-600;
-$pagination-disabled-bg:               #fff;
-$pagination-disabled-border:           #ddd;
+h1, h2, h3, h4 {
+  font-family: ComicZine;
+}
 
-@import './custom.scss';
-@import './triceratops.scss';
+a {
+  color: $body-bg;
+}
 
+// add underline to all links, 
+// except those children of header tags or are buttons
+*:not(h1, h2, h3, h4) > a:not(.btn) {
+  text-decoration: underline;
+}
+
+// Utilities
+@import "utilities/double-border";
+
+// Blocks
+@import "blocks/episode";
+@import "blocks/episodes";
+@import "blocks/footer";
+@import "blocks/hero-container";
+@import "blocks/main-container";
+@import "blocks/middle-container";
+@import "blocks/navbar";
+@import "blocks/transcript";
