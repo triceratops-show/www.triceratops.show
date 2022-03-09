@@ -1,6 +1,6 @@
 # Tricerátops Show
 
-website for the brazilian alternative music podcast Tricerátops Show
+website for Tricerátops Show, brazilian alternative music podcast
 
 [www.triceratops.show](https://www.triceratops.show)
 

@@ -73,11 +73,11 @@ deployment:
     cloudFrontDistributionID: E2KO2KRGLDS09K
 
   matchers:
-  - pattern: "^.+\\.(js|css|svg|ttf|woff|woff2)$"
+  - pattern: "^.+\\.(js|css|svg|ttf|otf|woff|woff2)$"
     cacheControl: "max-age=31536000, no-transform, public"
     gzip: true
 
-  - pattern : "^.+\\.(png|jpg)$"
+  - pattern : "^.+\\.(png|jpg|gif)$"
     cacheControl : "max-age=31536000, no-transform, public"
     gzip : false
 
