@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="middle_container">
+  <div class="main_container">
+    <div class="row">
+      <div class="col-md-12 featured-title">
+        <h1><span>Artistas</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        todos os artistas que já tocamos no Tricerátops Show em ordem alfabética<br>
+        <br>
+        clique nos links para ver os episódios<br>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          {{ range .Data.Terms.Alphabetical }}
+          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

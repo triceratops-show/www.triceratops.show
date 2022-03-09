@@ -23,6 +23,8 @@
 {{ $description := .Site.Params.Description }}
 {{ if .Description }}
   {{ $description = .Description }}
+{{ else if (eq .Type "artistas") }}
+  {{ $description =  printf "episódios em que tocamos %s" .Title }}
 {{ end }}
 
 <meta name="description" content="{{ $description }}">

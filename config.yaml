@@ -5,10 +5,6 @@ copyright: "© 2021-2022 Tricerátops Show"
 ignorefiles: [ "docs" ]
 googleAnalytics: G-MEPFJYBLXC
 
-  #taxonomies:
-  #  tags: ""
-  #  category: ""
-
 # i18n
 # using pt because dateFormat doesn't work with pt-br
 # but with languageCode we can keep lang="pt-br" in the HTML
@@ -17,6 +13,10 @@ languages:
   pt:
     weight: 1
 languageCode: pt-br
+
+# content
+taxonomies:
+  artista: artistas
 
 Menu:
   #Main: []

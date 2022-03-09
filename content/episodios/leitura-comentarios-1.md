@@ -1,14 +1,17 @@
-+++
-Description = "lemos o email do andré carvalho de pelotas"
-publishDate= 2021-09-30T20:00:00.335Z
-podcast_file = "/episodios/leitura-de-comentarios-1.mp3"
-podcast_duration = "12:32"
-podcast_bytes = 30030800
-image = "/episodios/emails.jpg"
-title = 'leitura de comentários'
-youtube = "mma-RJ0FGqk"
-episode = 1
-+++
+---
+episode: 1
+title: 'leitura de comentários'
+image: "/episodios/emails.jpg"
+description: "lemos o email do andré carvalho de pelotas"
+artistas:
+  - filter
+podcast_file: "/episodios/leitura-de-comentarios-1.mp3"
+podcast_duration: "12:32"
+podcast_bytes: 30030800
+youtube: "mma-RJ0FGqk"
+published: true
+publishDate: 2021-09-30T20:00:00.335Z
+---
 
 lemos o email do andré carvalho de pelotas num episódio de 12 minutos!!!:
 

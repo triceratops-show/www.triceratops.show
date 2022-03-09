@@ -1,16 +1,16 @@
-+++
-title = 'Tricerátops Apresenta: Senoma'
-episode = 1
-Description = "Herdeiros do Grunge, do Punk e do Noise, essa banda reuniu gente de São Paulo e Sorocaba e fez muito barulho, germinando bandas e projetos distintos. Hoje conheceremos um pouco mais da banda Senoma, na primeira edição do Tricerátops Apresenta, com a própria banda falando um pouco sobre a história e outros projetos."
-podcast_file = "/episodios/apresenta/senoma.mp3"
-podcast_duration = "1:08:52"
-podcast_bytes = 99211945
-image = "/episodios/apresenta/senoma.jpg"
-youtube= "752oGxvZyXE"
-published = true
-publishDate = 2021-12-08T10:00:00.335Z
-+++
-
+---
+episode: 1
+title: 'Tricerátops Apresenta: Senoma'
+image: "/episodios/apresenta/senoma.jpg"
+description: "Herdeiros do Grunge, do Punk e do Noise, essa banda reuniu gente de São Paulo e Sorocaba e fez muito barulho, germinando bandas e projetos distintos. Hoje conheceremos um pouco mais da banda Senoma, na primeira edição do Tricerátops Apresenta, com a própria banda falando um pouco sobre a história e outros projetos."
+artistas:
+  - senoma
+podcast_file: "/episodios/apresenta/senoma.mp3"
+podcast_duration: "1:08:52"
+podcast_bytes: 99211945
+youtube: "752oGxvZyXE"
+published: true
+publishDate: 2021-12-08T10:00:00.335Z
 ---
 
 ## SHOWS

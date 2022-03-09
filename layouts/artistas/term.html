@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="middle_container">
+  <div class="main_container">
+    <div class="row">
+      <div class="col-md-12 featured-title">
+        <h1><span>{{ .Data.Term }}</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        todos os episódios em que tocamos {{ .Data.Term }}<br>
+        <br>
+        total de episódios: {{ len .Data.Pages }}<br>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          {{ range .Data.Pages.ByPublishDate }}
+          {{ $title := printf "#%d %s" .Params.episode (title .Title) }}
+          <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,7 +1,9 @@
-logo_url: https://www.triceratops.show/images/logo-400px.png
 display_url: https://www.triceratops.show
-media_folder: static/episodios
+logo_url: https://www.triceratops.show/images/logo-400px.png
+
 public_folder: /episodios
+media_folder: static/episodios
+
 locale: 'pt'
 
 collections:
@@ -10,23 +12,22 @@ collections:
     label_singular: 'Episódio'
     summary: '#{{episode}} {{title}}'
     folder: 'content/episodios'
-    create: true
     slug: '{{episode}}'
+    create: true
     delete: false
-    sortable_fields: ['publishDate']
-      #    editor:
-      #      preview: false
+    sortable_fields: ['episode', 'publishDate']
     fields:
       - { label: 'Episódio (número)', name: 'episode', widget: 'number', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
-      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Capa', name: 'image', widget: 'image', required: false }
       - { label: 'Descrição', name: 'description', widget: 'string', required: false }
-      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
+      - { label: 'Artistas tocados (separados por vírgula)', name: 'artistas', widget: 'list', required: false }
       - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
-      - { label: 'Duração', name: 'podcast_duration', widget: 'string', required: false }
-      - { label: 'Tamanho (em bytes)', name: 'podcast_bytes', widget: 'string', required: false }
+      - { label: 'Duração (hh:mm:ss)', name: 'podcast_duration', widget: 'string', required: false }
+      - { label: 'Tamanho (bytes)', name: 'podcast_bytes', widget: 'string', required: false }
+      - { label: 'YouTube', name: 'youtube', widget: 'string', required: false }
       - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
-      - { label: 'Youtube', name: 'youtube', widget: 'string', required: false }
+      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
       - label: 'Corpo'
         name: 'body'
         widget: 'markdown'
@@ -46,4 +47,3 @@ collections:
           * nosso email de contato é `contato@triceratops.show`
           * [instagram](https://www.instagram.com/triceratops.show/)
           * [twitter](https://twitter.com/TriceratopsShow/)
-
