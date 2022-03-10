@@ -95,5 +95,11 @@
 </script>
 {{ end }}
 
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="{{$.Site.Title}}" href="{{"episode/index.xml" | absURL }}">
+
+<!-- Icons -->
+{{ partial "head/icons.html" . }}
+
 <!-- Other -->
 {{ partial "head/includes.html" . }}
