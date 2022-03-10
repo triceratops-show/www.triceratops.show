@@ -1,0 +1,95 @@
+<!-- TODO: Keep in sync with assets/js/admin.jsx -->
+
+<!-- header -->
+<div class="row title">
+  <div class="col">
+    {{ if .Params.episode }}
+    <h1><a href="{{ .Permalink }}"><h1>#{{ .Params.episode }} {{ title .Title }}</h1></a></h1>
+    {{ end }}
+
+    {{- if ne $.Params.upcoming true -}}
+    <small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
+    {{- else -}}
+    <small>Estreia em {{ dateFormat ":date_full" .Date }}</small>
+    {{- end -}}
+  </div>
+</div>
+<!-- /header -->
+
+<!-- content -->
+{{- if .Content }}
+<div class="row description-content">
+  <div class="col">
+    {{- if .Description }}
+    <div style="margin-bottom: 32px">
+      <h2>cabeça</h2>
+      {{ .Description }}
+    </div>
+    {{- end }}
+    <div>
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{- end }}
+<!-- /content -->
+
+<!-- media & links -->
+<div class="row youtube_row">
+  <div class="col">
+    {{- if .Params.video_local }}
+    <h2>Veja o vídeo aqui no site porque o youtube deu copyright strike:</h2>
+    <div class="embed-responsive embed-responsive-1by1">
+      <video controls>
+        <source class="embed-responsive-item" src="{{ .Params.video_local }}" type="video/mp4" />
+      </video>
+    </div>
+    {{- else }}
+    <h2>Escute no youtube:</h2>
+    <div class="embed-responsive embed-responsive-1by1">
+      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen></iframe>
+    </div>
+    {{- end }}
+    <div>
+      <h2>No seu agregador preferido:</h2>
+      {{- partial "episodios/subscribe.html" . }}
+    </div>
+    <div>
+      <h2>Aqui no site mesmo:</h2>
+      {{- with .Params.podcast_file -}}
+      {{- if ne $.Params.upcoming true -}}
+      <div class="row">
+        <div class="col-md-12 player_row">
+          <audio id="player2" style="width: 100%" controls preload="none">
+            <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+      {{- end -}}
+      {{- end -}}
+    </div>
+    <div>
+      <h2>Ou baixe para a posteridade:</h2>
+      <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
+    </div>
+  </div>
+</div>
+<!-- /media & links -->
+
+<!-- transcript POC begin -->
+{{- with .Params.transcript -}}        
+<!--
+  TODO: fix these buttons
+<p>
+  <button class="hide_transcript btn btn-secondary">Hide Transcript</button>
+  <button class="show_transcript btn btn-secondary">Display Transcript</button>
+  </p>
+-->
+<div class="row transcript">
+  <div class="col-md-12">
+    <h2>Transcrição</h2>
+    {{ (readFile .) | markdownify}}
+  </div>
+</div>
+{{- end -}}
+<!-- transcript POC end -->
