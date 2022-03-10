@@ -13,7 +13,7 @@
 {{ $title := .Title }}
 {{ if .IsHome }}
   {{ $title = .Site.Title }}
-{{ else if and (eq .Type "episodios") (not .IsNode) }}
+{{ else if and (eq .Type "episodios") (not .IsSection) }}
   {{ $title =  printf "#%d %s" .Params.episode (title .Title) }}
 {{ end }}
 
@@ -70,7 +70,7 @@
 <!-- SEO -->
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{ if and (eq .Type "episodios") (not .IsNode) }}
+{{ if and (eq .Type "episodios") (not .IsSection) }}
 <script type="application/ld+json">
   [
     {
@@ -94,6 +94,12 @@
   ]
 </script>
 {{ end }}
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="{{$.Site.Title}}" href="{{"episode/index.xml" | absURL }}">
+
+<!-- Icons -->
+{{ partial "head/icons.html" . }}
 
 <!-- Other -->
 {{ partial "head/includes.html" . }}

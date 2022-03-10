@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Tricerátops Show Admin</title>
     <script>
       // This needs to be set before importing netlify CMS
       // since we want to lazily load
       window.CMS_MANUAL_INIT = true;
 
-      {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+      {{ $styleOptions := (dict "targetPath" "css/main.css") }}
+      {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.Minify | resources.Fingerprint }}
       window.CSS_PATH = "{{ $style.Permalink }}"
     </script>
 
@@ -21,7 +22,7 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
-    {{- $app := resources.Get "js/admin.jsx" | js.Build (dict "sourceMap" "inline" "target" "es2015") | fingerprint -}}
+    {{- $app := resources.Get "js/admin.jsx" | js.Build (dict "minify" true "target" "esnext") | fingerprint -}}
     <script src="{{ $app.RelPermalink }}"></script>
   </body>
 </html>

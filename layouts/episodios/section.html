@@ -9,7 +9,7 @@
     <div class="row">
     {{ range (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
       <!-- Skip episode 0 -->
-      {{- if ne .Params.Episode "0" }}
+      {{- if ne .Params.Episode 0 }}
         <div class = "col-md-6 episode">
           <a href="{{ .Permalink }}">
             <img class = "img-fluid" src = "{{ .Params.image | absURL }}" loading="lazy" />
