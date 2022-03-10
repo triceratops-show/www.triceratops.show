@@ -20,7 +20,7 @@ collections:
       - { label: 'Episódio (número)', name: 'episode', widget: 'number', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
       - { label: 'Capa', name: 'image', widget: 'image', required: false }
-      - { label: 'Descrição', name: 'description', widget: 'string', required: false }
+      - { label: 'Descrição', name: 'description', widget: 'text', required: false }
       - { label: 'Artistas tocados (separados por vírgula)', name: 'artistas', widget: 'list', required: false }
       - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
       - { label: 'Duração (hh:mm:ss)', name: 'podcast_duration', widget: 'string', required: false }
