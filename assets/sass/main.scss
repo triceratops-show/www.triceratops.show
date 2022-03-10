@@ -21,13 +21,13 @@ html, body {
 }
 
 body {
-  background: url(/bg-bw.gif);
+  background: url(/img/bg-bw.gif);
   padding-top: 70px;
 }
 
 @media screen and (max-width: 530px){
   body {
-    background: url(/bg-bw-small.gif);
+    background: url(/img/bg-bw-small.gif);
   }
 }
 
