@@ -1,6 +1,6 @@
 ---
 episode: 1
-title: 'leitura de comentários'
+title: 'Leitura De Comentários'
 image: "/episodios/emails.jpg"
 description: "lemos o email do andré carvalho de pelotas"
 artistas:
@@ -12,8 +12,9 @@ youtube: "mma-RJ0FGqk"
 published: true
 publishDate: 2021-09-30T20:00:00.335Z
 ---
+## saudações
 
-lemos o email do andré carvalho de pelotas num episódio de 12 minutos!!!:
+lemos o email do andré carvalho de pelotas num episódio de 12 minutos!!!
 
 > Saudações cretáceas,
 
@@ -32,6 +33,13 @@ lemos o email do andré carvalho de pelotas num episódio de 12 minutos!!!:
 
 > Abraços e até breve!
 
-
 ## tocamos
+
 * filter - hey man, nice shot
+
+## otras cositas más
+
+* [nossa playlist no spotify](https://open.spotify.com/playlist/0UiztKuga6LmTAxWTsUQdw?si=fb96026bc1994d90)
+* [instagram](https://www.instagram.com/triceratops.show/)
+* [twitter](https://twitter.com/TriceratopsShow/)
+* nosso email de contato é `contato@triceratops.show`
