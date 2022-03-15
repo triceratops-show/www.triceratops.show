@@ -1,3 +1,3 @@
 ---
-Title: Episódios
+title: episódios
 ---
