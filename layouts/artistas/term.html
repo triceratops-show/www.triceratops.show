@@ -1,16 +1,15 @@
 {{ define "main" }}
 <section class="middle_container">
   <div class="main_container">
-    <div class="row">
-      <div class="col-md-12 featured-title">
-        <h1><span>{{ .Data.Term }}</span></h1>
+    <div class="row title">
+      <div class="col">
+        <h1><a href="{{ .Permalink }}">{{ .Data.Term }}</a></h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        todos os episódios em que tocamos {{ .Data.Term }}<br>
-        <br>
-        total de episódios: {{ len .Data.Pages }}<br>
+        {{ $numEpisodes := len .Data.Pages }}
+        tocamos {{ .Data.Term }} em {{ $numEpisodes }} {{ if eq $numEpisodes 1 }}episódio{{ else }}episódios{{ end }}:<br>
         <br>
       </div>
     </div>
@@ -22,6 +21,12 @@
           <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
           {{ end }}
         </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <a href="/{{ .Data.Plural }}">voltar para artistas</a>
       </div>
     </div>
   </div>

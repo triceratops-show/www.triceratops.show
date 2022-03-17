@@ -15,6 +15,8 @@
   {{ $title = .Site.Title }}
 {{ else if and (eq .Type "episodios") (not .IsSection) }}
   {{ $title =  printf "#%d %s" .Params.episode (title .Title) }}
+{{ else if and (eq .Type "artistas") (eq .Kind "term") }}
+  {{ $title =  printf "%s | artistas" .Title }}
 {{ end }}
 
 <title>{{ $title }}</title>
@@ -23,8 +25,8 @@
 {{ $description := .Site.Params.Description }}
 {{ if .Description }}
   {{ $description = .Description }}
-{{ else if (eq .Type "artistas") }}
-  {{ $description =  printf "episódios em que tocamos %s" .Title }}
+{{ else if and (eq .Type "artistas") (eq .Kind "term") }}
+  {{ $description = printf "episódios em que tocamos %s" .Title }}
 {{ end }}
 
 <meta name="description" content="{{ $description }}">
