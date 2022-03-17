@@ -17,6 +17,9 @@ languageCode: pt-br
 # content
 taxonomies:
   artista: artistas
+  participacao: participacoes
+permalinks:
+  participacoes: /participacoes/:slug
 
 Menu:
   #Main: []
@@ -37,7 +40,7 @@ Menu:
     identifier: Twitter
 
 params:
-  description: "podcast pra falar de musica alternativa e o que der na telha"
+  description: "podcast pra falar de música alternativa e o que vier na mente"
   image: "https://www.triceratops.show/cover.jpg"
   locale: "pt-br"
 
@@ -56,7 +59,7 @@ params:
   feed:
     copyright: "2021 triceratops show"
     itunes_author: "Eduardo Aleixo e Luiz Terra"
-    itunes_summary: "podcast pra falar de musica alternativa e o que der na telha"
+    itunes_summary: "podcast pra falar de música alternativa e o que vier na mente"
     itunes_owner_email: contato@triceratops.show
     itunes_owner_name: triceratops show
     itunes_image: https://www.triceratops.show/cover-itunes.jpg

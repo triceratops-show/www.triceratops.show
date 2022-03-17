@@ -8,21 +8,62 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        todos os artistas que já tocamos no Tricerátops Show em ordem alfabética<br>
+        todos os artistas que já tocamos aqui no tricerátops show<br>
         <br>
-        clique nos links para ver os episódios<br>
+        clique nos links pra ver em quais episódios!<br>
         <br>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <ul>
-          {{ range .Data.Terms.Alphabetical }}
-          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+        <!-- https://discourse.gohugo.io/t/alphabetical-sorting-with-headings/17566/5 -->
+
+        <!-- Get Page Type -->
+        {{ $type := .Type }}
+
+        <!-- Get Page -->
+        {{ $page := .Site.GetPage $type }}
+
+        <!-- Create an array of alphanumeric characters -->
+        {{ $symbols := slice "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" }}
+
+        <!-- Range through each alphanumeric character -->
+        {{ range $symbols }}
+
+          <!-- Set the current character in a variable -->
+          {{ $symbol := . }}
+
+          <!-- Create a slice to hold this page's taxonomy terms that match the current symbol -->
+          {{ $terms := slice }}
+
+          <!-- Range through page's .Data.Terms alphabetically -->
+          {{ range $page.Data.Terms.Alphabetical }}
+
+            <!-- Get current term's name -->
+            {{ $term := .Name }}
+
+            <!-- If the current term's preFix matches the current iteration of $symbol, then add the term to the $terms slice -->
+            {{ if hasPrefix $term $symbol }}
+              {{ $terms = $terms | append . }}
+            {{ end }}
           {{ end }}
-        </ul>
+
+          <!-- Once every term whose preFix matches the current $symbol has been added to the $terms slice, range over the $terms slice. If the $terms slice is greater than 0 (meaning the current symbol has .Data.Terms associated with it, then display a proper heading, and list out each term -->
+          {{ if gt $terms 0 }}
+            <h2 id="artistas-{{ $symbol }}">{{ $symbol | upper }}</h2>
+            <ul>
+            {{ range $terms }}
+              <li><a href="{{ .Page.Permalink }}">{{ .Page.Name }}</a> ({{ .Count }})</li>
+            {{ end }}
+            </ul>
+          {{ else }}
+
+          <!-- Otherwise do nothing ( meaning, any symbol that doesn't have any .Data.Terms associated with it will be skipped ) -->
+
+          {{ end }}
+        {{ end }}
       </div>
-    </div>
+    </div>  
   </div>
 </section>
 {{ end }}
