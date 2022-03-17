@@ -17,6 +17,9 @@ languageCode: pt-br
 # content
 taxonomies:
   artista: artistas
+  participacao: participacoes
+permalinks:
+  participacoes: /participacoes/:slug
 
 Menu:
   #Main: []

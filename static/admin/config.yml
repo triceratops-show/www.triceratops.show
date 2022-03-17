@@ -22,6 +22,7 @@ collections:
       - { label: 'Capa', name: 'image', widget: 'image', required: false }
       - { label: 'Descrição', name: 'description', widget: 'text', required: false }
       - { label: 'Artistas tocados', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
+      - { label: 'Participações', hint: 'separadas por vírgula', name: 'participacoes', widget: 'list', required: false }
       - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
       - { label: 'Duração', hint: 'no formato hh:mm:ss', name: 'podcast_duration', widget: 'string', required: false }
       - { label: 'Tamanho', hint: 'em bytes', name: 'podcast_bytes', widget: 'string', required: false }
@@ -53,3 +54,19 @@ collections:
           * [instagram](https://www.instagram.com/triceratops.show/)
           * [twitter](https://twitter.com/TriceratopsShow/)
           * nosso email de contato é `contato@triceratops.show`
+  - name: 'participacoes'
+    label: 'Participações'
+    label_singular: 'Participação'
+    folder: 'content/participacoes'
+    nested:
+      depth: 2
+    meta: { path: { label: 'Path', hint: 'nome da pasta/arquivo, mantenha acentos, ex.: laís-marinoni', widget: string, index_file: '_index' } }
+    create: true
+    delete: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Nome', name: 'title', widget: 'string', required: false }
+      - { label: 'Tagline', hint: 'ex.: "melhor jogador de snooker de todos os tempos"', name: 'tagline', widget: 'string', required: false }
+      - { label: 'Slug', hint: 'é o que aparece na URL, tire os acentos, ex.: lais-marinoni', name: 'slug', widget: 'string', required: false }
+      - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }

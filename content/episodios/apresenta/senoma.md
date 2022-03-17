@@ -8,6 +8,11 @@ artistas:
   - full el cuervo
   - crime caqui
   - tôrta
+participacoes:
+  - senoma
+  - full el cuervo
+  - brunno negão
+  - may manão
 podcast_file: "/episodios/apresenta/senoma.mp3"
 podcast_duration: "1:08:52"
 podcast_bytes: 99211945
@@ -28,6 +33,12 @@ RUE JOSÉ DE OLIVEIRA CASSU, 175 \
 SOROCABA (BAIRRO DO ÉDEN)
 
 para mais infos: https://www.instagram.com/p/CW3cRowrPhV/
+
+## participaram
+
+* full el cuervo, voz e guitarra
+* brunno negão, bateria
+* may manão, voz e guitarra
 
 ## tocamos
 

@@ -17,6 +17,8 @@
   {{ $title =  printf "#%d %s" .Params.episode (title .Title) }}
 {{ else if and (eq .Type "artistas") (eq .Kind "term") }}
   {{ $title =  printf "%s | artistas" .Title }}
+{{ else if and (eq .Type "participacoes") (eq .Kind "term") }}
+  {{ $title =  printf "%s | participações" .Title }}
 {{ end }}
 
 <title>{{ $title }}</title>
@@ -27,6 +29,12 @@
   {{ $description = .Description }}
 {{ else if and (eq .Type "artistas") (eq .Kind "term") }}
   {{ $description = printf "episódios em que tocamos %s" .Title }}
+{{ else if and (eq .Type "participacoes") (eq .Kind "term") }}
+  {{ if .Params.tagline }}
+  {{ $description = printf "episódios com a participação de %s, %s" .Title .Params.tagline }}
+  {{ else }}
+  {{ $description = printf "episódios com a participação de %s" .Title }}
+  {{ end }}
 {{ end }}
 
 <meta name="description" content="{{ $description }}">
