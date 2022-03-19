@@ -1,9 +1,9 @@
 ---
 title: apolônia alexandrina
-tagline: do brechó da da da ideias
+tagline: DJ e dona do brechó da da da ideias
 slug: apolonia-alexandrina
 ---
-a apolônia cuida do brechó da da da ideias, de moda anos 80, alternativa e rock. tem peças exclusivas customizadas por ela mesma!
+a apolônia é DJ e também cuida do brechó da da da ideias, de moda anos 80, alternativa e rock. tem peças exclusivas customizadas por ela mesma!
 
 siga as redes do da da da ideias:
 * [instagram](https://www.instagram.com/dadadaideias/)
