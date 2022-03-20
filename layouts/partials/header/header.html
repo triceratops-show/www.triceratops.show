@@ -1,0 +1,48 @@
+<a href="#main">Pular para conteúdo</a>
+
+<header class="header fixed-top">
+  <div class="content container">
+    <a href="{{ .Site.BaseURL }}">
+      <img
+        class="logo"
+        src="/img/logo-200px.png"
+        width="100"
+        height="51"
+        alt="Tricerátops Show"
+      >
+    </a>
+  
+    <nav id="menu" class="navmenu" data-expanded="false">
+      <button id="menu-toggle" class="toggle" aria-expanded="false">
+        Menu
+        <div class="icon menu-toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+  
+      <span id="main-label" hidden>Site</span>
+      <ul class="main" aria-labelledby="main-label">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ $isActivePage := false }}
+        {{ if (eq $currentPage.RelPermalink .URL) }}
+        {{ $isActivePage = true }}
+        {{ end }}
+        <li data-active="{{- $isActivePage -}}">
+          <a href="{{ .URL | absURL }}">{{ .Pre }}<span>{{ .Name }}</span></a>
+        </li>
+        {{ end }}
+      </ul>
+  
+      <span id="social-label" hidden>Redes sociais</span>
+      <ul class="social" aria-labelledby="social-label">
+      {{ range .Site.Menus.social }}
+        <li><a href="{{ .URL }}">{{ .Pre }}</a></li>
+      {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

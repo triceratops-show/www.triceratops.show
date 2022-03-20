@@ -6,5 +6,5 @@
 
 <!-- custom js -->
 {{- $js := resources.Get "js/main.js" | js.Build (dict "minify" true "target" "es2015") | fingerprint -}}
-<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+<script type="text/javascript" src="{{ $js.Permalink }}" defer></script>
 <!-- /custom js -->
