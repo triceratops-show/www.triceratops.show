@@ -98,7 +98,7 @@
         <itunes:summary>{{ .Description | plainify }}</itunes:summary>
         <description>{{ .Description  | plainify  }}</description>
         <googleplay:description>{{ .Description  | plainify }}</googleplay:description>
-        {{ "<content:encoded><![CDATA[" | safeHTML }}{{ .Description | safeHTML }}{{ .Content | safeHTML }}veja o episódio no site: <a href="{{ .Permalink }}">{{ $title }}</a>{{"]]></content:encoded>" | safeHTML}}
+        {{ "<content:encoded><![CDATA[" | safeHTML }}<p>{{ .Description | safeHTML }}</p>{{ .Content | safeHTML }}veja o episódio no site: <a href="{{ .Permalink }}">{{ $title }}</a>{{"]]></content:encoded>" | safeHTML}}
           {{- with .Params.image -}}
           <itunes:image href="{{ . | absURL }}"></itunes:image>
           <googleplay:image href="{{ . | absURL }}"></googleplay:image>
