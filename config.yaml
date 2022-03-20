@@ -21,23 +21,41 @@ taxonomies:
 permalinks:
   participacoes: /participacoes/:slug
 
-Menu:
-  #Main: []
-
-  #Menu:
-  Main:
-  - name: "Episódios"
-    identifier: "episodios"
-    url: "episodios"
-  - url: https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1&nd=1
-    pre: <img width="20" height="20" src="/icons/spotify.svg" title="Spotify" />
-    identifier: Spotify
-  - url: https://www.instagram.com/triceratops.show
-    pre: <img width="20" height="20" src="/icons/instagram.svg" title="Instagram" />
-    identifier: Instagram
-  - url: https://www.twitter.com/triceratopsshow
-    pre: <img width="20" height="20" src="/icons/twitter.svg" title="Twitter" />
-    identifier: Twitter
+# navigation
+# the url should be the RelPermalink for the page
+# for the menu to show the active page
+# https://discourse.gohugo.io/t/ismenucurrent-returns-false-for-single-pages/13970/7
+menu:
+  main:
+  - identifier: episodios
+    name: Episódios
+    url: /episodios/
+    weight: 1
+  - identifier: artistas
+    name: Artistas
+    url: /artistas/
+    weight: 50
+  - identifier: participacoes
+    name: Participações
+    url: /participacoes/
+    weight: 100
+  social:
+  - identifier: instagram
+    name: Instagram
+    url: https://www.instagram.com/triceratops.show
+    pre: <img width="20" height="20" src="/icons/instagram.svg" title="Instagram" alt="">
+  - identifier: spotify
+    name: Spotify
+    url: https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1&nd=1
+    pre: <img width="20" height="20" src="/icons/spotify.svg" title="Spotify" alt="">
+  - identifier: twitter
+    name: Twitter
+    url: https://www.twitter.com/triceratopsshow
+    pre: <img width="20" height="20" src="/icons/twitter.svg" title="Twitter" alt="">
+  - identifier: youtube
+    name: YouTube
+    url: https://www.youtube.com/channel/UCZwUc2FBKoopD6v4Uhi_i-g
+    pre: <img width="20" height="20" src="/icons/youtube.svg" title="YouTube" alt="">
 
 params:
   description: "podcast pra falar de música alternativa e o que vier na mente"

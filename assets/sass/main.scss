@@ -72,12 +72,18 @@ a {
   text-decoration: underline;
 }
 
+button:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: solid $brand-secondary 2px;
+}
+
 // Utilities
 @import "utilities/double-border";
 @import "utilities/fixed";
 @import "utilities/grid";
 @import "utilities/img";
 @import "utilities/margin";
+@import "utilities/visually-hidden";
 
 // Blocks
 @import "blocks/button";
@@ -86,8 +92,8 @@ a {
 @import "blocks/episode";
 @import "blocks/episodes";
 @import "blocks/footer";
+@import "blocks/header";
 @import "blocks/hero-container";
 @import "blocks/main-container";
 @import "blocks/middle-container";
-@import "blocks/navbar";
 @import "blocks/transcript";

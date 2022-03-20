@@ -1,10 +1,10 @@
 <!-- custom css -->
 {{ $styleOptions := (dict "targetPath" "css/main.css") }}
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.Minify | resources.Fingerprint }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.PostCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <!-- /custom css -->
 
 <!-- custom js -->
 {{- $js := resources.Get "js/main.js" | js.Build (dict "minify" true "target" "es2015") | fingerprint -}}
-<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+<script type="text/javascript" src="{{ $js.Permalink }}" defer></script>
 <!-- /custom js -->
