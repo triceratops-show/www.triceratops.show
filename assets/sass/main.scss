@@ -72,6 +72,11 @@ a {
   text-decoration: underline;
 }
 
+button:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: solid $brand-secondary 2px;
+}
+
 // Utilities
 @import "utilities/double-border";
 @import "utilities/fixed";
