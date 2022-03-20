@@ -8,8 +8,9 @@
         src="/img/logo-200px.png"
         width="100"
         height="51"
-        alt="Tricerátops Show"
+        alt=""
       >
+      <span class="visually-hidden">Tricerátops Show, Homepage</span>
     </a>
   
     <nav id="menu" class="navmenu" data-expanded="false">
@@ -23,7 +24,7 @@
         </div>
       </button>
   
-      <span id="main-label" hidden>Site</span>
+      <span id="main-label" hidden>Navegação</span>
       <ul class="main" aria-labelledby="main-label">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
@@ -40,7 +41,11 @@
       <span id="social-label" hidden>Redes sociais</span>
       <ul class="social" aria-labelledby="social-label">
       {{ range .Site.Menus.social }}
-        <li><a href="{{ .URL }}">{{ .Pre }}</a></li>
+        <li>
+          <a href="{{ .URL }}">
+            {{ .Pre }}<span class="visually-hidden">{{ .Name }}</span>
+          </a>
+        </li>
       {{ end }}
       </ul>
     </nav>
