@@ -2,7 +2,7 @@
 title: lucas lippaus
 tagline: da trema¨, herod, s.o.m.a. e hollow sounds
 ---
-lucas lippaus foi integrate herod, s.o.m.a. e hollow sounds, e já veio no tricerátops show divulgar a trema¨.
+lucas lippaus foi integrante da herod, s.o.m.a. e hollow sounds, e já veio no tricerátops show divulgar a trema¨.
 
 redes sociais da trema¨:
 
