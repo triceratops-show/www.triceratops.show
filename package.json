@@ -20,13 +20,13 @@
     "@aws-cdk/aws-certificatemanager": "^1.137.0",
     "@aws-cdk/aws-lambda-go": "^1.137.0",
     "@aws-cdk/core": "^1.137.0",
-    "@fortawesome/fontawesome-free": "^6.0.0",
     "aws-cdk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "autoprefixer": "^10.4.4",
     "netlify-cms-app": "^2.15.69",
     "netlify-cms-locales": "^1.38.2",
