@@ -14,6 +14,7 @@ everything you need should be in the `Makefile`
 
 ## structure
 
+- `checks` contains verifications and tests to run locally or in CI
 - `scripts` contains miscellaneous helper scripts
 
 ## develop
