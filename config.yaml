@@ -83,7 +83,7 @@ params:
     itunes_image: https://www.triceratops.show/cover-itunes.jpg
     itunes_top_category: Music
     explicit: true
-
+    spotify_country_of_origin: br
 
 deployment:
   targets:
