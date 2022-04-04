@@ -14,6 +14,7 @@
     "check": "ts-node -P checks/tsconfig.json checks/index.spec.ts",
     "dev": "./node_modules/.bin/netlify-cms-proxy-server",
     "deploy": "cdk deploy",
+    "format": "prettier --write .",
     "ts-node": "ts-node"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "netlify-cms-proxy-server": "^1.3.23",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
+    "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   }

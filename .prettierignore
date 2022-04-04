@@ -1,0 +1,17 @@
+# node
+node_modules
+
+# hugo
+public
+resources/_gen
+static
+
+# cdk
+cdk.out
+
+# file extensions
+*.html
+*.xml
+*.md
+*.yaml
+*.yml
