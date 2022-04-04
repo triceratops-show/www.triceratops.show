@@ -16,7 +16,8 @@
   font-display: swap;
 }
 
-html, body {
+html,
+body {
   overflow-x: clip;
 }
 
@@ -25,13 +26,18 @@ body {
   padding-top: 70px;
 }
 
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
   body {
     background: url(/img/bg-bw-small.gif);
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: ComicZine;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -66,7 +72,7 @@ a {
   color: $body-bg;
 }
 
-// add underline to all links, 
+// add underline to all links,
 // except those children of header tags or are buttons
 *:not(h1, h2, h3, h4) > a:not(.btn) {
   text-decoration: underline;

@@ -2,7 +2,7 @@ import * as apigw from "@aws-cdk/aws-apigatewayv2";
 import * as integrations from "@aws-cdk/aws-apigatewayv2-integrations";
 import * as acm from "@aws-cdk/aws-certificatemanager";
 import * as cdk from "@aws-cdk/core";
-import Function from "./constructs/function";
+import Function from "./constructs/function.js";
 
 class Stack extends cdk.Stack {
   constructor(scope: cdk.App, id: string) {
@@ -16,7 +16,7 @@ class Stack extends cdk.Stack {
     });
 
     const oauthHandler = Function(this, "OAuth Handler", {
-      entry: "go/cmd/oauth",
+      entry: "auth/go/cmd/oauth",
     });
 
     const dn = new apigw.DomainName(this, "DN", {

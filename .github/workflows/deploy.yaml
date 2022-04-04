@@ -25,6 +25,8 @@ jobs:
         run: hugo --minify
         env:
           HUGO_PARAMS_GITSHA: ${{ github.sha }}
+      - name: Run checks
+        run: npm run check
       - name: Deploy site
         if: github.ref == 'refs/heads/main'
         # https://stackoverflow.com/questions/59511859/how-to-skip-deleting-some-files-when-doing-hugo-deploy
