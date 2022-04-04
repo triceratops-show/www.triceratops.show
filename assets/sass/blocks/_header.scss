@@ -21,7 +21,7 @@ $header-padding-y: 0.5rem;
   background: black;
   color: white;
   display: flex;
-  
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -81,10 +81,10 @@ $header-padding-y: 0.5rem;
       padding: 0.25rem 0;
     }
   }
-  
+
   &.social {
     margin: 0 -0.5rem;
-  
+
     li {
       padding: 0 0.5rem;
     }
@@ -117,11 +117,11 @@ $header-padding-y: 0.5rem;
 
   .navmenu ul {
     padding: 0;
-  
+
     &.main {
       flex-direction: row;
       margin: 0 1.5rem;
-  
+
       li {
         padding: 0 0.5rem;
       }
@@ -142,7 +142,7 @@ $menu-toggle-icon-width: 27px;
 $menu-toggle-icon-height: 18px;
 $menu-toggle-icon-line-height: 2px;
 $menu-toggle-icon-spacing: $menu-toggle-icon-line-height * 4;
-$menu-toggle-icon-transition: .25s ease-in-out;
+$menu-toggle-icon-transition: 0.25s ease-in-out;
 
 .menu-toggle-icon {
   width: $menu-toggle-icon-width;
@@ -167,11 +167,12 @@ $menu-toggle-icon-transition: .25s ease-in-out;
   span:nth-child(1) {
     top: $menu-toggle-icon-spacing * 0;
   }
-  
-  span:nth-child(2), span:nth-child(3) {
+
+  span:nth-child(2),
+  span:nth-child(3) {
     top: $menu-toggle-icon-spacing * 1;
   }
-  
+
   span:nth-child(4) {
     top: $menu-toggle-icon-spacing * 2;
   }
@@ -183,15 +184,15 @@ $menu-toggle-icon-transition: .25s ease-in-out;
     width: 0%;
     left: 50%;
   }
-  
+
   span:nth-child(2) {
     transform: rotate(45deg);
   }
-  
+
   span:nth-child(3) {
     transform: rotate(-45deg);
   }
-  
+
   span:nth-child(4) {
     top: $menu-toggle-icon-spacing * 1;
     width: 0%;

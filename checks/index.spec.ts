@@ -1,1 +1,1 @@
-import './rss.spec.ts';
+import "./rss.spec.ts";

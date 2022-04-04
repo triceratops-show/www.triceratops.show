@@ -3,10 +3,10 @@
 
   background-color: $middle-container-bg;
   position: relative;
-  
+
   // give enough room from the navbar
   margin-top: 50px;
-  
+
   .featured-title {
     position: absolute;
 
@@ -32,7 +32,7 @@
 
 // at this point "ultimo episodio" is going to break into 2 words
 // so we give it enough space
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
   .middle_container {
     // give enough room from the navbar
     margin-top: 100px;
