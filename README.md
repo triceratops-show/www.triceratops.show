@@ -4,13 +4,11 @@ website for Tricerátops Show, brazilian alternative music podcast
 
 [www.triceratops.show](https://www.triceratops.show)
 
-based on the ![Castanet](https://github.com/mattstratton/castanet) theme
+based on the [Castanet](https://github.com/mattstratton/castanet) theme
 
 ## setup
 
-requires: go, hugo, node
-
-everything you need should be in the `Makefile`
+requires: [go](https://go.dev/), [hugo](https://gohugo.io/), [node](https://nodejs.org/) (suggestion: use a version manager such as [fnm](https://github.com/Schniz/fnm) or [nvm](https://github.com/nvm-sh/nvm))
 
 ## structure
 
@@ -20,9 +18,11 @@ everything you need should be in the `Makefile`
 
 ## develop
 
+everything you need should be in the `Makefile`
+
 ### live reload
 
-```
+```sh
 make serve
 ```
 
