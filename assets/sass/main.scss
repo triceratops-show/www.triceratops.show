@@ -1,11 +1,15 @@
 // Config comes first
 @import "config";
 
-// Reset
+// Reset & Fonts
 @import "reset";
-
-// Fonts
 @import "fonts";
+
+// Disable util class generator because we'll render them at the end
+$generate-utility-classes: false;
+
+// Next: pull in gorko for design token and custom property generation
+@import "../../node_modules/gorko/gorko.scss";
 
 // Dependencies
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -100,3 +104,6 @@ button:focus-visible,
 @import "blocks/main-container";
 @import "blocks/middle-container";
 @import "blocks/transcript";
+
+// Render gorko utilities
+@include generate-utility-classes();
