@@ -5,3 +5,4 @@ node_modules
 public
 resources/_gen
 cdk.out
+assets/jsconfig.json
