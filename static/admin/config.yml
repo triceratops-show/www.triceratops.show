@@ -78,11 +78,6 @@ collections:
         name: 'tagline'
         widget: 'string'
         required: false
-      - label: 'Slug'
-        hint: 'é o que aparece na URL, tire os acentos, ex.: lais-marinoni'
-        name: 'slug'
-        widget: 'string'
-        required: false
       - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
 
   - name: 'artistas'
@@ -103,9 +98,4 @@ collections:
       preview: false
     fields:
       - { label: 'Nome', name: 'title', widget: 'string', required: false }
-      - label: 'Slug'
-        hint: 'é o que aparece na URL, tire os acentos, ex.: polimeros-semicondutores'
-        name: 'slug'
-        widget: 'string'
-        required: false
       - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
