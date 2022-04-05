@@ -4,18 +4,15 @@
 // Reset
 @import "reset";
 
+// Fonts
+@import "fonts";
+
 // Dependencies
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
 // Global
-@font-face {
-  font-family: ComicZine;
-  src: url(/fonts/comic_zine_ot.otf);
-  font-display: swap;
-}
-
 html,
 body {
   overflow-x: clip;
