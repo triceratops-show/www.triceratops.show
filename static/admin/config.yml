@@ -99,3 +99,18 @@ collections:
     fields:
       - { label: 'Nome', name: 'title', widget: 'string', required: false }
       - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
+
+  - name: "about"
+    label: "Sobre"
+    create: true
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "about-index"
+        label: "Sobre"
+        file: "content/sobre/_index.md"
+        fields:
+          - { label: Título, name: title, widget: string, required: false }
+          - { label: Descrição, name: description, widget: string, required: false }
+          - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
