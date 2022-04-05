@@ -30,7 +30,7 @@
       <div class = "col-md-6 episode">
         <a href="{{ .Permalink }}">
           <img class="img-fluid" src="{{ .Params.image | absURL }}" loading="lazy">
-          <h3>#{{ .Params.episode }} {{ title .Title }}</h3>
+          <h3>#{{ .Params.episode }} {{ .Title }}</h3>
           <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
         </a>
       </div>

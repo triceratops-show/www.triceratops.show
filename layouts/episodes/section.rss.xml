@@ -68,7 +68,7 @@
   
     {{- range (where ( where .Site.Pages "Type" "episodios") ".Params.upcoming" "!=" true) -}}
       {{ if isset .Params "podcast_file" }}
-        {{ $title :=  printf "#%d %s" .Params.episode (title .Title) }}
+        {{ $title :=  printf "#%d %s" .Params.episode .Title }}
         <item>
           <title>{{ $title }}</title>
           <link>{{ .Permalink }}</link>

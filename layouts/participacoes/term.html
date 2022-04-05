@@ -20,7 +20,7 @@
         <h2>Episódios</h2>
         <ul>
           {{ range .Data.Pages.ByPublishDate }}
-          {{ $title := printf "#%d %s" .Params.episode (title .Title) }}
+          {{ $title := printf "#%d %s" .Params.episode .Title }}
           <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
           {{ end }}
         </ul>
