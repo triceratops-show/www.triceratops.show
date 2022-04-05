@@ -75,18 +75,19 @@ $header-padding-y: 0.5rem;
 
   &.main {
     flex-direction: column;
-    margin: -0.25rem 0;
 
-    li {
-      padding: 0.25rem 0;
+    a {
+      display: flex;
+      padding: 1rem 0;
     }
   }
 
   &.social {
-    margin: 0 -0.5rem;
+    margin: -0.875rem;
 
-    li {
-      padding: 0 0.5rem;
+    a {
+      display: flex;
+      padding: 0.875rem;
     }
   }
 
@@ -122,13 +123,18 @@ $header-padding-y: 0.5rem;
       flex-direction: row;
       margin: 0 1.5rem;
 
-      li {
+      a {
         padding: 0 0.5rem;
       }
     }
 
     &.social {
-      padding-bottom: 0.5rem;
+      margin: 0 -0.5rem;
+      padding-bottom: 0.25rem;
+
+      a {
+        padding: 0.125rem 0.5rem;
+      }
     }
   }
 }

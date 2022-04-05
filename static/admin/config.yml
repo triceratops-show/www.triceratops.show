@@ -54,19 +54,63 @@ collections:
           * [instagram](https://www.instagram.com/triceratops.show/)
           * [twitter](https://twitter.com/TriceratopsShow/)
           * nosso email de contato é `contato@triceratops.show`
+
   - name: 'participacoes'
     label: 'Participações'
     label_singular: 'Participação'
     folder: 'content/participacoes'
     nested:
       depth: 2
-    meta: { path: { label: 'Path', hint: 'nome da pasta/arquivo, mantenha acentos, ex.: laís-marinoni', widget: string, index_file: '_index' } }
+    meta:
+      path:
+        label: 'Path'
+        hint: 'nome da pasta/arquivo, mantenha acentos, ex.: laís-marinoni'
+        widget: string
+        index_file: '_index'
     create: true
     delete: false
     editor:
       preview: false
     fields:
       - { label: 'Nome', name: 'title', widget: 'string', required: false }
-      - { label: 'Tagline', hint: 'ex.: "melhor jogador de snooker de todos os tempos"', name: 'tagline', widget: 'string', required: false }
-      - { label: 'Slug', hint: 'é o que aparece na URL, tire os acentos, ex.: lais-marinoni', name: 'slug', widget: 'string', required: false }
+      - label: 'Tagline'
+        hint: 'ex.: "melhor jogador de snooker de todos os tempos"'
+        name: 'tagline'
+        widget: 'string'
+        required: false
       - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
+
+  - name: 'artistas'
+    label: 'Artistas'
+    label_singular: 'Artista'
+    folder: 'content/artistas'
+    nested:
+      depth: 2
+    meta:
+      path:
+        label: 'Path'
+        hint: 'nome da pasta/arquivo, mantenha acentos, ex.: polímeros-semicondutores'
+        widget: string
+        index_file: '_index'
+    create: true
+    delete: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Nome', name: 'title', widget: 'string', required: false }
+      - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
+
+  - name: "about"
+    label: "Sobre"
+    create: true
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "about-index"
+        label: "Sobre"
+        file: "content/sobre/_index.md"
+        fields:
+          - { label: Título, name: title, widget: string, required: false }
+          - { label: Descrição, name: description, widget: string, required: false }
+          - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }

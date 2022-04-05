@@ -4,7 +4,7 @@
 <div class="row title">
   <div class="col">
     {{ if .Params.episode }}
-    <h1><a href="{{ .Permalink }}"><h1>#{{ .Params.episode }} {{ title .Title }}</h1></a></h1>
+    <h1><a href="{{ .Permalink }}"><h1>#{{ .Params.episode }} {{ .Title }}</h1></a></h1>
     {{ end }}
 
     {{- if ne $.Params.upcoming true -}}

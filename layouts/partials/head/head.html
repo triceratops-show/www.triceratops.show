@@ -14,7 +14,7 @@
 {{ if .IsHome }}
   {{ $title = .Site.Title }}
 {{ else if and (eq .Type "episodios") (not .IsSection) }}
-  {{ $title =  printf "#%d %s" .Params.episode (title .Title) }}
+  {{ $title =  printf "#%d %s" .Params.episode .Title }}
 {{ else if and (eq .Type "artistas") (eq .Kind "term") }}
   {{ $title =  printf "%s | artistas" .Title }}
 {{ else if and (eq .Type "participacoes") (eq .Kind "term") }}

@@ -1,9 +1,10 @@
-baseURL: "https://www.triceratops.show"
-title: "Tricerátops Show"
-copyright: "© 2021-2022 Tricerátops Show"
+# hugo configuration
+# https://gohugo.io/getting-started/configuration
 
-ignorefiles: [ "docs" ]
-googleAnalytics: G-MEPFJYBLXC
+# general
+title: "Tricerátops Show"
+baseURL: "https://www.triceratops.show"
+copyright: "© 2021-2022 Tricerátops Show"
 
 # i18n
 # using pt because dateFormat doesn't work with pt-br
@@ -18,8 +19,7 @@ languageCode: pt-br
 taxonomies:
   artista: artistas
   participacao: participacoes
-permalinks:
-  participacoes: /participacoes/:slug
+removePathAccents: true # strip accents from auto-generated urls
 
 # navigation
 # the url should be the RelPermalink for the page
@@ -85,6 +85,8 @@ params:
     explicit: true
     spotify_country_of_origin: br
 
+googleAnalytics: G-MEPFJYBLXC
+
 deployment:
   targets:
     name: website
@@ -109,4 +111,3 @@ deployment:
 
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true
-
