@@ -1,8 +1,44 @@
 <footer class="footer">
-  <span>{{ .Site.Copyright | markdownify}}</span>
-  {{ with .Site.Params.GitSHA }}
-    <br><span>Versão: {{ first 6 . }}</span>
-  {{ end }}
+  <div class="flow wrapper">
+    <div class="auto-grid">
+      <div>
+        <span id="footer-site-label" class="weight-bold">
+          {{ .Site.Title }}
+        </span>
+        <ul role="list" aria-labelledby="footer-site-label">
+        {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+        </ul>
+      </div>
+      <div>
+        <span id="footer-social-label" class="weight-bold">
+          Redes sociais
+        </span>
+        <ul role="list" aria-labelledby="footer-social-label">
+        {{ range .Site.Menus.social }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="repel">
+      <div>
+        <span>E-mail: contato@triceratops.show</span>
+        <span>
+          <a href="https://github.com/triceratops-show/www.triceratops.show">
+            GitHub
+          </a>
+        </span>
+        {{ with .Site.Params.GitSHA }}
+        <span>Versão: {{ first 6 . }}</span>
+        {{ end }}
+      </div>
+      <div>{{ .Site.Copyright | markdownify}}</div>
+    </div>
+  </div>
 </footer>
 {{ partial "footer/scripts.html" . }}
   

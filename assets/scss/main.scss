@@ -124,7 +124,9 @@ button:focus-visible,
 }
 
 // Compositions
+@import "compositions/auto-grid";
 @import "compositions/flow";
+@import "compositions/repel";
 
 // Utilities
 @import "utilities/double-border";
