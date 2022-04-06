@@ -1,11 +1,12 @@
 .middle_container {
   @extend .double-border;
 
-  background-color: $middle-container-bg;
   position: relative;
 
   // give enough room from the navbar
   margin-top: 50px;
+
+  @include apply-utility("bg", "shades-light-bright");
 
   .featured-title {
     position: absolute;
@@ -20,7 +21,7 @@
       transform: translateY(-100%) rotate(-5deg);
 
       span {
-        background: $brand-secondary;
+        @include apply-utility("bg", "core-primary");
       }
     }
   }

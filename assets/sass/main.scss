@@ -17,72 +17,114 @@ $generate-utility-classes: false;
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
 // Global
-html,
-body {
-  overflow-x: clip;
+html {
+  -webkit-tap-highlight-color: get-color("shades-dark");
 }
 
 body {
-  background: url(/img/bg-bw.gif);
+  background-color: get-color("shades-gray-glare");
+  background-image: url(/img/bg-bw.jpg);
   padding-top: 70px;
-}
+  line-height: 1.5;
+  text-align: left;
 
-@media screen and (max-width: 530px) {
-  body {
-    background: url(/img/bg-bw-small.gif);
+  @include apply-utility("color", "shades-dim");
+  @include apply-utility("font", "base");
+  @include apply-utility("text", "400");
+  @include apply-utility("weight", "regular");
+
+  @include media-query("sm") {
+    background-image: url(/img/bg-bw.gif);
+  }
+
+  @media (prefers-reduced-motion) {
+    background-image: url(/img/bg-bw.jpg);
   }
 }
 
+// Links
+a {
+  @include apply-utility("color", "core-secondary-dim");
+}
+
+a:hover {
+  @include apply-utility("bg", "core-secondary-bright");
+}
+
+a:active {
+  @include apply-utility("color", "shades-dark");
+}
+
+a[class] {
+  // Remove styles from buttons etc.
+  text-decoration: none;
+}
+
+// Headings
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: ComicZine;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  margin-bottom: get-size("100");
   line-height: 1.2;
+
+  @include apply-utility("color", "shades-dark");
+  @include apply-utility("font", "brand");
+  @include apply-utility("weight", "regular");
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+
+    @include apply-utility("color", "core-secondary-dim");
+  }
+
+  a:active {
+    text-decoration: underline;
+
+    @include apply-utility("bg", "core-secondary-bright");
+  }
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: get-size("900");
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: get-size("800");
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: get-size("700");
 }
 
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
+h4,
+h5,
 h6 {
-  font-size: 1rem;
+  font-size: get-size("600");
 }
 
-a {
-  color: $body-bg;
-}
-
-// add underline to all links,
-// except those children of header tags or are buttons
-*:not(h1, h2, h3, h4) > a:not(.btn) {
-  text-decoration: underline;
-}
-
+// Interactive states
+*:focus-visible,
 button:focus-visible,
 [tabindex="-1"]:focus-visible {
-  outline: solid $brand-secondary 2px;
+  outline: solid get-color("core-primary") 2px;
 }
+
+// Hidden
+[hidden] {
+  display: none !important;
+}
+
+// Compositions
+@import "compositions/flow";
 
 // Utilities
 @import "utilities/double-border";
@@ -91,6 +133,7 @@ button:focus-visible,
 @import "utilities/img";
 @import "utilities/margin";
 @import "utilities/visually-hidden";
+@import "utilities/wrapper";
 
 // Blocks
 @import "blocks/button";
@@ -103,6 +146,7 @@ button:focus-visible,
 @import "blocks/hero-container";
 @import "blocks/main-container";
 @import "blocks/middle-container";
+@import "blocks/prose";
 @import "blocks/transcript";
 
 // Render gorko utilities

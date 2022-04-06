@@ -16,11 +16,14 @@ $gorko-base-size: 1rem;
 /// your whole project.
 ///
 $gorko-size-scale: (
+  "100": $gorko-base-size * 0.5,
+  "200": $gorko-base-size * 0.64,
   "300": $gorko-base-size * 0.8,
   "400": $gorko-base-size,
   "500": $gorko-base-size * 1.25,
   "600": $gorko-base-size * 1.6,
   "700": $gorko-base-size * 2,
+  "800": $gorko-base-size * 2.4,
   "900": $gorko-base-size * 3,
 );
 
@@ -30,8 +33,18 @@ $gorko-size-scale: (
 ///
 $gorko-colors: (
   "core-primary": #ffbc6b,
+  "core-primary-shade": #ee982f,
+  "core-primary-bright": #fff6eb,
+  "core-secondary": #5aaf8f,
+  "core-secondary-bright": #f2f8f6,
+  "core-secondary-dim": #0e8155,
+  "core-tertiary": #e65268,
+  "core-tertiary-dim": #c0536c,
   "shades-dark": #000000,
-  "light-bright": #ffffff,
+  "shades-dim": #212529,
+  "shades-gray-bright": #a5a7af,
+  "shades-gray-glare": #d2d3d7,
+  "shades-light-bright": #ffffff,
 );
 
 /// FONTS
@@ -41,7 +54,7 @@ $gorko-fonts: (
     "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,
     Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,
     Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
-  "brand": "ComicZine,sans-serif",
+  "brand": "ComicZine,-apple-system,sans-serif",
 );
 
 /// CORE CONFIG
@@ -150,8 +163,11 @@ $gorko-config: (
     "property": "width",
   ),
   "breakpoints": (
+    // 576px
     "sm": "(min-width: 36em)",
+    // 768px
     "md": "(min-width: 48em)",
+    // 992px
     "lg": "(min-width: 62em)",
   ),
 );
@@ -162,15 +178,11 @@ $gorko-config: (
 /// OTHER ///
 /////////////
 
+/// GLOBAL VARIABLES
+///
+$global-gutter: map-get($gorko-size-scale, "400");
+$global-prose-element-max-width: 50rem;
+
 /// FONTAWESOME
 ///
 $fa-font-path: "../fonts"; // point to the subset files
-
-/// LEGACY
-///
-$brand-primary: #000;
-$brand-secondary: #ffbc6b;
-
-$body-bg: lighten($brand-primary, 8%);
-$middle-container-bg: #fff;
-$link-color: $brand-primary;

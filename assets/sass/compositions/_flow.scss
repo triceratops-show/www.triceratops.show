@@ -1,0 +1,5 @@
+// Provides flow and rhythm between direct sibling elements
+// From: https://cube.fyi/composition.html#examples
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}

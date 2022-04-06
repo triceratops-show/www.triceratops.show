@@ -4,6 +4,20 @@
   text-align: center;
 
   a {
+    background-color: transparent;
+    color: currentColor;
     text-decoration: none;
+  }
+
+  a:hover h3 {
+    text-decoration: underline;
+
+    @include apply-utility("color", "core-secondary-dim");
+  }
+
+  a:active h3 {
+    text-decoration: underline;
+
+    @include apply-utility("bg", "core-secondary-bright");
   }
 }

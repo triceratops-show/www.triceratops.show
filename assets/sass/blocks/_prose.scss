@@ -1,0 +1,15 @@
+// Simple rules to help longform content—prose—read as nicely as it can
+// From: https://web.dev/design-system/component/prose/
+.prose {
+  @extend .flow;
+  @extend .wrapper;
+
+  --flow-space: #{get-space('400')};
+
+  max-width: $global-prose-element-max-width;
+  display: flow-root;  // Clear floats
+
+  p:empty {
+    display: none;
+  }
+}
