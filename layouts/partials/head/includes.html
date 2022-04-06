@@ -1,6 +1,6 @@
 <!-- custom css -->
 {{ $styleOptions := (dict "targetPath" "css/main.css") }}
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $styleOptions | resources.PostCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <!-- /custom css -->
 

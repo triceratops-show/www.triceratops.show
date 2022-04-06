@@ -11,7 +11,7 @@
       window.CMS_MANUAL_INIT = true;
 
       {{ $styleOptions := (dict "targetPath" "css/main.css") }}
-      {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+      {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $styleOptions | resources.PostCSS | resources.Minify | resources.Fingerprint }}
       window.CSS_PATH = "{{ $style.Permalink }}"
     </script>
 
