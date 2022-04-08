@@ -1,0 +1,29 @@
+/// Box-like section
+.section {
+  border: get-size("400") double get-color("shades-dark");
+  padding-block: get-size("600");
+  position: relative;
+
+  @include apply-utility("bg", "shades-light-bright");
+  @include apply-utility("gap-top", "900");
+
+  // h1 title at the top with highlight
+  .featured-title {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+
+    h1 {
+      position: relative;
+      transform: translateY(-100%) rotate(-5deg);
+    }
+
+    span {
+      @include apply-utility("bg", "core-primary");
+    }
+
+    & + * {
+      @include apply-utility("gap-top", "600");
+    }
+  }
+}

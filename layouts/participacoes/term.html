@@ -1,37 +1,17 @@
 {{ define "main" }}
-<main id="main" class="middle_container wrapper">
-  <div class="main_container">
-    <div class="row title">
-      <div class="col">
-        <h1><a href="{{ .Permalink }}">{{ if .Title }}{{ .Title }}{{ else }}{{ .Data.Term }}{{ end }}</a></h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        {{ if .Description }}
-        {{ .Description }}<br>
-        <br>
-        {{ end }}
-        {{ .Content }}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Episódios</h2>
-        <ul>
-          {{ range .Data.Pages.ByPublishDate }}
-          {{ $title := printf "#%d %s" .Params.episode .Title }}
-          <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <br>
-        <a href="/{{ .Data.Plural }}">voltar para participações</a>
-      </div>
-    </div>
-  </div>
+<main id="main" class="section prose">
+  <h1>{{ if .Title }}{{ .Title }}{{ else }}{{ .Data.Term }}{{ end }}</h1>
+
+  {{ .Content }}
+
+  <h2>Episódios</h2>
+  <ul>
+    {{ range .Data.Pages.ByPublishDate }}
+    {{ $title := printf "#%d %s" .Params.episode .Title }}
+    <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
+    {{ end }}
+  </ul>
+
+  <p><a href="/{{ .Data.Plural }}">voltar para participações</a></p>
 </main>
 {{ end }}

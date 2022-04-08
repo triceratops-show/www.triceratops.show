@@ -1,29 +1,17 @@
 {{ define "main" }}
-<main id="main" class="middle_container wrapper">
-  <div class="main_container">
-    <div class="row">
-      <div class="col-md-12 featured-title">
-        <h1><span>Participações</span></h1>
-      </div>
-    </div>
-    <!-- TODO: style this properly -->
-    <div class="row" style="margin-top: 16px;">
-      <div class="col-md-12">
-        toda a galera que já apareceu pra dar um oi no tricerátops show<br>
-        <br>
-        clique nos links pra ver quem são, e em quais episódios colaram:<br>
-        <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <ul>
-          {{ range .Data.Terms.Alphabetical }}
-          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-    </div>
+<main id="main" class="section prose">
+  <div class="featured-title">
+    <h1><span>Participações</span></h1>
   </div>
+
+  <p>toda a galera que já apareceu pra dar um oi no tricerátops show</p>
+
+  <p>clique nos links pra ver quem são, e em quais episódios colaram:</p>
+  
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+  </ul>
 </main>
 {{ end }}

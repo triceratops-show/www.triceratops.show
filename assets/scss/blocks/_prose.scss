@@ -4,12 +4,35 @@
   @extend .flow;
   @extend .wrapper;
 
-  --flow-space: #{get-space('400')};
+  --flow-space: #{get-size("400")};
 
   max-width: $global-prose-element-max-width;
   display: flow-root;  // Clear floats
 
   p:empty {
     display: none;
+  }
+
+  /// Stacked headings need to maintain larger spacing
+  h1 + h2,
+  h2 + h3,
+  h3 + h4 {
+    --flow-space: #{get-size("600")};
+  }
+
+  // other headings with anchor link
+  :is(h2, h3, h4, h5, h6) a[href^='#'] {
+    color: currentColor;
+
+    &:hover::after {
+      content: "#";
+      display: inline-block;
+      margin-inline-start: get-size("100");
+      line-height: 1;
+
+      @include apply-utility("font", "base");
+      @include apply-utility("color", "shades-gray-bright");
+      @include apply-utility("text", "600");
+    }
   }
 }
