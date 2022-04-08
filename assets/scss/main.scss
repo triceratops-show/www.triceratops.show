@@ -24,7 +24,6 @@ html {
 body {
   background-color: get-color("shades-gray-glare");
   background-image: url(/img/bg-bw.jpg);
-  padding-top: 70px;
   line-height: 1.5;
   text-align: left;
 
@@ -130,7 +129,6 @@ button:focus-visible,
 
 // Utilities
 @import "utilities/double-border";
-@import "utilities/fixed";
 @import "utilities/grid";
 @import "utilities/img";
 @import "utilities/margin";
