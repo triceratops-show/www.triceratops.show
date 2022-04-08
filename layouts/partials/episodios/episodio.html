@@ -1,36 +1,24 @@
 <!-- TODO: Keep in sync with assets/js/admin.jsx -->
 
 <!-- header -->
-<div class="row title">
-  <div class="col">
-    {{ if .Params.episode }}
-    <h1><a href="{{ .Permalink }}">#{{ .Params.episode }} {{ .Title }}</a></h1>
-    {{ end }}
+{{ if .Params.episode }}
+<h1><a href="{{ .Permalink }}">#{{ .Params.episode }} {{ .Title }}</a></h1>
+{{ end }}
 
-    {{- if ne $.Params.upcoming true -}}
-    <small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
-    {{- else -}}
-    <small>Estreia em {{ dateFormat ":date_full" .Date }}</small>
-    {{- end -}}
-  </div>
-</div>
+{{- if ne $.Params.upcoming true -}}
+<small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
+{{- else -}}
+<small>Estreia em {{ dateFormat ":date_full" .Date }}</small>
+{{- end -}}
 <!-- /header -->
 
 <!-- content -->
 {{- if .Content }}
-<div class="row description-content">
-  <div class="col">
-    {{- if .Description }}
-    <div style="margin-bottom: 32px">
-      <h2>cabeça</h2>
-      {{ .Description }}
-    </div>
-    {{- end }}
-    <div>
-      {{ .Content }}
-    </div>
-  </div>
-</div>
+  {{- if .Description }}
+    <h2 class="gap-top-900">cabeça</h2>
+    <p>{{ .Description }}</p>
+  {{- end }}
+    {{ .Content }}
 {{- end }}
 <!-- /content -->
 
@@ -85,11 +73,7 @@
   <button class="show_transcript btn btn-secondary">Display Transcript</button>
   </p>
 -->
-<div class="row transcript">
-  <div class="col-md-12">
-    <h2>Transcrição</h2>
-    {{ (readFile .) | markdownify}}
-  </div>
-</div>
+  <h2>Transcrição</h2>
+  {{ (readFile .) | markdownify}}
 {{- end -}}
 <!-- transcript POC end -->

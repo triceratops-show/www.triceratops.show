@@ -1,25 +1,24 @@
 {{ define "main" }}
-<main id="main" class="episode-list middle_container wrapper">
-  <div class="main_container last-episodes">
-    <div class="row">
-      <div class="col-md-12 featured-title">
-        <h1><span>Todos Episódios</span></h1>
-      </div>
-    </div>
-    <div class="row">
-    {{ range (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
-      <!-- Skip episode 0 -->
-      {{- if ne .Params.Episode 0 }}
-        <div class = "col-md-6 episode">
-          <a href="{{ .Permalink }}">
-            <img class = "img-fluid" src = "{{ .Params.image | absURL }}" loading="lazy" />
-            <h3>#{{ .Params.episode }} {{ .Title }}</h3>
-            <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
-          </a>
-        </div>
-      {{- end }}
-    {{- end -}}
-    </div>
+<main id="main" class="section wrapper">
+  <div class="featured-title">
+    <h1><span>Todos Episódios</span></h1>
+  </div>
+
+  <div class="gallery auto-grid">
+  {{ range (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
+    <!-- Skip episode 0 -->
+    {{- if ne .Params.Episode 0 }}
+    <a href="{{ .Permalink }}">
+      <img
+        src="{{ .Params.image | absURL }}"
+        loading="lazy"
+        alt=""
+      >
+      <h2>#{{ .Params.episode }} {{ .Title }}</h2>
+      <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
+    </a>
+    {{- end }}
+  {{- end -}}
   </div>
 </main>
 {{- end }}

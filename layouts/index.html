@@ -1,48 +1,44 @@
 {{ define "main" }}
-<div class="wrapper">
-
 <!-- featured -->
-<main id="main" class="row hero_container middle_container">
-  <div class="col-md-12 featured-title">
-    <h1><span>Último Episódio</span></h1>
-  </div>
-  <div class="col-md-12">
-  {{ range first 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
-    {{ partial "episodios/episodio.html" . }}
-  {{- end -}}
-  </div>
+<main id="main">
+  <section class="section prose">
+    <div class="featured-title">
+      <h1><span>Último Episódio</span></h1>
+    </div>
+  
+    {{ range first 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
+      {{ partial "episodios/episodio.html" . }}
+    {{- end -}}
+  </section>
 </main>
 <!-- /featured -->
 
 <!-- latest episodes -->
-<aside class="episode-list middle_container">
+<aside class="section wrapper">
   {{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
   {{- $previousEpisodes := where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true | after 1 | first 2 }}
   {{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
   {{- $len := (len $list) -}}
-  <div class="main_container last-episodes">
-    <div class="row">
-      <div class="col-md-12 featured-title">
-        <h1><span>Episódios Anteriores</span></h1>
-      </div>
-    </div>
-    <div class="row">
-      {{- if gt $len 1 -}}
+  <div class="featured-title">
+    <h2><span>Episódios Anteriores</span></h2>
+  </div>
+
+  <div class="gallery auto-grid">
+    {{- if gt $len 1 -}}
       {{- range $previousEpisodes -}}
-      <div class = "col-md-6 episode">
-        <a href="{{ .Permalink }}">
-          <img class="img-fluid" src="{{ .Params.image | absURL }}" loading="lazy">
-          <h3>#{{ .Params.episode }} {{ .Title }}</h3>
-          <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
-        </a>
-      </div>
+      <a href="{{ .Permalink }}">
+        <img
+          src="{{ .Params.image | absURL }}"
+          loading="lazy"
+          alt=""
+        >
+        <h3>#{{ .Params.episode }} {{ .Title }}</h3>
+        <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
+      </a>
       {{- end -}}
-      {{- end -}}
-    </div>
+    {{- end -}}
   </div>
   {{- end -}}
 </aside>
 <!-- /latest episodes -->
-
-</div>
 {{ end }}

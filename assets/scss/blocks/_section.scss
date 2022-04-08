@@ -13,9 +13,11 @@
     position: absolute;
     text-align: center;
 
-    h1 {
+    :is(h1, h2, h3, h4, h5) {
       position: relative;
       transform: translateY(-100%) rotate(-5deg);
+
+      @include apply-utility("text", "900");
     }
 
     span {
