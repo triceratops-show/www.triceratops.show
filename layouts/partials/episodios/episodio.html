@@ -25,7 +25,11 @@
 <!-- media & links -->
 <div class="all-center flow">
   {{- if .Params.video_local }}
-  <h2>Veja o vídeo aqui no site porque o YouTube deu copyright strike:</h2>
+  <h2 id="video">
+    <a href="#video">
+      Veja o vídeo aqui no site porque o YouTube deu copyright strike:
+    </a>
+  </h2>
   <div class="embed responsive-1by1 max-width">
     <video controls>
       <source
@@ -36,7 +40,7 @@
     </video>
   </div>
   {{- else }}
-  <h2>Escute no YouTube:</h2>
+  <h2 id="video"><a href="#video">Escute no YouTube:</a></h2>
   <div class="embed responsive-1by1 max-width">
     <iframe
       class="responsive-item"
@@ -46,10 +50,10 @@
   </div>
   {{- end }}
   
-  <h2>No seu agregador preferido:</h2>
+  <h2 id="rss"><a href="#rss">No seu agregador preferido:</a></h2>
   {{- partial "episodios/subscribe.html" . }}
   
-  <h2>Aqui no site mesmo:</h2>
+  <h2 id="audio"><a href="#audio">Aqui no site mesmo:</a></h2>
   {{- with .Params.podcast_file -}}
   {{- if ne $.Params.upcoming true -}}
   <audio
@@ -63,7 +67,7 @@
   {{- end -}}
   {{- end -}}
   
-  <h2>Ou baixe para a posteridade:</h2>
+  <h2 id="download"><a href="#download">Ou baixe para a posteridade:</a></h2>
   <p>
     <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
   </p>

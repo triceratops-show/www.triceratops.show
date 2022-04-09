@@ -31,12 +31,15 @@
   // other headings with anchor link
   :is(h2, h3, h4, h5, h6) a[href^='#'] {
     color: currentColor;
+    position: relative;
 
     &:hover::after {
       content: "#";
-      display: inline-block;
+      display: inline-flex;
+      align-items: flex-end;
+      height: 100%;
       margin-inline-start: get-size("100");
-      line-height: 1;
+      position: absolute;
 
       @include apply-utility("font", "base");
       @include apply-utility("color", "shades-gray-bright");
