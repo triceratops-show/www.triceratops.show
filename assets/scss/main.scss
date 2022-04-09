@@ -128,6 +128,7 @@ button:focus-visible,
 @import "compositions/repel";
 
 // Utilities
+@import "utilities/all-center";
 @import "utilities/double-border";
 @import "utilities/grid";
 @import "utilities/img";
@@ -135,6 +136,7 @@ button:focus-visible,
 @import "utilities/wrapper";
 
 // Blocks
+@import "blocks/audio-player";
 @import "blocks/button";
 @import "blocks/embed";
 @import "blocks/episode";

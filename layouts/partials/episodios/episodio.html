@@ -15,7 +15,7 @@
 <!-- content -->
 {{- if .Content }}
   {{- if .Description }}
-    <h2 class="gap-top-900">cabeça</h2>
+    <h2 id="cabeça" class="gap-top-900"><a href="#cabeça">cabeça</a></h2>
     <p>{{ .Description }}</p>
   {{- end }}
     {{ .Content }}
@@ -23,44 +23,50 @@
 <!-- /content -->
 
 <!-- media & links -->
-<div class="row youtube_row">
-  <div class="col">
-    {{- if .Params.video_local }}
-    <h2>Veja o vídeo aqui no site porque o youtube deu copyright strike:</h2>
-    <div class="embed-responsive embed-responsive-1by1">
-      <video controls>
-        <source class="embed-responsive-item" src="{{ .Params.video_local }}" type="video/mp4" />
-      </video>
-    </div>
-    {{- else }}
-    <h2>Escute no youtube:</h2>
-    <div class="embed-responsive embed-responsive-1by1">
-      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen></iframe>
-    </div>
-    {{- end }}
-    <div>
-      <h2>No seu agregador preferido:</h2>
-      {{- partial "episodios/subscribe.html" . }}
-    </div>
-    <div>
-      <h2>Aqui no site mesmo:</h2>
-      {{- with .Params.podcast_file -}}
-      {{- if ne $.Params.upcoming true -}}
-      <div class="row">
-        <div class="col-md-12 player_row">
-          <audio id="player2" style="width: 100%" controls preload="none">
-            <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
-      {{- end -}}
-      {{- end -}}
-    </div>
-    <div>
-      <h2>Ou baixe para a posteridade:</h2>
-      <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
-    </div>
+<div class="all-center flow">
+  {{- if .Params.video_local }}
+  <h2>Veja o vídeo aqui no site porque o YouTube deu copyright strike:</h2>
+  <div class="embed responsive-1by1 max-width">
+    <video controls>
+      <source
+        class="responsive-item"
+        src="{{ .Params.video_local }}"
+        type="video/mp4"
+      >
+    </video>
   </div>
+  {{- else }}
+  <h2>Escute no YouTube:</h2>
+  <div class="embed responsive-1by1 max-width">
+    <iframe
+      class="responsive-item"
+      src="//www.youtube.com/embed/{{ .Params.youtube }}"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {{- end }}
+  
+  <h2>No seu agregador preferido:</h2>
+  {{- partial "episodios/subscribe.html" . }}
+  
+  <h2>Aqui no site mesmo:</h2>
+  {{- with .Params.podcast_file -}}
+  {{- if ne $.Params.upcoming true -}}
+  <audio
+    id="episode-player"
+    class="audio-player"
+    preload="none"
+    controls
+  >
+    <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
+  </audio>
+  {{- end -}}
+  {{- end -}}
+  
+  <h2>Ou baixe para a posteridade:</h2>
+  <p>
+    <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
+  </p>
 </div>
 <!-- /media & links -->
 
@@ -73,7 +79,7 @@
   <button class="show_transcript btn btn-secondary">Display Transcript</button>
   </p>
 -->
-  <h2>Transcrição</h2>
-  {{ (readFile .) | markdownify}}
+<h2 id="transcrição"><a href="#transcrição">Transcrição</a></h2>
+{{ (readFile .) | markdownify}}
 {{- end -}}
 <!-- transcript POC end -->
