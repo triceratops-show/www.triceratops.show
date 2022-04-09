@@ -42,5 +42,9 @@
       @include apply-utility("color", "shades-gray-bright");
       @include apply-utility("text", "600");
     }
+
+    &:active {
+      @include apply-utility("bg", "shades-light");
+    }
   }
 }
