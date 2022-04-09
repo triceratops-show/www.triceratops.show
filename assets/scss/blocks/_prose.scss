@@ -29,8 +29,8 @@
   }
 
   /// Headings with links
-  :is(h1, h2) a {
-    color: currentColor;
+  :is(h1, h2, h3, h4, h5, h6) a {
+    color: inherit;
     text-decoration: none;
 
     &:hover {
@@ -49,8 +49,11 @@
 
   /// Headings with anchor link
   :is(h2, h3, h4, h5, h6) a[href^='#'] {
-    color: currentColor;
     position: relative;
+
+    &:hover {
+      color: inherit;
+    }
 
     &:hover::after {
       content: "#";
