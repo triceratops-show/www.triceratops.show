@@ -1,0 +1,36 @@
+.footer {
+  margin-top: get-size("900");
+  padding-block: get-size("600");
+
+  --flow-space: #{get-size("600")};
+
+  @include apply-utility("color", "shades-light-bright");
+  @include apply-utility("bg", "shades-dim");
+  @include apply-utility("text", "300");
+
+  // Lists
+  ul {
+    line-height: 2;
+    margin-block: get-size("400");
+    padding: 0;
+  }
+
+  // Links
+  a {
+    background-color: transparent;
+    color: currentColor;
+  }
+
+  a:hover {
+    @include apply-utility("color", "core-primary-shade");
+  }
+
+  a:active {
+    @include apply-utility("color", "core-primary-bright");
+  }
+
+  // Horizontal spacing
+  span + span {
+    margin-inline-start: 1rem;
+  }
+}

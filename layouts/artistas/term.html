@@ -1,34 +1,19 @@
 {{ define "main" }}
-<main id="main" class="middle_container">
-  <div class="main_container">
-    <div class="row title">
-      <div class="col">
-        <h1><a href="{{ .Permalink }}">{{ .Data.Term }}</a></h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        {{ $numEpisodes := len .Data.Pages }}
-        tocamos {{ .Data.Term }} em {{ $numEpisodes }} {{ if eq $numEpisodes 1 }}episódio{{ else }}episódios{{ end }}:<br>
-        <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <ul>
-          {{ range .Data.Pages.ByPublishDate }}
-          {{ $title := printf "#%d %s" .Params.episode .Title }}
-          <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <br>
-        <a href="/{{ .Data.Plural }}">voltar para artistas</a>
-      </div>
-    </div>
-  </div>
+<main id="main" class="section prose">
+  <h1>{{ .Data.Term }}</h1>
+
+  <p>
+    {{ $numEpisodes := len .Data.Pages }}
+        tocamos {{ .Data.Term }} em {{ $numEpisodes }} {{ if eq $numEpisodes 1 }}episódio{{ else }}episódios{{ end }}:
+  </p>
+
+  <ul>
+    {{ range .Data.Pages.ByPublishDate }}
+    {{ $title := printf "#%d %s" .Params.episode .Title }}
+    <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
+    {{ end }}
+  </ul>
+
+  <p><a href="/{{ .Data.Plural }}">voltar para artistas</a></p>
 </main>
 {{ end }}

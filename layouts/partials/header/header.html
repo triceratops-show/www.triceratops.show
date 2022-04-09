@@ -1,7 +1,7 @@
 <a href="#main">Pular para conteúdo</a>
 
-<header class="header fixed-top">
-  <div class="content container">
+<header class="header">
+  <div class="content wrapper">
     <a href="{{ .Site.BaseURL }}">
       <img
         class="logo"
@@ -24,8 +24,8 @@
         </div>
       </button>
   
-      <span id="main-label" hidden>Navegação</span>
-      <ul class="main" aria-labelledby="main-label">
+      <span id="menu-main-label" hidden>Navegação</span>
+      <ul class="main" role="list" aria-labelledby="menu-main-label">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         {{ $isActivePage := false }}
@@ -38,8 +38,8 @@
         {{ end }}
       </ul>
   
-      <span id="social-label" hidden>Redes sociais</span>
-      <ul class="social" aria-labelledby="social-label">
+      <span id="menu-social-label" hidden>Redes sociais</span>
+      <ul class="social" role="list" aria-labelledby="menu-social-label">
       {{ range .Site.Menus.social }}
         <li>
           <a href="{{ .URL }}">

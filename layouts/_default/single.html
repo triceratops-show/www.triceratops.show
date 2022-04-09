@@ -1,15 +1,7 @@
 {{ define "main" }}
-
-<div class="row">
-  <div class="col-md-12">
-    <h1>{{ .Title }}</h1>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-    {{ .Content }}
-  </div>
-</div>
-
+<main class="section prose">
+  <h1>{{ .Title }}</h1>
+  
+  {{ .Content }}
+</main>
 {{ end }}

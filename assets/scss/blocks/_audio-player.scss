@@ -1,0 +1,7 @@
+.audio-player {
+  width: 100%;
+
+  &::-webkit-media-controls-enclosure {
+    border-radius: 0;
+  }
+}

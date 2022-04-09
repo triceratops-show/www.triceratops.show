@@ -1,37 +1,44 @@
-///////////////
-// Skip link //
-///////////////
+/////////////////////////////////////////
+// Skip link                           //
+// For screen readers, visually hidden //
+/////////////////////////////////////////
 
 [href="#main"] {
   position: absolute;
   top: -10rem;
 }
 
-////////////
-// Header //
-////////////
+///////////////////////////////////
+// Header                        //
+// The solid color bar with logo //
+///////////////////////////////////
 
 $header-height: 4.25rem;
-$header-padding-x: 1rem;
-$header-padding-y: 0.5rem;
+$header-padding-block: get-size("100");
 
 .header {
   width: 100%;
   min-height: $header-height;
-  background: black;
-  color: white;
   display: flex;
+
+  @include apply-utility("bg", "shades-dark");
+  @include apply-utility("color", "shades-light-bright");
 
   .content {
     display: flex;
     justify-content: space-between;
-    padding: $header-padding-y $header-padding-x;
+    padding-block: $header-padding-block;
+  }
+
+  a {
+    background-color: transparent;
   }
 }
 
-////////////////
-// Navigation //
-////////////////
+////////////////////////////////////////////////////////////
+// Navigation                                             //
+// Collapsible menu on mobile + horizontal bar on desktop //
+////////////////////////////////////////////////////////////
 
 .navmenu {
   display: flex;
@@ -43,16 +50,18 @@ $header-padding-y: 0.5rem;
 .navmenu .toggle {
   display: flex;
   align-items: center;
-  height: ($header-height - 2 * $header-padding-y);
+  height: ($header-height - 2 * $header-padding-block);
   background: none;
   border: none;
   color: currentColor;
-  font-size: 1rem;
-  font-weight: bold;
   padding: 0;
+  -webkit-tap-highlight-color: get-color("shades-dim");
+
+  @include apply-utility("text", "400");
+  @include apply-utility("weight", "bold");
 
   .icon {
-    margin-inline-start: 0.75rem;
+    margin-inline-start: get-size("200");
   }
 }
 
@@ -67,42 +76,50 @@ $header-padding-y: 0.5rem;
 // Navigation link list
 .navmenu ul {
   align-items: flex-end;
-  font-weight: bold;
-  list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding-block: get-size("400");
   text-align: right;
+
+  @include apply-utility("weight", "bold");
+
+  a {
+    display: flex;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  a:hover {
+    @include apply-utility("color", "core-primary-shade");
+  }
+
+  a:active {
+    @include apply-utility("color", "core-primary-bright");
+  }
+
+  li[data-active="true"] a {
+    @include apply-utility("color", "core-primary");
+  }
 
   &.main {
     flex-direction: column;
 
     a {
-      display: flex;
-      padding: 1rem 0;
+      padding-block: get-size("400");
     }
   }
 
   &.social {
+    // Magic number to increase tap area
     margin: -0.875rem;
 
     a {
-      display: flex;
       padding: 0.875rem;
     }
-  }
-
-  a {
-    color: currentColor;
-    text-decoration: none;
-  }
-
-  li[data-active="true"] a {
-    color: $brand-secondary;
   }
 }
 
 // Switch to horizontal
-@media (min-width: 1200px) {
+@include media-query("lg") {
   .navmenu {
     flex-direction: row;
     align-items: center;
@@ -121,19 +138,25 @@ $header-padding-y: 0.5rem;
 
     &.main {
       flex-direction: row;
-      margin: 0 1.5rem;
+      margin-block: 0;
+      margin-inline: get-size("600");
 
       a {
-        padding: 0 0.5rem;
+        padding-block: 0;
+        padding-inline: get-size("100");
       }
     }
 
     &.social {
-      margin: 0 -0.5rem;
+      margin-block: 0;
+      margin-inline: -0.5rem;
+
+      // Magic number to align with text links
       padding-bottom: 0.25rem;
 
       a {
-        padding: 0.125rem 0.5rem;
+        padding-block: 0.125rem;
+        padding-inline: 0.5rem;
       }
     }
   }

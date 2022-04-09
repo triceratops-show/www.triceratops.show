@@ -1,0 +1,75 @@
+// Simple rules to help longform content—prose—read as nicely as it can
+// From: https://web.dev/design-system/component/prose/
+.prose {
+  @extend .flow;
+  @extend .wrapper;
+
+  --flow-space: #{get-size("500")};
+
+  max-width: $global-prose-element-max-width;
+  display: flow-root;  // Clear floats
+
+  p:empty {
+    display: none;
+  }
+
+  /// Add more space
+  h2,
+  h3,
+  h4 {
+    --flow-space: #{get-size("700")};
+  }
+
+  /// Main headings should have less space for their
+  /// immediate sibling
+  h2 + *,
+  h3 + *,
+  h4 + * {
+    --flow-space: #{get-size("300")};
+  }
+
+  /// Headings with links
+  :is(h1, h2, h3, h4, h5, h6) a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+  
+      @include apply-utility("color", "core-secondary-dim");
+    }
+  
+    &:active {
+      text-decoration: underline;
+  
+      @include apply-utility("bg", "core-secondary-bright");
+    }
+  }
+
+  /// Headings with anchor link
+  :is(h2, h3, h4, h5, h6) a[href^='#'] {
+    position: relative;
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:hover::after {
+      content: "#";
+      display: inline-flex;
+      align-items: flex-end;
+      height: 100%;
+      margin-inline-start: get-size("100");
+      position: absolute;
+
+      @include apply-utility("font", "base");
+      @include apply-utility("color", "shades-gray-bright");
+      @include apply-utility("text", "600");
+    }
+
+    &:active {
+      @include apply-utility("bg", "shades-light");
+    }
+  }
+}

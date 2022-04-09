@@ -1,78 +1,76 @@
 <!-- TODO: Keep in sync with assets/js/admin.jsx -->
 
 <!-- header -->
-<div class="row title">
-  <div class="col">
-    {{ if .Params.episode }}
-    <h1><a href="{{ .Permalink }}"><h1>#{{ .Params.episode }} {{ .Title }}</h1></a></h1>
-    {{ end }}
+{{ if .Params.episode }}
+<h1><a href="{{ .Permalink }}">#{{ .Params.episode }} {{ .Title }}</a></h1>
+{{ end }}
 
-    {{- if ne $.Params.upcoming true -}}
-    <small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
-    {{- else -}}
-    <small>Estreia em {{ dateFormat ":date_full" .Date }}</small>
-    {{- end -}}
-  </div>
-</div>
+{{- if ne $.Params.upcoming true -}}
+<small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
+{{- else -}}
+<small>Estreia em {{ dateFormat ":date_full" .Date }}</small>
+{{- end -}}
 <!-- /header -->
 
 <!-- content -->
 {{- if .Content }}
-<div class="row description-content">
-  <div class="col">
-    {{- if .Description }}
-    <div style="margin-bottom: 32px">
-      <h2>cabeça</h2>
-      {{ .Description }}
-    </div>
-    {{- end }}
-    <div>
-      {{ .Content }}
-    </div>
-  </div>
-</div>
+  {{- if .Description }}
+    <h2 id="cabeça" class="gap-top-900"><a href="#cabeça">cabeça</a></h2>
+    <p>{{ .Description }}</p>
+  {{- end }}
+    {{ .Content }}
 {{- end }}
 <!-- /content -->
 
 <!-- media & links -->
-<div class="row youtube_row">
-  <div class="col">
-    {{- if .Params.video_local }}
-    <h2>Veja o vídeo aqui no site porque o youtube deu copyright strike:</h2>
-    <div class="embed-responsive embed-responsive-1by1">
-      <video controls>
-        <source class="embed-responsive-item" src="{{ .Params.video_local }}" type="video/mp4" />
-      </video>
-    </div>
-    {{- else }}
-    <h2>Escute no youtube:</h2>
-    <div class="embed-responsive embed-responsive-1by1">
-      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen></iframe>
-    </div>
-    {{- end }}
-    <div>
-      <h2>No seu agregador preferido:</h2>
-      {{- partial "episodios/subscribe.html" . }}
-    </div>
-    <div>
-      <h2>Aqui no site mesmo:</h2>
-      {{- with .Params.podcast_file -}}
-      {{- if ne $.Params.upcoming true -}}
-      <div class="row">
-        <div class="col-md-12 player_row">
-          <audio id="player2" style="width: 100%" controls preload="none">
-            <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
-      {{- end -}}
-      {{- end -}}
-    </div>
-    <div>
-      <h2>Ou baixe para a posteridade:</h2>
-      <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
-    </div>
+<div class="all-center flow">
+  {{- if .Params.video_local }}
+  <h2 id="video">
+    <a href="#video">
+      Veja o vídeo aqui no site porque o YouTube deu copyright strike:
+    </a>
+  </h2>
+  <div class="embed responsive-1by1 max-width">
+    <video controls>
+      <source
+        class="responsive-item"
+        src="{{ .Params.video_local }}"
+        type="video/mp4"
+      >
+    </video>
   </div>
+  {{- else }}
+  <h2 id="video"><a href="#video">Escute no YouTube:</a></h2>
+  <div class="embed responsive-1by1 max-width">
+    <iframe
+      class="responsive-item"
+      src="//www.youtube.com/embed/{{ .Params.youtube }}"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {{- end }}
+  
+  <h2 id="rss"><a href="#rss">No seu agregador preferido:</a></h2>
+  {{- partial "episodios/subscribe.html" . }}
+  
+  <h2 id="audio"><a href="#audio">Aqui no site mesmo:</a></h2>
+  {{- with .Params.podcast_file -}}
+  {{- if ne $.Params.upcoming true -}}
+  <audio
+    id="episode-player"
+    class="audio-player"
+    preload="none"
+    controls
+  >
+    <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
+  </audio>
+  {{- end -}}
+  {{- end -}}
+  
+  <h2 id="download"><a href="#download">Ou baixe para a posteridade:</a></h2>
+  <p>
+    <a class="btn btn-info" href="{{ .Params.podcast_file }}" download>Download</a>
+  </p>
 </div>
 <!-- /media & links -->
 
@@ -85,11 +83,7 @@
   <button class="show_transcript btn btn-secondary">Display Transcript</button>
   </p>
 -->
-<div class="row transcript">
-  <div class="col-md-12">
-    <h2>Transcrição</h2>
-    {{ (readFile .) | markdownify}}
-  </div>
-</div>
+<h2 id="transcrição"><a href="#transcrição">Transcrição</a></h2>
+{{ (readFile .) | markdownify}}
 {{- end -}}
 <!-- transcript POC end -->

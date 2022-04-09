@@ -1,0 +1,32 @@
+// Grid with cover images and episode info
+.gallery {
+  text-align: center;
+
+  --auto-grid-min-item-size: 24rem;
+  --gutter: #{get-size("600")};
+
+  > a {
+    background-color: transparent;
+    color: currentColor;
+    text-decoration: none;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    :is(h2, h3, h4, h5, h6) {
+      @include apply-utility("text", "700");
+    }
+
+    &:hover :is(h2, h3, h4, h5, h6) {
+      text-decoration: underline;
+
+      @include apply-utility("color", "core-secondary-dim");
+    }
+
+    &:active {
+      @include apply-utility("bg", "core-secondary-bright");
+    }
+  }
+}

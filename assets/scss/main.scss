@@ -1,0 +1,129 @@
+// Config comes first
+@import "config";
+
+// Reset & Fonts
+@import "reset";
+@import "fonts";
+
+// Disable util class generator because we'll render them at the end
+$generate-utility-classes: false;
+
+// Next: pull in gorko for design token and custom property generation
+@import "../../node_modules/gorko/gorko.scss";
+
+// Dependencies
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+// Global
+html {
+  -webkit-tap-highlight-color: get-color("shades-dark");
+}
+
+body {
+  background-color: get-color("shades-gray-glare");
+  background-image: url(/img/bg-bw.jpg);
+  line-height: 1.5;
+  text-align: left;
+
+  @include apply-utility("color", "shades-dim");
+  @include apply-utility("font", "base");
+  @include apply-utility("text", "400");
+  @include apply-utility("weight", "regular");
+
+  @include media-query("sm") {
+    background-image: url(/img/bg-bw.gif);
+  }
+
+  @media (prefers-reduced-motion) {
+    background-image: url(/img/bg-bw.jpg);
+  }
+}
+
+// Links
+a {
+  @include apply-utility("color", "core-secondary-dim");
+}
+
+a:hover {
+  @include apply-utility("bg", "core-secondary-bright");
+}
+
+a:active {
+  @include apply-utility("color", "shades-dim");
+}
+
+a[class] {
+  // Remove styles from buttons etc.
+  text-decoration: none;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: get-size("100");
+  line-height: 1.2;
+
+  @include apply-utility("color", "shades-dark");
+  @include apply-utility("font", "brand");
+  @include apply-utility("weight", "regular");
+}
+
+h1 {
+  font-size: get-size("900");
+}
+
+h2 {
+  font-size: get-size("800");
+}
+
+h3 {
+  font-size: get-size("700");
+}
+
+h4,
+h5,
+h6 {
+  font-size: get-size("600");
+}
+
+// Interactive states
+*:focus-visible,
+button:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: solid get-color("core-primary") 2px;
+}
+
+// Hidden
+[hidden] {
+  display: none !important;
+}
+
+// Compositions
+@import "compositions/auto-grid";
+@import "compositions/flow";
+@import "compositions/repel";
+
+// Utilities
+@import "utilities/all-center";
+@import "utilities/visually-hidden";
+@import "utilities/wrapper";
+
+// Blocks
+@import "blocks/audio-player";
+@import "blocks/button";
+@import "blocks/embed";
+@import "blocks/footer";
+@import "blocks/gallery";
+@import "blocks/header";
+@import "blocks/prose";
+@import "blocks/section";
+@import "blocks/transcript";
+
+// Render gorko utilities
+@include generate-utility-classes();

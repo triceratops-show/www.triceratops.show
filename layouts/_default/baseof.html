@@ -8,11 +8,9 @@
 <body>
   {{- partial "header/header.html" . -}}
 
-  <div class="container">
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-  </div>
+  {{ block "main" . }}
+  <!-- The part of the page that begins to differ between templates -->
+  {{ end }}
 
   {{- partial "footer/footer.html" . -}}
 </body>

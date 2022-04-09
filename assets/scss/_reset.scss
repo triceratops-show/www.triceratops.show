@@ -1,0 +1,122 @@
+/// Based on:
+/// https://piccalil.li/blog/a-modern-css-reset/
+/// Bootstrap Reboot 4.6.0
+
+// Box sizing rules
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Set core body defaults
+body {
+  min-height: 100vh;
+}
+
+// Remove default margin
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+pre {
+  margin: 0;
+}
+
+// Remove list styles on ul, ol elements with a list role, which suggests
+// default styling will be removed.
+// https://github.com/hankchizljaw/modern-css-reset/issues/30
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+// Anchor elements that don't have a class get default styles
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+// Make images easier to work with
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+li img,
+p img {
+  display: inline-block;
+  vertical-align: sub;
+}
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  word-spacing: inherit;
+}
+
+// Interactive states
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/// LEGACY BOOTSTRAP STUFF
+
+button {
+  border-radius: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
