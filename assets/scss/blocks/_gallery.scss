@@ -2,7 +2,7 @@
 .gallery {
   text-align: center;
 
-  --auto-grid-min-item-size: 24rem;
+  --auto-grid-min-item-size: 16rem;
   --gutter: #{get-size("600")};
 
   > a {
@@ -28,5 +28,10 @@
     &:active {
       @include apply-utility("bg", "core-secondary-bright");
     }
+  }
+
+  // TODO: remove workaround
+  @include media-query("sm") {
+    --auto-grid-min-item-size: 24rem;
   }
 }
