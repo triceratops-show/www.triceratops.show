@@ -72,24 +72,6 @@ h6 {
   @include apply-utility("color", "shades-dark");
   @include apply-utility("font", "brand");
   @include apply-utility("weight", "regular");
-
-  a {
-    color: currentColor;
-    text-decoration: none;
-  }
-
-  a:hover {
-    background-color: transparent;
-    text-decoration: underline;
-
-    @include apply-utility("color", "core-secondary-dim");
-  }
-
-  a:active {
-    text-decoration: underline;
-
-    @include apply-utility("bg", "core-secondary-bright");
-  }
 }
 
 h1 {

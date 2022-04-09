@@ -28,7 +28,26 @@
     --flow-space: #{get-size("300")};
   }
 
-  // other headings with anchor link
+  /// Headings with links
+  :is(h1, h2) a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+  
+      @include apply-utility("color", "core-secondary-dim");
+    }
+  
+    &:active {
+      text-decoration: underline;
+  
+      @include apply-utility("bg", "core-secondary-bright");
+    }
+  }
+
+  /// Headings with anchor link
   :is(h2, h3, h4, h5, h6) a[href^='#'] {
     color: currentColor;
     position: relative;
