@@ -107,8 +107,16 @@ button:focus-visible,
   display: none !important;
 }
 
+// Skip link
+// (visually hidden)
+[href="#main"] {
+  position: absolute;
+  top: -10rem;
+}
+
 // Compositions
 @import "compositions/auto-grid";
+@import "compositions/cover";
 @import "compositions/flow";
 @import "compositions/repel";
 
