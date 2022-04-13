@@ -30,15 +30,14 @@ $gorko-space-scale: (
 /// @link https://utopia.fyi/type/calculator/?c=320,16,1.2,1500,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
 ///
 $gorko-size-scale: (
-  "100": $gorko-base-size * 0.5,
-  "200": $gorko-base-size * 0.64,
-  "300": $gorko-base-size * 0.8,
-  "400": $gorko-base-size,
-  "500": $gorko-base-size * 1.25,
-  "600": $gorko-base-size * 1.6,
-  "700": $gorko-base-size * 2,
-  "800": $gorko-base-size * 2.4,
-  "900": $gorko-base-size * 3,
+  "size--2": clamp(0.69rem, calc(0.69rem + 0.03vw), 0.72rem),
+  "size--1": clamp(0.83rem, calc(0.81rem + 0.09vw), 0.90rem),
+  "size-0": clamp(1.00rem, calc(0.97rem + 0.17vw), 1.13rem),
+  "size-1": clamp(1.20rem, calc(1.14rem + 0.28vw), 1.41rem),
+  "size-2": clamp(1.44rem, calc(1.35rem + 0.43vw), 1.76rem),
+  "size-3": clamp(1.73rem, calc(1.60rem + 0.64vw), 2.20rem),
+  "size-4": clamp(2.07rem, calc(1.89rem + 0.91vw), 2.75rem),
+  "size-5": clamp(2.49rem, calc(2.23rem + 1.28vw), 3.43rem),
 );
 
 /// COLORS
@@ -195,7 +194,7 @@ $gorko-config: (
 
 /// GLOBAL VARIABLES
 ///
-$global-gutter: map-get($gorko-size-scale, "400");
+$global-gutter: map-get($gorko-space-scale, "space-sm");
 $global-prose-element-max-width: 50rem;
 
 /// FONTAWESOME

@@ -6,7 +6,7 @@
 
   @include apply-utility("color", "shades-light-bright");
   @include apply-utility("bg", "shades-dim");
-  @include apply-utility("text", "300");
+  @include apply-utility("text", "size--1");
 
   // Lists
   ul {

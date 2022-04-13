@@ -65,7 +65,7 @@
 
       @include apply-utility("font", "base");
       @include apply-utility("color", "shades-gray-bright");
-      @include apply-utility("text", "600");
+      @include apply-utility("text", "size-2");
     }
 
     &:active {

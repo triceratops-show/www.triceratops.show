@@ -32,7 +32,7 @@ body {
 
   @include apply-utility("color", "shades-dim");
   @include apply-utility("font", "base");
-  @include apply-utility("text", "400");
+  @include apply-utility("text", "size-0");
   @include apply-utility("weight", "regular");
 
   @include media-query("sm") {
@@ -78,21 +78,21 @@ h6 {
 }
 
 h1 {
-  font-size: get-size("900");
+  @include apply-utility("text", "size-5");
 }
 
 h2 {
-  font-size: get-size("800");
+  @include apply-utility("text", "size-4");
 }
 
 h3 {
-  font-size: get-size("700");
+  @include apply-utility("text", "size-3");
 }
 
 h4,
 h5,
 h6 {
-  font-size: get-size("600");
+  @include apply-utility("text", "size-2");
 }
 
 // Interactive states

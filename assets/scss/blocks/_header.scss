@@ -57,7 +57,7 @@ $header-padding-block: 0.5rem;
   padding: 0;
   -webkit-tap-highlight-color: get-color("shades-dim");
 
-  @include apply-utility("text", "400");
+  @include apply-utility("text", "size-0");
   @include apply-utility("weight", "bold");
 
   .icon {

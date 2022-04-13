@@ -17,7 +17,7 @@
     transform: rotate(-5deg) translateY(-50%);
 
     :is(h1, h2, h3, h4, h5) {
-      @include apply-utility("text", "900");
+      @include apply-utility("text", "size-5");
     }
 
     span {
