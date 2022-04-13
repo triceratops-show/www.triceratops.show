@@ -11,8 +11,10 @@
   .featured-title {
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
-    transform: translateY(-100%) rotate(-5deg);
+    transform: rotate(-5deg) translateY(-50%);
 
     :is(h1, h2, h3, h4, h5) {
       @include apply-utility("text", "900");
@@ -23,7 +25,7 @@
     }
 
     & + * {
-      @include apply-utility("gap-top", "space-md");
+      @include apply-utility("gap-top", "space-lg");
     }
   }
 }
