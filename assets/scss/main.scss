@@ -16,6 +16,9 @@ $generate-utility-classes: false;
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
+// Functions
+@import "functions/get-space";
+
 // Global
 html {
   -webkit-tap-highlight-color: get-color("shades-dark");
@@ -66,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: get-size("100");
+  margin-block-end: get-space("space-xs");
   line-height: 1.2;
 
   @include apply-utility("color", "shades-dark");

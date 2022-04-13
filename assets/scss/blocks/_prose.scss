@@ -4,7 +4,7 @@
   @extend .flow;
   @extend .wrapper;
 
-  --flow-space: #{get-size("500")};
+  --flow-space: #{get-space("space-sm")};
 
   max-width: $global-prose-element-max-width;
   display: flow-root;  // Clear floats
@@ -17,7 +17,7 @@
   h2,
   h3,
   h4 {
-    --flow-space: #{get-size("700")};
+    --flow-space: #{get-space("space-lg")};
   }
 
   /// Main headings should have less space for their
@@ -25,7 +25,7 @@
   h2 + *,
   h3 + *,
   h4 + * {
-    --flow-space: #{get-size("300")};
+    --flow-space: #{get-space("space-xs")};
   }
 
   /// Headings with links
@@ -60,7 +60,7 @@
       display: inline-flex;
       align-items: flex-end;
       height: 100%;
-      margin-inline-start: get-size("100");
+      margin-inline-start: get-space("space-2xs");
       position: absolute;
 
       @include apply-utility("font", "base");

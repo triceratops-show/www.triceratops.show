@@ -9,11 +9,25 @@
 ///
 $gorko-base-size: 1rem;
 
+/// SPACE SCALE
+/// For margin and padding
+/// @link https://utopia.fyi/space/calculator?c=320,16,1.2,1500,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+///
+$gorko-space-scale: (
+  "space-3xs": clamp(0.25rem, calc(0.23rem + 0.08vw), 0.31rem),
+  "space-2xs": clamp(0.50rem, calc(0.48rem + 0.08vw), 0.56rem),
+  "space-xs": clamp(0.75rem, calc(0.72rem + 0.17vw), 0.88rem),
+  "space-sm": clamp(1.00rem, calc(0.97rem + 0.17vw), 1.13rem),
+  "space-md": clamp(1.50rem, calc(1.45rem + 0.25vw), 1.69rem),
+  "space-lg": clamp(2.00rem, calc(1.93rem + 0.34vw), 2.25rem),
+  "space-xl": clamp(3.00rem, calc(2.90rem + 0.51vw), 3.38rem),
+  "space-2xl": clamp(4.00rem, calc(3.86rem + 0.68vw), 4.50rem),
+  "space-3xl": clamp(6.00rem, calc(5.80rem + 1.02vw), 6.75rem),
+);
+
 /// SIZE SCALE
-/// This is a Major Third scale that powers all the utilities that
-/// it is relevant for (font-size, margin, padding). All items are
-/// calcuated off the base size, so change that and cascade across
-/// your whole project.
+/// For font-size
+/// @link https://utopia.fyi/type/calculator/?c=320,16,1.2,1500,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
 ///
 $gorko-size-scale: (
   "100": $gorko-base-size * 0.5,
@@ -89,42 +103,42 @@ $gorko-config: (
     "property": "font-family",
   ),
   "gap-top": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "margin-top",
   ),
   "gap-right": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "margin-right",
   ),
   "gap-bottom": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "margin-bottom",
   ),
   "gap-left": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "margin-left",
   ),
   "pad-top": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "padding-top",
   ),
   "pad-right": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "padding-right",
   ),
   "pad-bottom": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "padding-bottom",
   ),
   "pad-left": (
-    "items": $gorko-size-scale,
+    "items": $gorko-space-scale,
     "output": "standard",
     "property": "padding-left",
   ),
