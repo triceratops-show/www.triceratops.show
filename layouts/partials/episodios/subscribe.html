@@ -1,8 +1,9 @@
 <div>
   {{ if (isset .Site.Params "spotify_subscribe") }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ .Site.Params.spotify_subscribe}}"
+    data-type="clear"
   >
     <i class="fab fa-spotify"></i>&nbsp;Spotify
   </a>
@@ -10,8 +11,9 @@
 
   {{ if (isset .Site.Params "itunes_subscribe") }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ .Site.Params.itunes_subscribe}}"
+    data-type="clear"
   >
     <i class="fa fa-podcast"></i>&nbsp;Apple Podcasts
   </a>
@@ -19,8 +21,9 @@
 
   {{ if (isset .Site.Params "android_subscribe") }}
   <a
-    class="btn btn-default subscribe_buttons"
+    class="button subscribe_buttons"
     href="{{ .Site.Params.android_subscribe }}"
+    data-type="clear"
   >
     <i class="fab fa-android"></i>&nbsp;Android
   </a>
@@ -28,8 +31,9 @@
 
   {{ if (isset .Site.Params "google_play_subscribe") }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ .Site.Params.google_play_subscribe }}"
+    data-type="clear"
   >
     <i class="fab fa-google-play"></i>&nbsp;Google Podcasts
   </a>
@@ -37,8 +41,9 @@
 
   {{ with .Site.Params.stitcher_subscribe }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ . }}"
+    data-type="clear"
   >
     <i class="fa fa-podcast"></i>&nbsp;Stitcher
   </a>
@@ -46,8 +51,9 @@
 
   {{ if (isset .Site.Params "soundcloud_subscribe") }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ .Site.Params.soundcloud_subscribe }}"
+    data-type="clear"
   >
     <i class="fab fa-soundcloud"></i>&nbsp;Soundcloud
   </a>
@@ -55,16 +61,18 @@
 
   {{ if (isset .Site.Params "pocketcasts_subscribe") }}
   <a
-    class="btn btn-default"
+    class="button"
     href="{{ .Site.Params.pocketcasts_subscribe }}"
+    data-type="clear"
   >
     <i class="fa fa-podcast"></i>&nbsp;PocketCasts
   </a>
   {{ end }}
 
   <a
-    class="btn btn-default"
+    class="button"
     href="{{"episodes/index.xml" | absURL }}"
+    data-type="clear"
   >
     <i class="fa fa-rss"></i>&nbsp;RSS
   </a>
