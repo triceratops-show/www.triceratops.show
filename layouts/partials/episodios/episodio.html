@@ -76,6 +76,33 @@
 </div>
 <!-- /media & links -->
 
+<!-- taxonomies -->
+<h2 id="tags" class="text-size-2 gap-top-space-2xl">
+  <a href="#tags">
+    Tags
+  </a>
+</h2>
+<p class="text-size--1">
+  {{ with (.GetTerms "artistas") }}
+  artistas:
+    {{ range $index, $term := . }}
+    {{- if gt $index 0 }}, {{ end -}}
+    <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+    {{- end }}
+  <br>
+  {{ end }}
+
+  {{ with (.GetTerms "participacoes") }}
+  participações especiais:
+    {{ range $index, $term := . }}
+    {{- if gt $index 0 }}, {{ end -}}
+    <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+    {{- end }}
+  <br>
+  {{ end }}
+</p>
+<!-- /taxonomies -->
+
 <!-- transcript POC begin -->
 {{- with .Params.transcript -}}        
 <!--
