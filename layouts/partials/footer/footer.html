@@ -27,14 +27,16 @@
     <div class="repel">
       <div>
         <span>E-mail: contato@triceratops.show</span>
+      </div>
+      <div>
+        {{ with .Site.Params.GitSHA }}
+        <span>Versão: {{ first 6 . }}</span>
+        {{ end }}
         <span>
           <a href="https://github.com/triceratops-show/www.triceratops.show">
             GitHub
           </a>
         </span>
-        {{ with .Site.Params.GitSHA }}
-        <span>Versão: {{ first 6 . }}</span>
-        {{ end }}
       </div>
       <div>{{ .Site.Copyright | markdownify}}</div>
     </div>
