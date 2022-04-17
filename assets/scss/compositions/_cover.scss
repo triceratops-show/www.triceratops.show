@@ -1,23 +1,22 @@
+/// The Cover has one principal element that should always gravitate towards
+/// the center. In addition, it can have one top/header element and/or 
+/// one bottom/footer element.
+///
 /// From: https://every-layout.dev/layouts/cover/
 .cover {
   display: flex;
   flex-direction: column;
   min-block-size: 100vh;
-  // padding: 0;
-}
-
-// .cover > * {
-//   margin-block: 1rem;
-// }
-
-.cover > :first-child:not(.centered) {
-  margin-block-start: 0;
-}
-
-.cover > :last-child:not(.centered) {
-  margin-block-end: 0;
-}
-
-.cover > .centered {
-  margin-block: auto;
+  
+  & > :first-child:not(.centered) {
+    margin-block-start: 0;
+  }
+  
+  & > :last-child:not(.centered) {
+    margin-block-end: 0;
+  }
+  
+  & > .centered {
+    margin-block: auto;
+  }
 }
