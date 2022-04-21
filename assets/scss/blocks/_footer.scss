@@ -1,17 +1,17 @@
 .footer {
-  margin-top: get-size("900");
-  padding-block: get-size("600");
+  margin-block-start: get-space("space-3xl");
+  padding-block: get-space("space-md");
 
-  --flow-space: #{get-size("600")};
+  --flow-space: #{get-space("space-md")};
 
   @include apply-utility("color", "shades-light-bright");
   @include apply-utility("bg", "shades-dim");
-  @include apply-utility("text", "300");
+  @include apply-utility("text", "size--1");
 
   // Lists
   ul {
     line-height: 2;
-    margin-block: get-size("400");
+    margin-block: get-space("space-xs");
     padding: 0;
   }
 
@@ -31,6 +31,6 @@
 
   // Horizontal spacing
   span + span {
-    margin-inline-start: 1rem;
+    margin-inline-start: get-space("space-xs");
   }
 }

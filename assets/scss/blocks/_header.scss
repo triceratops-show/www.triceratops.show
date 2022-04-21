@@ -1,20 +1,10 @@
-/////////////////////////////////////////
-// Skip link                           //
-// For screen readers, visually hidden //
-/////////////////////////////////////////
-
-[href="#main"] {
-  position: absolute;
-  top: -10rem;
-}
-
 ///////////////////////////////////
 // Header                        //
 // The solid color bar with logo //
 ///////////////////////////////////
 
 $header-height: 4.25rem;
-$header-padding-block: get-size("100");
+$header-padding-block: 0.5rem;
 
 .header {
   width: 100%;
@@ -57,11 +47,11 @@ $header-padding-block: get-size("100");
   padding: 0;
   -webkit-tap-highlight-color: get-color("shades-dim");
 
-  @include apply-utility("text", "400");
+  @include apply-utility("text", "size-0");
   @include apply-utility("weight", "bold");
 
   .icon {
-    margin-inline-start: get-size("200");
+    margin-inline-start: get-space("space-2xs");
   }
 }
 
@@ -77,7 +67,7 @@ $header-padding-block: get-size("100");
 .navmenu ul {
   align-items: flex-end;
   margin: 0;
-  padding-block: get-size("400");
+  padding-block: get-space("space-sm");
   text-align: right;
 
   @include apply-utility("weight", "bold");
@@ -104,7 +94,7 @@ $header-padding-block: get-size("100");
     flex-direction: column;
 
     a {
-      padding-block: get-size("400");
+      padding-block: get-space("space-sm");
     }
   }
 
@@ -139,11 +129,11 @@ $header-padding-block: get-size("100");
     &.main {
       flex-direction: row;
       margin-block: 0;
-      margin-inline: get-size("600");
+      margin-inline: get-space("space-md");
 
       a {
         padding-block: 0;
-        padding-inline: get-size("100");
+        padding-inline: get-space("space-2xs");
       }
     }
 

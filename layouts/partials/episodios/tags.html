@@ -1,0 +1,23 @@
+<div class="navigation" data-type="tags">
+  <div>
+    {{ with (.GetTerms "artistas") }}
+    {{ $taxonomy := $.Site.GetPage "artistas" }}
+    <strong>{{ $taxonomy.Title }}</strong>:
+      {{ range $index, $term := . }}
+      {{- if gt $index 0 }}, {{ end -}}
+      <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+      {{- end }}
+    <br>
+    {{ end }}
+  
+    {{ with (.GetTerms "participacoes") }}
+    {{ $taxonomy := $.Site.GetPage "participacoes" }}
+    <strong>{{ $taxonomy.Title }}</strong>:
+      {{ range $index, $term := . }}
+      {{- if gt $index 0 }}, {{ end -}}
+      <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+      {{- end }}
+    <br>
+    {{ end }}
+  </div>
+</div>

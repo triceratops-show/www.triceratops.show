@@ -1,0 +1,39 @@
+/// Navigation elements within the content body
+/// e.g. back links, pagination, anchor links
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: get-space("space-xl");
+
+  @include apply-utility('text', 'size--1');
+
+  a {
+    @include navigation-link-base-styles();
+  }
+
+  /// Tag links
+  &[data-type="tags"] {
+  }
+
+  /// Footer with back link, next link, and/or pagination
+  &[data-type="body-footer"] {
+    > * {
+      max-width: 50%;
+    }
+  
+    :last-child {
+      text-align: right;
+    }
+
+    /// Back link, Previous link
+    a[data-action="back"]::before,
+    a[data-action="previous"]::before {
+      content: '«';
+    }
+
+    // Next link
+    a[data-action="next"]::after {
+      content: '»';
+    }
+  }
+}

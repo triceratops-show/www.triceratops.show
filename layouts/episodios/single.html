@@ -1,5 +1,9 @@
 {{ define "main" }}
 <main id="main" class="section prose">
+  {{ partial "episodios/breadcrumbs.html" . }}
+
   {{ partial "episodios/episodio.html" . }}
+
+  {{ partial "episodios/navigation.html" . }}
 </main>
 {{ end }}

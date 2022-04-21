@@ -3,7 +3,7 @@
   text-align: center;
 
   --auto-grid-min-item-size: 16rem;
-  --gutter: #{get-size("600")};
+  --gutter: #{get-space("space-md")};
 
   > a {
     background-color: transparent;
@@ -16,7 +16,7 @@
     }
 
     :is(h2, h3, h4, h5, h6) {
-      @include apply-utility("text", "700");
+      @include apply-utility("text", "size-3");
     }
 
     &:hover :is(h2, h3, h4, h5, h6) {
@@ -30,7 +30,7 @@
     }
   }
 
-  // TODO: remove workaround
+  // TODO: remove workaround to keep 2-item grid
   @include media-query("sm") {
     --auto-grid-min-item-size: 24rem;
   }

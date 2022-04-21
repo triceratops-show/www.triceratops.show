@@ -6,13 +6,19 @@
 </head>
 
 <body>
-  {{- partial "header/header.html" . -}}
+  <a href="#main">Pular para conteúdo</a>
 
-  {{ block "main" . }}
-  <!-- The part of the page that begins to differ between templates -->
-  {{ end }}
+  <div class="cover">
+    {{- partial "header/header.html" . -}}
+  
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+  
+    {{- partial "footer/footer.html" . -}}
+  </div>
 
-  {{- partial "footer/footer.html" . -}}
+  {{ partial "footer/scripts.html" . }}
 </body>
 
 </html>

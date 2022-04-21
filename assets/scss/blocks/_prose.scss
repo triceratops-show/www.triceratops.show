@@ -4,7 +4,7 @@
   @extend .flow;
   @extend .wrapper;
 
-  --flow-space: #{get-size("500")};
+  --flow-space: #{get-space("space-sm")};
 
   max-width: $global-prose-element-max-width;
   display: flow-root;  // Clear floats
@@ -17,7 +17,7 @@
   h2,
   h3,
   h4 {
-    --flow-space: #{get-size("700")};
+    --flow-space: #{get-space("space-lg")};
   }
 
   /// Main headings should have less space for their
@@ -25,7 +25,7 @@
   h2 + *,
   h3 + *,
   h4 + * {
-    --flow-space: #{get-size("300")};
+    --flow-space: #{get-space("space-xs")};
   }
 
   /// Headings with links
@@ -41,9 +41,7 @@
     }
   
     &:active {
-      text-decoration: underline;
-  
-      @include apply-utility("bg", "core-secondary-bright");
+      text-decoration: none;
     }
   }
 
@@ -60,16 +58,12 @@
       display: inline-flex;
       align-items: flex-end;
       height: 100%;
-      margin-inline-start: get-size("100");
+      margin-inline-start: get-space("space-2xs");
       position: absolute;
 
       @include apply-utility("font", "base");
       @include apply-utility("color", "shades-gray-bright");
-      @include apply-utility("text", "600");
-    }
-
-    &:active {
-      @include apply-utility("bg", "shades-light");
+      @include apply-utility("text", "size-1");
     }
   }
 }

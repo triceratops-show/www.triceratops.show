@@ -1,21 +1,23 @@
 /// Box-like section
 .section {
-  border: get-size("400") double get-color("shades-dark");
-  padding-block: get-size("600");
+  border: 1rem double get-color("shades-dark");
+  padding-block: get-space("space-md");
   position: relative;
 
   @include apply-utility("bg", "shades-light-bright");
-  @include apply-utility("gap-top", "900");
+  @include apply-utility("gap-top", "space-3xl");
 
   // h1 title at the top with highlight
   .featured-title {
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
-    transform: translateY(-100%) rotate(-5deg);
+    transform: rotate(-5deg) translateY(-50%);
 
     :is(h1, h2, h3, h4, h5) {
-      @include apply-utility("text", "900");
+      @include apply-utility("text", "size-5");
     }
 
     span {
@@ -23,7 +25,7 @@
     }
 
     & + * {
-      @include apply-utility("gap-top", "600");
+      @include apply-utility("gap-top", "space-lg");
     }
   }
 }

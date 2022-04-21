@@ -1,0 +1,33 @@
+/// Based on: https://web.dev/design-system/component/breadcrumbs/
+.breadcrumbs {
+  margin-block-end: get-space("space-lg");
+
+  a {
+    @include navigation-link-base-styles();
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  
+    &,
+    li {
+      display: flex;
+      align-items: center;
+    }
+  
+    li {
+      flex: none;
+  
+      @include apply-utility('text', 'size--1');
+    }
+  
+    li + li::before {
+      content: '/';
+      display: block;
+      padding-inline: 1ch;
+    }
+  }
+}

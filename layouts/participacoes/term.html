@@ -1,17 +1,21 @@
 {{ define "main" }}
-<main id="main" class="section prose">
-  <h1>{{ if .Title }}{{ .Title }}{{ else }}{{ .Data.Term }}{{ end }}</h1>
+<div class="centered">
+  <main id="main" class="section prose">
+    {{ partial "breadcrumbs/taxonomy.html" . }}
 
-  {{ .Content }}
+    <h1>{{ if .Title }}{{ .Title }}{{ else }}{{ .Data.Term }}{{ end }}</h1>
+  
+    {{ .Content }}
+  
+    <h2>Episódios</h2>
+    <ul>
+      {{ range .Data.Pages.ByPublishDate }}
+      {{ $title := printf "#%d %s" .Params.episode .Title }}
+      <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
+      {{ end }}
+    </ul>
 
-  <h2>Episódios</h2>
-  <ul>
-    {{ range .Data.Pages.ByPublishDate }}
-    {{ $title := printf "#%d %s" .Params.episode .Title }}
-    <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
-    {{ end }}
-  </ul>
-
-  <p><a href="/{{ .Data.Plural }}">voltar para participações</a></p>
-</main>
+    {{ partial "navigation/taxonomy.html" . }}
+  </main>
+</div>
 {{ end }}

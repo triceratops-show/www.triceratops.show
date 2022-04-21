@@ -1,0 +1,6 @@
+<div class="navigation" data-type="body-footer">
+  {{ $taxonomy := .Site.GetPage .Data.Plural }}
+  <a href="{{ $taxonomy.RelPermalink }}" data-action="back">
+    voltar para {{ $taxonomy.Title }}
+  </a>
+</div>

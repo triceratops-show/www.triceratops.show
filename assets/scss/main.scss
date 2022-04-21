@@ -16,6 +16,12 @@ $generate-utility-classes: false;
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 
+// Functions
+@import "functions/get-space";
+
+// Mixins
+@import "mixins/navigation-link-base-styles";
+
 // Global
 html {
   -webkit-tap-highlight-color: get-color("shades-dark");
@@ -29,7 +35,7 @@ body {
 
   @include apply-utility("color", "shades-dim");
   @include apply-utility("font", "base");
-  @include apply-utility("text", "400");
+  @include apply-utility("text", "size-0");
   @include apply-utility("weight", "regular");
 
   @include media-query("sm") {
@@ -51,7 +57,7 @@ a:hover {
 }
 
 a:active {
-  @include apply-utility("color", "shades-dim");
+  text-decoration: none;
 }
 
 a[class] {
@@ -66,7 +72,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: get-size("100");
+  margin-block-end: get-space("space-xs");
   line-height: 1.2;
 
   @include apply-utility("color", "shades-dark");
@@ -75,21 +81,21 @@ h6 {
 }
 
 h1 {
-  font-size: get-size("900");
+  @include apply-utility("text", "size-5");
 }
 
 h2 {
-  font-size: get-size("800");
+  @include apply-utility("text", "size-4");
 }
 
 h3 {
-  font-size: get-size("700");
+  @include apply-utility("text", "size-3");
 }
 
 h4,
 h5,
 h6 {
-  font-size: get-size("600");
+  @include apply-utility("text", "size-2");
 }
 
 // Interactive states
@@ -104,8 +110,16 @@ button:focus-visible,
   display: none !important;
 }
 
+// Skip link
+// (visually hidden)
+[href="#main"] {
+  position: absolute;
+  top: -10rem;
+}
+
 // Compositions
 @import "compositions/auto-grid";
+@import "compositions/cover";
 @import "compositions/flow";
 @import "compositions/repel";
 
@@ -116,11 +130,13 @@ button:focus-visible,
 
 // Blocks
 @import "blocks/audio-player";
+@import "blocks/breadcrumbs";
 @import "blocks/button";
 @import "blocks/embed";
 @import "blocks/footer";
 @import "blocks/gallery";
 @import "blocks/header";
+@import "blocks/navigation";
 @import "blocks/prose";
 @import "blocks/section";
 @import "blocks/transcript";
