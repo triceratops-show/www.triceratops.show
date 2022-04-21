@@ -57,7 +57,7 @@ a:hover {
 }
 
 a:active {
-  @include apply-utility("color", "shades-dim");
+  text-decoration: none;
 }
 
 a[class] {

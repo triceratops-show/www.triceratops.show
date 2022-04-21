@@ -41,9 +41,7 @@
     }
   
     &:active {
-      text-decoration: underline;
-  
-      @include apply-utility("bg", "core-secondary-bright");
+      text-decoration: none;
     }
   }
 
@@ -66,10 +64,6 @@
       @include apply-utility("font", "base");
       @include apply-utility("color", "shades-gray-bright");
       @include apply-utility("text", "size-1");
-    }
-
-    &:active {
-      @include apply-utility("bg", "shades-light");
     }
   }
 }
