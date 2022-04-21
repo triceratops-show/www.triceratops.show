@@ -28,6 +28,10 @@ make serve
 
 will start hugo + netlify cms server
 
+### styling
+
+inspired by [every layout](https://every-layout.dev) and [cube css](https://cube.fyi/), also used css from [web.dev](https://github.com/GoogleChrome/web.dev/) as reference
+
 ### fontawesome icons
 
 the fontawesome files in `static/fonts` are subsets containing only the icons that are actually used.
