@@ -106,7 +106,12 @@
 {{ end }}
 
 <!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="{{$.Site.Title}}" href="{{"episode/index.xml" | absURL }}">
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="{{"episode/index.xml" | absURL }}"
+  title="{{$.Site.Title}}"
+>
 
 <!-- Icons -->
 {{ partial "head/icons.html" . }}

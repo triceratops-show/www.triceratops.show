@@ -1,135 +1,113 @@
 <rss version="2.0"
-  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
   xmlns:spotify="https://www.spotify.com/ns/rss"
-  xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:psc="http://podlove.org/simple-chapters/"
+  xmlns:media="http://search.yahoo.com/mrss/"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 >
   <channel>
-    <title>{{ $.Site.Title }}</title>
-
-    <description>{{ .Site.Params.feed.itunes_summary | truncate 4000 ""}}</description>
-    <itunes:summary>{{ .Site.Params.feed.itunes_summary | truncate 4000 ""}}</itunes:summary>
-    <googleplay:description>{{ .Site.Params.feed.itunes_summary | truncate 4000 ""}}</googleplay:description>
-
+    <!-- podcast required tags -->
+    <title>{{ .Site.Params.feed.title }}</title>
+    <description>{{ .Site.Params.feed.itunes_summary | truncate 4000 "" }}</description>
+    <itunes:author>{{ .Site.Params.feed.itunes_author }}</itunes:author>
     <itunes:image href="{{ .Site.Params.feed.itunes_image }}" />
-    <googleplay:image href="{{ .Site.Params.feed.itunes_image }}"></googleplay:image>
-    <image>
-      <url>{{ .Site.Params.feed.itunes_image }}</url>
-      <title>{{ $.Site.Title }}</title>
-      <link>{{ .Site.BaseURL }}</link>
-    </image>
+    <link>{{ .Site.BaseURL }}</link>
+    <language>{{ .Site.Params.feed.language }}</language>
+    <itunes:category text="{{ .Site.Params.feed.itunes_top_category }}">
+      {{ with .Site.Params.feed.itunes_first_sub_category -}}
+      <itunes:category text="{{ . }}" />
+      {{- end }}
+      {{ with .Site.Params.feed.itunes_second_sub_category -}}
+      <itunes:category text="{{ . }}" />
+      {{- end }}
+    </itunes:category>
+    <itunes:explicit>{{ .Site.Params.feed.explicit }}</itunes:explicit>
+    <!-- /podcast required tags -->
 
+    <!-- podcast recommended tags -->
+    {{ with .Site.Params.feed.spotify_country_of_origin -}}
+    <spotify:countryOfOrigin>{{ . }}</spotify:countryOfOrigin>
+    {{- end }}
+    <itunes:owner>
+      <itunes:name>{{ .Site.Params.feed.itunes_owner_name }}</itunes:name>
+      <itunes:email>{{ .Site.Params.feed.itunes_owner_email }}</itunes:email>
+    </itunes:owner>
+    <itunes:type>episodic</itunes:type>
+    <copyright>{{ .Site.Params.feed.copyright }}</copyright>
+    <!-- /podcast recommended tags-->
+
+    <!-- other -->
     <atom:link href="{{ "episodes/index.xml" | absURL }}" rel="self" type="application/rss+xml" />
     <lastBuildDate>{{ dateFormat "Mon, 2 Jan 2006 15:04:05 -0700" .Date }}</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
 
-    <link>{{ .Site.BaseURL }}</link>
-
-    <language>{{ .Site.Params.feed.language | default .Site.LanguageCode }}</language>
-    <copyright>{{ .Site.Params.feed.copyright }}</copyright>
-
-    {{ with .Site.Params.feed.itunes_subtitle }}<itunes:subtitle>{{ . }}</itunes:subtitle>{{ end }}
-    
-    <itunes:type>episodic</itunes:type>
-
-    <itunes:author>{{ .Site.Params.feed.itunes_author }}</itunes:author>
-    <googleplay:author>{{ .Site.Params.feed.itunes_author }}</googleplay:author>
-    <googleplay:email>{{ .Site.Params.feed.itunes_owner_email }}</googleplay:email>
-    <itunes:owner>
-      <itunes:name>{{ .Site.Params.feed.itunes_owner_name }}</itunes:name>
-      <itunes:email>{{ .Site.Params.feed.itunes_owner_email }}</itunes:email>
-    </itunes:owner>
-
-    <itunes:category text="{{ .Site.Params.feed.itunes_top_category }}">
-      {{ with .Site.Params.feed.itunes_first_sub_category -}}
-      <itunes:category text="{{ . }}" />
-      {{- end -}}
-      {{- with .Site.Params.feed.itunes_second_sub_category -}}
-      <itunes:category text="{{ . }}" />
-      {{- end }}
-    </itunes:category>
-
-    {{ if isset .Site.Params.feed "explicit" -}}
-    <itunes:explicit>{{ .Site.Params.feed.explicit }}</itunes:explicit>
-    <googleplay:explicit>{{ .Site.Params.feed.explicit }}</googleplay:explicit>
-    {{- end }}
-
-    {{ with .Site.Params.feed.spotify_country_of_origin -}}
-    <spotify:countryOfOrigin>{{ . }}</spotify:countryOfOrigin>
-    {{- end }}
-    
     <generator>Hugo -- gohugo.io</generator>
+    <!-- /other -->
   
+    <!-- episodes -->
     {{- range (where ( where .Site.Pages "Type" "episodios") ".Params.upcoming" "!=" true) -}}
       {{ if isset .Params "podcast_file" }}
-        {{ $title :=  printf "#%d %s" .Params.episode .Title }}
-        <item>
-          <title>{{ $title }}</title>
-          <link>{{ .Permalink }}</link>
-          <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
-          <dc:creator>{{ .Site.Params.itunes_author }}</dc:creator>
-          <guid>{{- if isset .Params "guid" -}}{{ .Params.guid }}{{- else -}}{{ .Site.Params.media_prefix }}{{ .Params.podcast_file }}{{- end -}}</guid>
-          <itunes:author>
-          {{- if isset .Params "hosts" -}}
-            {{ $hosts := (.Params.hosts) }}
-            {{ $len := (len $hosts) }}
-            {{ range $index, $element := $hosts }}
-              {{ range where (where $.Site.Pages "Type" "host" ) ".File.BaseFileName" "=" . }}
-                {{- if eq $len 1 -}}
-                  {{ .Title }}
-                {{- else -}}
-                  {{- if eq (add $index 1) $len }}
-                    and {{ .Title }}
-                  {{- else -}}
-                    {{- if eq $len 2 -}}
-                      {{ printf "%s " .Title }}
-                    {{- else -}}
-                      {{ printf "%s, " .Title }}
-                    {{- end -}}
-                  {{- end -}}
-                {{- end -}}
-              {{ end }}
-            {{- end -}}
+      <!-- episode -->
+      <item>
+        <!-- episode required tags -->
+        <guid>
+          {{- if isset .Params "guid" -}}
+            {{ .Params.guid }}
           {{- else -}}
-            {{ .Site.Params.feed.itunes_author }}
+            {{ .Site.Params.media_prefix }}{{ .Params.podcast_file }}
           {{- end -}}
-          </itunes:author>
-          {{ with .Params.episode }}
-          <itunes:episode>{{ . }}</itunes:episode>
-          {{ end }}
-        <itunes:title>{{ $title }}</itunes:title>
-        {{"<itunes:subtitle><![CDATA[" | safeHTML }}
-        {{ with .Params.subtitle }}
-        {{ . | plainify | truncate 243 "..." }}
-        {{ else }}
-        {{ .Description | plainify | truncate 243 "..." }}
-        {{ end }}
-        {{"]]></itunes:subtitle>" | safeHTML}}
-        <itunes:summary>{{ .Description | plainify }}</itunes:summary>
-        <description>{{ .Description  | plainify  }}</description>
-        <googleplay:description>{{ .Description  | plainify }}</googleplay:description>
-        {{ "<content:encoded><![CDATA[" | safeHTML }}<p>{{ .Description | safeHTML }}</p>{{ .Content | safeHTML }}veja o episódio no site: <a href="{{ .Permalink }}">{{ $title }}</a>{{"]]></content:encoded>" | safeHTML}}
-          {{- with .Params.image -}}
-          <itunes:image href="{{ . | absURL }}"></itunes:image>
-          <googleplay:image href="{{ . | absURL }}"></googleplay:image>
-          {{- end -}}
+        </guid>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
+        <enclosure
+          url="{{ .Site.Params.media_prefix }}{{ .Params.podcast_file }}"
+          length="{{ .Params.podcast_bytes }}"
+          type="audio/mpeg"
+        />
 
-        <enclosure url="{{ .Site.Params.media_prefix }}{{ .Params.podcast_file }}" length="{{ .Params.podcast_bytes }}" type="audio/mpeg" />
+        {{ $title :=  printf "#%d %s" .Params.episode .Title }}
+        <title>{{ $title }}</title>
+        <!-- /episode required tags -->
 
-          {{- with .Params.podcast_duration -}}<itunes:duration>{{ . }}</itunes:duration>{{- end -}}
-          {{- with .Params.explicit -}}
-          <itunes:explicit>{{ if (or (eq . "yes") (eq . "true")) }}true{{ else }}false{{ end }}</itunes:explicit>
-          <googleplay:explicit>{{ if (or (eq . "yes") (eq . "true")) }}yes{{ else }}no{{ end }}</googleplay:explicit>
+        <!-- episode recommended tags -->
+        <description>{{ .Description }}</description>
+
+        {{ "<content:encoded><![CDATA[" | safeHTML -}}
+        <p>{{ .Description }}</p>
+        {{ .Content | safeHTML }}
+        veja o episódio no site: <a href="{{ .Permalink }}">{{ $title }}</a>
+        {{- "]]></content:encoded>" | safeHTML }}
+
+        {{ with .Params.podcast_duration -}}
+        <itunes:duration>{{ . }}</itunes:duration>
+        {{- end }}
+
+        {{ with .Params.image -}}
+        <itunes:image href="{{ . | absURL }}"></itunes:image>
+        {{- end }}
+
+        {{- with .Params.episode }}
+        <itunes:episode>{{ . }}</itunes:episode>
+        {{ end -}}
+
+        {{ with .Params.explicit -}}
+        <itunes:explicit>
+          {{- if (or (eq . "yes") (eq . "true")) -}}
+          true
+          {{- else -}}
+          false
           {{- end -}}
-        </item>
+        </itunes:explicit>
+        {{- end }}
+
+        <link>{{ .Permalink }}</link>
+        <!-- /episode recommended tags -->
+      </item>
+      <!-- /episode -->
       {{- end -}}
     {{- end -}}
+    <!-- /episodes -->
   </channel>
 </rss>
