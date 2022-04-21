@@ -1,6 +1,8 @@
 {{ define "main" }}
 <div class="centered">
   <main id="main" class="section prose">
+    {{ partial "breadcrumbs/taxonomy.html" . }}
+
     <h1>{{ if .Title }}{{ .Title }}{{ else }}{{ .Data.Term }}{{ end }}</h1>
   
     {{ .Content }}
@@ -12,8 +14,8 @@
       <li><a href="{{ .Permalink }}">{{ $title }}</a></li>
       {{ end }}
     </ul>
-  
-    <p><a href="/{{ .Data.Plural }}">voltar para participações</a></p>
+
+    {{ partial "navigation/taxonomy.html" . }}
   </main>
 </div>
 {{ end }}

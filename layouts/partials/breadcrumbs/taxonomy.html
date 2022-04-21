@@ -1,0 +1,14 @@
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ul role="list">
+    <li>
+      <a href="{{ .Site.Home.RelPermalink }}">home</a>
+    </li>
+    <li>
+      {{ $taxonomy := .Site.GetPage .Data.Plural }}
+      <a href="{{ $taxonomy.RelPermalink }}">{{ $taxonomy.Title }}</a>
+    </li>
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,16 @@
+/// Link styles for navigation components such as breadcrumbs
+@mixin navigation-link-base-styles() {
+  & {
+    background-color: transparent;
+    color: currentColor;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    @include apply-utility('bg', 'shades-light');
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}

@@ -19,6 +19,9 @@ $generate-utility-classes: false;
 // Functions
 @import "functions/get-space";
 
+// Mixins
+@import "mixins/navigation-link-base-styles";
+
 // Global
 html {
   -webkit-tap-highlight-color: get-color("shades-dark");
@@ -127,11 +130,13 @@ button:focus-visible,
 
 // Blocks
 @import "blocks/audio-player";
+@import "blocks/breadcrumbs";
 @import "blocks/button";
 @import "blocks/embed";
 @import "blocks/footer";
 @import "blocks/gallery";
 @import "blocks/header";
+@import "blocks/navigation";
 @import "blocks/prose";
 @import "blocks/section";
 @import "blocks/transcript";
