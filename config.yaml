@@ -57,7 +57,9 @@ menu:
     url: https://www.youtube.com/channel/UCZwUc2FBKoopD6v4Uhi_i-g
     pre: <img width="20" height="20" src="/icons/youtube.svg" title="YouTube" alt="">
 
+# custom params
 params:
+  # site
   description: "podcast pra falar de música alternativa e o que vier na mente"
   image: "https://www.triceratops.show/cover.jpg"
   locale: "pt-br"
@@ -74,16 +76,19 @@ params:
   pocketcasts_subscribe: "https://pca.st/v9i0ubfg"
   spotify_subscribe: "https://open.spotify.com/show/4SH9CFGCWOXTOk9yQ4l58n?si=I5RJ5ypgSgq3r0UbNQO5eQ&dl_branch=1"
 
+  # podcast rss feed
   feed:
-    copyright: "2021 triceratops show"
-    itunes_author: "Eduardo Aleixo e Luiz Terra"
+    title: Tricerátops Show
     itunes_summary: "podcast pra falar de música alternativa e o que vier na mente"
-    itunes_owner_email: contato@triceratops.show
-    itunes_owner_name: triceratops show
+    itunes_author: "Eduardo Aleixo e Luiz Terra"
     itunes_image: https://www.triceratops.show/cover-itunes.jpg
     itunes_top_category: Music
-    explicit: true
+    itunes_owner_name: Tricerátops Show
+    itunes_owner_email: contato@triceratops.show
     spotify_country_of_origin: br
+    language: pt-br
+    explicit: true
+    copyright: "© 2021-2022 Tricerátops Show"
 
 googleAnalytics: G-MEPFJYBLXC
 

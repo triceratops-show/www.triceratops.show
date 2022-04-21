@@ -40,3 +40,9 @@ to include a new icon:
 1. [search](https://fontawesome.com/icons) the corresponding unicode for the icon
 2. add it to `scripts/fontawesome-subset.sh`
 3. run the script to generate the new font files
+
+### podcast specs
+
+- [Spotify Podcast Delivery Specification](https://content-ops.atspotify.com/hc/en-us/sections/360010813671-Spotify-Podcast-Documentation-)
+- [Apple Podcast RSS feed requirements](https://podcasters.apple.com/support/823-podcast-requirements)
+- [RSS feed guidelines for Google Podcasts](https://support.google.com/podcast-publishers/answer/9889544?hl=en)
