@@ -138,7 +138,8 @@ func download(url string) (string, error) {
 	defer out.Close()
 
 	// TODO: cache
-	// TODO it's a url to www.triceratops.show/episodios
+	// TODO check it's a url to www.triceratops.show/episodios
+	// TODO load this from s3 which should be faster?
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err

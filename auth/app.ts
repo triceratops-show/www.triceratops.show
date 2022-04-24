@@ -2,6 +2,7 @@ import * as apigw from "@aws-cdk/aws-apigatewayv2";
 import * as integrations from "@aws-cdk/aws-apigatewayv2-integrations";
 import * as acm from "@aws-cdk/aws-certificatemanager";
 import * as cdk from "@aws-cdk/core";
+import * as lambda from "@aws-cdk/aws-lambda";
 import Function from "./constructs/function.js";
 
 class Stack extends cdk.Stack {
@@ -20,8 +21,19 @@ class Stack extends cdk.Stack {
       validation: acm.CertificateValidation.fromDns(), // Records must be added manually
     });
 
+    lambda.LayerVersion.fromLayerVersionAttributes;
+    const ffmpegLayer = lambda.LayerVersion.fromLayerVersionArn(
+      this,
+      "ffmpegLayer",
+      // refers to https://github.com/serverlesspub/ffmpeg-aws-lambda-layer#deploying-to-aws-as-a-layer
+      // which i deployed on my own account
+      "arn:aws:lambda:sa-east-1:201973741866:layer:ffmpeg:1"
+    );
+
     const handler = Function(this, "Cut mp3 Handler", {
       entry: "auth/go/cmd/cut-mp3",
+      layers: [ffmpegLayer],
+      timeout: cdk.Duration.seconds(60),
     });
 
     const dn = new apigw.DomainName(this, "CutMp3DN", {
