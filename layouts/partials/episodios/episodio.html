@@ -31,7 +31,7 @@
     </a>
   </h2>
   <div class="embed responsive-1by1 max-width">
-    <video controls>
+    <video id="episode-video-player" controls>
       <source
         class="responsive-item"
         src="{{ .Params.video_local }}"
@@ -44,7 +44,7 @@
   <div class="embed responsive-1by1 max-width">
     <iframe
       class="responsive-item"
-      src="//www.youtube.com/embed/{{ .Params.youtube }}"
+      src="//www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1"
       allowfullscreen
     ></iframe>
   </div>
@@ -57,7 +57,7 @@
   {{- with .Params.podcast_file -}}
   {{- if ne $.Params.upcoming true -}}
   <audio
-    id="episode-player"
+    id="episode-audio-player"
     class="audio-player"
     preload="none"
     controls
