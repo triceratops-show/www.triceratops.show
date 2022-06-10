@@ -28,4 +28,9 @@
       @include apply-utility("gap-top", "space-lg");
     }
   }
+
+  // for images that occupy the whole surface
+  &[data-type="image"] {
+    padding: 0;
+  }
 }
