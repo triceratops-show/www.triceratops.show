@@ -1,0 +1,20 @@
+.index {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  li + li::before {
+    content: "/";
+    padding-inline: get-space("space-2xs");
+  }
+}
+
+.index-back {
+  @include apply-utility('text', 'size--1');
+  
+  a {
+    @include navigation-link-base-styles();
+  }
+}

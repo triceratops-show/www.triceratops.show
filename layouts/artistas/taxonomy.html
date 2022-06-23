@@ -20,6 +20,43 @@
   {{ $symbols := slice "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" }}
 
   <!-- Range through each alphanumeric character -->
+  <!-- 1st time: render nav links -->
+  <nav id="índice" class="index">
+    <ul role="list">
+    {{ range $symbols }}
+
+      <!-- Set the current character in a variable -->
+      {{ $symbol := . }}
+  
+      <!-- Create a slice to hold this page's taxonomy terms that match the current symbol -->
+      {{ $terms := slice }}
+  
+      <!-- Range through page's .Data.Terms alphabetically -->
+      {{ range $page.Data.Terms.Alphabetical }}
+  
+        <!-- Get current term's name -->
+        {{ $term := .Name }}
+  
+        <!-- If the current term's preFix matches the current iteration of $symbol, then add the term to the $terms slice and break -->
+        {{ if hasPrefix $term $symbol }}
+          {{ $terms = $terms | append . }}
+        {{ end }}
+
+      {{ end }}
+  
+      <!-- Once every term whose preFix matches the current $symbol has been added to the $terms slice, range over the $terms slice. If the $terms slice is greater than 0 (meaning the current symbol has .Data.Terms associated with it, then display a proper heading, and list out each term -->
+      {{ if gt $terms 0 }}
+        <li><a href="#artistas-{{ $symbol }}">{{ $symbol | upper }}</a></li>
+      {{ else }}
+      <!-- Otherwise do nothing ( meaning, any symbol that doesn't have any .Data.Terms associated with it will be skipped ) -->
+      {{ end }}
+
+    {{ end }}
+    </ul>
+  </nav>
+
+  <!-- Range through each alphanumeric character -->
+  <!-- 2nd time: render lists -->
   {{ range $symbols }}
 
     <!-- Set the current character in a variable -->
@@ -50,11 +87,13 @@
         <li><a href="{{ .Page.Permalink }}">{{ .Page.Name }}</a> ({{ .Count }})</li>
       {{ end }}
       </ul>
+      <span class="index-back">
+        <a href="#índice">voltar ao índice</a>
+      </span>
     {{ else }}
-
     <!-- Otherwise do nothing ( meaning, any symbol that doesn't have any .Data.Terms associated with it will be skipped ) -->
-
     {{ end }}
+
   {{ end }}
 </main>
 {{ end }}

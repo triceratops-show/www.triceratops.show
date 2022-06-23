@@ -1,9 +1,19 @@
 {{ define "main" }}
-<main id="main" class="section prose">
-  {{ partial "episodios/breadcrumbs.html" . }}
+<main id="main">
+  <section class="section prose">
+    {{ partial "episodios/breadcrumbs.html" . }}
 
-  {{ partial "episodios/episodio.html" . }}
+    {{ partial "episodios/episodio.html" . }}
+  
+    {{ partial "episodios/navigation.html" . }}
+  </section>
 
-  {{ partial "episodios/navigation.html" . }}
+  <section class="section prose" data-type="image">
+    <img
+      src="{{ .Params.image | absURL }}"
+      loading="lazy"
+      alt=""
+    >
+  </section>
 </main>
 {{ end }}
