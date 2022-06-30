@@ -8,12 +8,12 @@ artistas:
   - full el cuervo
   - crime caqui
   - tôrta
+  - fones
 participacoes:
   - senoma
   - full el cuervo
   - brunno negão
   - may manão
-  - fones
 podcast_file: "/episodios/apresenta/senoma.mp3"
 podcast_duration: "1:08:52"
 podcast_bytes: 99211945
