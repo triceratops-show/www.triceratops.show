@@ -13,6 +13,7 @@ participacoes:
   - full el cuervo
   - brunno negão
   - may manão
+  - fones
 podcast_file: "/episodios/apresenta/senoma.mp3"
 podcast_duration: "1:08:52"
 podcast_bytes: 99211945
@@ -47,6 +48,7 @@ para mais infos: https://www.instagram.com/p/CW3cRowrPhV/
 * senoma - suzana's megahair
 * [crime caqui - quartzo aranha](https://www.youtube.com/watch?v=JCFO9JKTfjc)
 * [tôrta - a fundo](https://www.youtube.com/watch?v=HIWAqMmmSfQ)
+* [fones - tiros em columbine](https://www.youtube.com/watch?v=6SNEnoAVR80)
 
 ## otras cositas más
 

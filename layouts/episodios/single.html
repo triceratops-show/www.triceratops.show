@@ -9,11 +9,14 @@
   </section>
 
   <section class="section prose" data-type="image">
-    <img
-      src="{{ .Params.image | absURL }}"
-      loading="lazy"
-      alt=""
-    >
+    <a href="{{ .Params.image | absURL }}">
+      <span class="visually-hidden">Capa do episódio</span>
+      <img
+        src="{{ .Params.image | absURL }}"
+        loading="lazy"
+        alt=""
+      >
+    </a>
   </section>
 </main>
 {{ end }}
