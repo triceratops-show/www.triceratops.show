@@ -39,6 +39,10 @@ menu:
     name: Participações
     url: /participacoes/
     weight: 100
+  - identifier: playlists
+    name: Playlists
+    url: /playlists/
+    weight: 150
   social:
   - identifier: instagram
     name: Instagram
