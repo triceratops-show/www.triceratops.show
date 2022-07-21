@@ -30,7 +30,7 @@
       </div>
       <div>
         {{ with .Site.Params.GitSHA }}
-        <span>Versão: {{ first 6 . }}</span>
+        <span><a href="https://github.com/triceratops-show/www.triceratops.show/commit/{{ . }}" target="_blank">Versão: {{ first 6 . }}</a></span>
         {{ end }}
         <span>
           <a href="https://github.com/triceratops-show/www.triceratops.show">
