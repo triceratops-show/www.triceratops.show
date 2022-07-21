@@ -120,3 +120,11 @@ deployment:
 
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true
+
+# https://github.com/gohugoio/hugo/issues/9811#issuecomment-1105842107
+security:
+  exec:
+    osEnv:
+      - '(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$'
+      - ^ASDF_DIR$
+      - ^HOME$
