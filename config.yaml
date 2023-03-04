@@ -4,7 +4,7 @@
 # general
 title: "Tricerátops Show"
 baseURL: "https://www.triceratops.show"
-copyright: "© 2021-2022 Tricerátops Show"
+copyright: "© 2021-2023 Tricerátops Show"
 
 # i18n
 # using pt because dateFormat doesn't work with pt-br
