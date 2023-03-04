@@ -10,4 +10,4 @@ serve:
 # clean up and build
 build:
 	rm -rf public
-	hugo
+	hugo --minify
