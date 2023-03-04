@@ -4,10 +4,13 @@ install:
 
 # run dev server for main site and admin
 serve:
-	npm run dev&
 	hugo serve
 
 # clean up and build
 build:
 	rm -rf public
 	hugo --minify
+
+deploy-dry-run:
+	/Users/eduardo/projects/hugo/hugo deploy --log --verbose --verboseLog --debug --maxDeletes 0 --dryRun
+

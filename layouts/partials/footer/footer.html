@@ -29,8 +29,10 @@
         <span>E-mail: contato@triceratops.show</span>
       </div>
       <div>
+        {{ if .IsHome }}
         {{ with .Site.Params.GitSHA }}
         <span><a href="https://github.com/triceratops-show/www.triceratops.show/commit/{{ . }}" target="_blank">Versão: {{ first 6 . }}</a></span>
+        {{ end }}
         {{ end }}
         <span>
           <a href="https://github.com/triceratops-show/www.triceratops.show">

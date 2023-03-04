@@ -75,6 +75,8 @@ params:
   - name: eduardo aleixo
   - name: luiz terra
 
+  GitSHA: dev
+
   itunes_subscribe: "https://podcasts.apple.com/us/podcast/tricer%C3%A1tops-show/id1574767544"
   google_play_subscribe: "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cudHJpY2VyYXRvcHMuc2hvdy9lcGlzb2Rlcy9pbmRleC54bWw"
   pocketcasts_subscribe: "https://pca.st/v9i0ubfg"
@@ -103,6 +105,9 @@ deployment:
 
     # invalidate cache
     cloudFrontDistributionID: E2KO2KRGLDS09K
+
+    # exclude mp3 since they are uploaded manually
+    exclude: "**.{mp3,mp4}"
 
   matchers:
   - pattern: "^.+\\.(js|css|svg|ttf|otf|woff|woff2)$"
