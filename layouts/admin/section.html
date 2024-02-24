@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
-    {{- $app := resources.Get "js/admin.jsx" | js.Build (dict "minify" true "target" "esnext") | fingerprint -}}
+    {{- $app := resources.Get "js/admin.jsx" | js.Build (dict "minify" true "target" "esnext" "sourcemap" "inline") | fingerprint -}}
     <script src="{{ $app.RelPermalink }}"></script>
   </body>
 </html>
