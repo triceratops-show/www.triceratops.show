@@ -1,4 +1,4 @@
-import CMS from "netlify-cms-app";
+import CMS from "decap-cms-app";
 import React from "react";
 
 // TODO keep this in sync with layouts/partials/episode.html
@@ -10,12 +10,13 @@ class EpisodesPreview extends React.Component {
       <div class="section prose">
         <h1>
           <a href="https://wwww.triceratops.show">
-            #{entry.getIn(["data", "episode"])}{" "}
-            {entry.getIn(["data", "title"])}
+            #{entry.getIn(["data", "episode"])} {entry.getIn(["data", "title"])}
           </a>
         </h1>
 
-        <h2 id="#cabeça"><a href="#cabeça">cabeça</a></h2>
+        <h2 id="#cabeça">
+          <a href="#cabeça">cabeça</a>
+        </h2>
         <p>{entry.getIn(["data", "description"])}</p>
 
         {widgetFor("body")}
