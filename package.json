@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/triceratops-show/www.triceratops.show.git"
   },
+  "type": "module",
   "scripts": {
     "check": "tsx --tsconfig checks/tsconfig.json checks/index.spec.ts",
     "dev": "./node_modules/.bin/netlify-cms-proxy-server",
