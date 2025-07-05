@@ -1,9 +1,9 @@
 import * as lambda from "@aws-cdk/aws-lambda";
-import * as golambda from "@aws-cdk/aws-lambda-go";
-import * as cdk from "@aws-cdk/core";
+import * as golambda from "@aws-cdk/aws-lambda-go-alpha";
+import { Construct } from "constructs";
 
 export default function Function(
-  scope: cdk.Construct,
+  scope: Construct,
   id: string,
   props: golambda.GoFunctionProps
 ) {

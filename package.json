@@ -9,12 +9,12 @@
     "type": "git",
     "url": "https://github.com/triceratops-show/www.triceratops.show.git"
   },
-  "type": "module",
   "scripts": {
     "check": "tsx --tsconfig checks/tsconfig.json checks/index.spec.ts",
     "dev": "./node_modules/.bin/netlify-cms-proxy-server",
     "deploy": "cdk deploy",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ts-node": "node --loader ts-node/esm"
   },
   "devDependencies": {
     "@aws-cdk/aws-apigatewayv2": "^1.150.0",
@@ -34,10 +34,14 @@
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "prettier": "^2.6.2",
+    "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@aws-cdk/aws-lambda-go-alpha": "^2.204.0-alpha.0",
+    "aws-cdk-lib": "^2.204.0",
+    "cdk-assets": "^2.155.126",
     "decap-cms-app": "^3.1.2"
   }
 }

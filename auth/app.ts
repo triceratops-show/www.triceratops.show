@@ -1,30 +1,39 @@
 import * as apigw from "@aws-cdk/aws-apigatewayv2";
-import * as integrations from "@aws-cdk/aws-apigatewayv2-integrations";
-import * as acm from "@aws-cdk/aws-certificatemanager";
-import * as cdk from "@aws-cdk/core";
+import * as cdk from "aws-cdk-lib";
 import Function from "./constructs/function.js";
 
 class Stack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string) {
-    super(scope, id);
+  constructor(scope: cdk.App, id: string, props: cdk.StackProps) {
+    super(scope, id, props);
 
-    const domainName = "auth.triceratops.show";
+    const domainName = "api.triceratops.show";
 
-    const certificate = new acm.Certificate(this, "Certificate", {
-      domainName,
-      validation: acm.CertificateValidation.fromDns(), // Records must be added manually
+    const zone = cdk.aws_route53.HostedZone.fromLookup(this, "Zone", {
+      domainName: "triceratops.show",
     });
+
+    const certificate = new cdk.aws_certificatemanager.DnsValidatedCertificate(
+      this,
+      "SiteCertificate",
+      {
+        domainName: domainName,
+        hostedZone: zone,
+        region: "sa-east-1",
+        validation:
+          cdk.aws_certificatemanager.CertificateValidation.fromDns(zone),
+      }
+    );
 
     const oauthHandler = Function(this, "OAuth Handler", {
       entry: "auth/go/cmd/oauth",
     });
 
-    const dn = new apigw.DomainName(this, "DN", {
-      domainName,
+    const dn = new cdk.aws_apigatewayv2.DomainName(this, "DN", {
+      domainName: domainName,
       certificate,
     });
 
-    const api = new apigw.HttpApi(this, "Oauth Handler", {
+    const api = new cdk.aws_apigatewayv2.HttpApi(this, "API Handler", {
       defaultDomainMapping: {
         domainName: dn,
       },
@@ -48,17 +57,36 @@ class Stack extends cdk.Stack {
       api.addRoutes({
         path: route,
         methods: [apigw.HttpMethod.GET],
-        integration: new integrations.HttpLambdaIntegration(
-          "OAuth handler",
-          oauthHandler,
-          {
-            parameterMapping,
-          }
-        ),
+        integration:
+          new cdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(
+            "API handler",
+            oauthHandler,
+            {
+              parameterMapping,
+            }
+          ),
       });
+    });
+
+    // Route53 for the apigatewayv2
+    new cdk.aws_route53.ARecord(this, "SiteAliasRecord", {
+      recordName: domainName,
+      ttl: cdk.Duration.minutes(5),
+      target: cdk.aws_route53.RecordTarget.fromAlias(
+        new cdk.aws_route53_targets.ApiGatewayv2DomainProperties(
+          dn.regionalDomainName,
+          dn.regionalHostedZoneId
+        )
+      ),
+      zone,
     });
   }
 }
 
 const app = new cdk.App();
-new Stack(app, "TriceratopsShowStack");
+new Stack(app, "TriceratopsShowStack", {
+  env: {
+    account: "201973741866",
+    region: "sa-east-1",
+  },
+});

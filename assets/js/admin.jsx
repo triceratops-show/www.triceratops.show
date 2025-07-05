@@ -68,7 +68,7 @@ if (localDomains.includes(window.location.hostname)) {
       backend: {
         name: "github",
         repo: "triceratops-show/www.triceratops.show",
-        base_url: "https://auth.triceratops.show",
+        base_url: "https://api.triceratops.show",
         branch: "main",
       },
     },
