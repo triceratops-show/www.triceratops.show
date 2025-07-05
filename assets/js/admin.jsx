@@ -1,5 +1,8 @@
 import CMS from "decap-cms-app";
 import React from "react";
+import jsmediatags from "./node_modules/jsmediatags/dist/jsmediatags.min";
+import { initPodcastBytes } from "./podcast_bytes_hook";
+import { initPodcastDuration } from "./podcast_duration_hook";
 
 // TODO keep this in sync with layouts/partials/episode.html
 class EpisodesPreview extends React.Component {
@@ -59,7 +62,7 @@ function FooFunction() {
   return <div>function component xd</div>;
 }
 
-CMS.registerWidget("foo", FooFunction);
+//CMS.registerWidget("foo", FooFunction);
 
 // Dirty but works
 //const localDomains = ["localhost", "office"];
@@ -90,3 +93,9 @@ if (localDomains.includes(window.location.hostname)) {
     },
   });
 }
+
+const MP3_PREFIX = "https://www.triceratops.show";
+
+console.log("before calling");
+initPodcastBytes(CMS, MP3_PREFIX);
+initPodcastDuration(CMS, MP3_PREFIX);
