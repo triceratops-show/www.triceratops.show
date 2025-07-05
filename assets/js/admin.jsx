@@ -1,5 +1,7 @@
 import CMS from "decap-cms-app";
 import React from "react";
+import { initPodcastBytes } from "./podcast_bytes_hook";
+import { initPodcastDuration } from "./podcast_duration_hook";
 
 // TODO keep this in sync with layouts/partials/episode.html
 class EpisodesPreview extends React.Component {
@@ -74,3 +76,8 @@ if (localDomains.includes(window.location.hostname)) {
     },
   });
 }
+
+const MP3_PREFIX = "https://www.triceratops.show";
+
+initPodcastBytes(CMS, MP3_PREFIX);
+initPodcastDuration(CMS, MP3_PREFIX);

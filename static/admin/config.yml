@@ -24,8 +24,8 @@ collections:
       - { label: 'Artistas tocados', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
       - { label: 'Participações', hint: 'separadas por vírgula', name: 'participacoes', widget: 'list', required: false }
       - { label: 'Arquivo', name: 'podcast_file', widget: 'string', required: false }
-      - { label: 'Duração', hint: 'no formato hh:mm:ss', name: 'podcast_duration', widget: 'string', required: false }
-      - { label: 'Tamanho', hint: 'em bytes', name: 'podcast_bytes', widget: 'string', required: false }
+      - { label: 'Duração', hint: 'no formato hh:mm:ss', name: 'podcast_duration', widget: 'hidden', required: true }
+      - { label: 'Tamanho', hint: 'em bytes', name: 'podcast_bytes', widget: 'hidden', required: true }
       - { label: 'YouTube', name: 'youtube', widget: 'string', required: false }
       - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
       - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
