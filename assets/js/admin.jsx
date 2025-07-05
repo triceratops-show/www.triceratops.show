@@ -1,6 +1,5 @@
 import CMS from "decap-cms-app";
 import React from "react";
-import jsmediatags from "./node_modules/jsmediatags/dist/jsmediatags.min";
 import { initPodcastBytes } from "./podcast_bytes_hook";
 import { initPodcastDuration } from "./podcast_duration_hook";
 
@@ -48,22 +47,6 @@ if (window.CSS_PATH) {
   CMS.registerPreviewTemplate("episodios", EpisodesPreview);
 }
 
-function FooFunction() {
-  // Return a custom upload component
-  // That hits an api
-  // That api uploads to s3
-  // And returns a path that will populate
-  // podcast_file: "/episodios/episodio-64.mp3"
-  //
-  // We also need to populate the following fields
-  // podcast_duration: "1:13:46"
-  // podcast_bytes: 177025093
-
-  return <div>function component xd</div>;
-}
-
-//CMS.registerWidget("foo", FooFunction);
-
 // Dirty but works
 //const localDomains = ["localhost", "office"];
 const localDomains = ["localhost"];
@@ -96,6 +79,5 @@ if (localDomains.includes(window.location.hostname)) {
 
 const MP3_PREFIX = "https://www.triceratops.show";
 
-console.log("before calling");
 initPodcastBytes(CMS, MP3_PREFIX);
 initPodcastDuration(CMS, MP3_PREFIX);
