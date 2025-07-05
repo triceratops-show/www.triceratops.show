@@ -26,6 +26,11 @@ class Stack extends cdk.Stack {
 
     const oauthHandler = Function(this, "OAuth Handler", {
       entry: "auth/go/cmd/oauth",
+      environment: {
+        HOST: mustFromEnv("HOST"),
+        GITHUB_KEY: mustFromEnv("GITHUB_KEY"),
+        GITHUB_SECRET: mustFromEnv("GITHUB_SECRET"),
+      },
     });
 
     const dn = new cdk.aws_apigatewayv2.DomainName(this, "DN", {
@@ -90,3 +95,12 @@ new Stack(app, "TriceratopsShowStack", {
     region: "sa-east-1",
   },
 });
+
+function mustFromEnv(s: string): string {
+  const val = process.env[s];
+  if (!val) {
+    throw new Error(`env var ${s} is undefined or empty`);
+  }
+
+  return val;
+}
