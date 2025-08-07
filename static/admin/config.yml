@@ -18,6 +18,7 @@ collections:
     sortable_fields: ['episode', 'publishDate']
     fields:
       - { label: 'Episódio', hint: 'número do episódio', name: 'episode', widget: 'number', required: false }
+      - { label: 'foo', name: 'foo', widget: 'foo', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
       - { label: 'Capa', name: 'image', widget: 'image', required: false }
       - { label: 'Descrição', name: 'description', widget: 'markdown', required: false }
