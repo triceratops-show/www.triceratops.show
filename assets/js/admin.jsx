@@ -19,7 +19,7 @@ class EpisodesPreview extends React.Component {
         <h2 id="#cabeça">
           <a href="#cabeça">cabeça</a>
         </h2>
-        <p>{entry.getIn(["data", "description"])}</p>
+        {widgetFor("description")}
 
         {widgetFor("body")}
 

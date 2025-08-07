@@ -102,6 +102,14 @@
         </itunes:explicit>
         {{- end }}
 
+        <!-- Timestamps for chapters -->
+        {{ with .Params.chapters }}
+        <psc:chapters version="1.2" xmlns:psc="http://podlove.org/simple-chapters">
+          {{range . }}
+          <psc:chapter start={{.start}} title={{.title}} />
+          {{ end }}
+        </psc:chapters>
+        {{- end }}
         <link>{{ .Permalink }}</link>
         <!-- /episode recommended tags -->
       </item>

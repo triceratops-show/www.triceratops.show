@@ -16,7 +16,7 @@
 {{- if .Content }}
   {{- if .Description }}
     <h2 id="cabeça" class="gap-top-space-xl"><a href="#cabeça">cabeça</a></h2>
-    <p>{{ .Description }}</p>
+    <p>{{ .Description | markdownify }}</p>
   {{- end }}
     {{ .Content }}
 {{- end }}
