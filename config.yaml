@@ -123,6 +123,9 @@ deployment:
     contentType: "application/xml"
     gzip: true
 
+  - pattern: "^episodes/index.html$"
+    gzip: false
+
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true
 
