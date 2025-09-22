@@ -40,6 +40,7 @@
     </video>
   </div>
   {{- else }}
+  {{- if .Params.youtube }}
   <h2 id="video"><a href="#video">Escute no YouTube:</a></h2>
   <div class="embed responsive-1by1 max-width">
     <iframe
@@ -48,6 +49,7 @@
       allowfullscreen
     ></iframe>
   </div>
+  {{- end }}
   {{- end }}
   
   <h2 id="rss"><a href="#rss">No seu agregador preferido:</a></h2>
