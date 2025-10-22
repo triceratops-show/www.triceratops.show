@@ -16,6 +16,15 @@
         loading="lazy"
         alt=""
       >
+      {{- if .Params.image_alt }}
+      <span class="visually-hidden">Capa Alternative do episódio</span>
+      <img
+        style="width: 100%; object-fit: cover;"
+        src="{{ .Params.image_alt | absURL }}"
+        loading="lazy"
+        alt=""
+      >
+      {{- end }}
     </a>
   </section>
 </main>

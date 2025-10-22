@@ -20,6 +20,7 @@ collections:
       - { label: 'Episódio', hint: 'número do episódio', name: 'episode', widget: 'number', required: false }
       - { label: 'Título', name: 'title', widget: 'string', required: false }
       - { label: 'Capa', name: 'image', widget: 'image', required: false }
+      - { label: 'Capa Alternativa', name: 'image_alt', widget: 'image', required: false }
       - { label: 'Descrição', name: 'description', widget: 'markdown', required: false }
       - { label: 'Artistas tocados', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
       - { label: 'Participações', hint: 'separadas por vírgula', name: 'participacoes', widget: 'list', required: false }
