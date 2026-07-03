@@ -20,6 +20,9 @@ export function initPodcastBytes(CMS, MP3_PREFIX) {
   CMS.registerEventListener({
     name: "preSave",
     handler: async function ({ entry }) {
+      if (entry.get("collection") !== "episodes") {
+        return;
+      }
       let podcastFilename = entry.get("data").get("podcast_file");
       if (!podcastFilename) {
         throw new Error("Field 'podcast_file' is required`");
@@ -33,7 +36,7 @@ export function initPodcastBytes(CMS, MP3_PREFIX) {
         console.log("Populating podcast_bytes with value", contentLength);
       } else {
         console.log(
-          "NOT populating field 'podcast_bytes' since it's already populated."
+          "NOT populating field 'podcast_bytes' since it's already populated.",
         );
       }
       return entry.get("data").set("podcast_bytes", contentLength);

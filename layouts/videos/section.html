@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main id="main" class="section wrapper">
+  <div class="featured-title">
+    <h1><span>Todos os Vídeos</span></h1>
+  </div>
+
+  <div class="gallery auto-grid">
+
+  {{ range where site.RegularPages "Section" "videos" }}
+    <a href="{{ .Permalink }}">
+      <img
+        src="{{ .Params.image | absURL }}"
+        loading="lazy"
+        alt=""
+      >
+      <h2>#{{ .Params.episode }} {{ .Title }}</h2>
+      <small>{{ dateFormat ":date_long" .Date }}</small>
+    </a>
+  {{- end -}}
+    
+  </div>
+</main>
+{{- end }}

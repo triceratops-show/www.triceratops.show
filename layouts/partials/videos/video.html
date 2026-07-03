@@ -1,0 +1,51 @@
+  <!-- header -->
+  <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+
+  <small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
+  <!-- /header -->
+
+  <!-- content -->
+  {{- if .Content }}
+    {{- if .Description }}
+    
+      <h2 id="cabeça" class="gap-top-space-xl"><a href="#cabeça">cabeça</a></h2>
+      <p>{{ .Description | markdownify }}</p>
+    {{- end }}
+      {{ .Content }}
+  {{- end }}
+  <!-- /content -->
+
+  <!-- media & links -->
+  <div class="all-center flow">
+    {{- if .Params.video_local }}
+    <h2 id="video">
+      <a href="#video">
+        Veja o vídeo aqui no site porque o YouTube deu copyright strike:
+      </a>
+    </h2>
+    <div class="embed responsive-1by1 max-width">
+      <video id="episode-video-player" controls>
+        <source
+          class="responsive-item"
+          src="{{ .Params.video_local }}"
+          type="video/mp4"
+        >
+      </video>
+    </div>
+    {{- else }}
+    {{- if .Params.youtube }}
+    <div class="embed responsive-16by9 max-width">
+      <iframe
+        class="responsive-item"
+        src="//www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1"
+        allowfullscreen
+      ></iframe>
+    </div>
+    {{- end }}
+    {{- end }}
+  </div>
+  <!-- /media & links -->
+
+  <!-- taxonomies -->
+  {{ partial "episodios/tags.html" . }}
+  <!-- /taxonomies -->

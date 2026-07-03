@@ -3,11 +3,15 @@
 <main id="main">
   <section class="section prose">
     <div class="featured-title">
-      <h1><span>Último Episódio</span></h1>
+      <h1><span>Última Publicação</span></h1>
     </div>
   
-    {{ range first 1 (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) }}
+    {{ range first 1 (where ( where site.RegularPages "Type" "in" (slice "videos" "episodios" )) ".Params.upcoming" "!=" true ) }}
+    {{- if eq .Type "videos" }}
+      {{ partial "videos/video.html" . }}
+    {{- else if eq .Type "episodios" }}
       {{ partial "episodios/episodio.html" . }}
+    {{- end -}}
     {{- end -}}
   </section>
 </main>
@@ -15,15 +19,53 @@
 
 <!-- latest episodes -->
 <aside class="section wrapper">
-  {{- if (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-  {{- $previousEpisodes := where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true | after 1 | first 2 }}
-  {{- $list := (where ( where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.upcoming" "!=" true ) -}}
+  {{- if (where site.RegularPages "Type" "in"  (slice "videos")) -}}
+  {{- $previousEpisodes := where (where site.RegularPages "Type" "in" (slice "videos")) ".Params.upcoming" "!=" true | after 1 | first 2 }}
+  {{- $list := (where ( where site.RegularPages "Type" "in" (slice "videos" )) ".Params.upcoming" "!=" true ) -}}
   {{- $len := (len $list) -}}
   <div class="featured-title">
-    <h2><span>Episódios Anteriores</span></h2>
+    <h2><span>Últimos Vídeos</span></h2>
   </div>
 
-  <div class="gallery auto-grid">
+  <div class="gallery">
+    <div class="auto-grid">
+    {{- if gt $len 1 -}}
+      {{- range $previousEpisodes -}}
+      <a href="{{ .Permalink }}">
+        <img
+          src="{{ .Params.image | absURL }}"
+          loading="lazy"
+          alt=""
+        >
+        <h3>{{ .Title }}</h3>
+        <small>Publicado em {{ dateFormat ":date_long" .Date }}</small>
+      </a>
+      {{- end -}}
+
+    {{- end -}}
+    </div>
+  </div>
+
+    <div class="verTodos">
+      <a class="button" href="/videos" data-type="primary" >
+        Ver Todos os Vídeos
+      </a>
+    </div>
+  {{- end -}}
+</aside>
+<!-- /latest episodes -->
+<!-- latest episodes -->
+<aside class="section wrapper">
+  {{- if (where site.RegularPages "Type" "in"  (slice "episodios")) -}}
+  {{- $previousEpisodes := where (where site.RegularPages "Type" "in" (slice "episodios")) ".Params.upcoming" "!=" true | after 1 | first 2 }}
+  {{- $list := (where ( where site.RegularPages "Type" "in" (slice "episodios" )) ".Params.upcoming" "!=" true ) -}}
+  {{- $len := (len $list) -}}
+  <div class="featured-title">
+    <h2><span>Últimos Podcasts</span></h2>
+  </div>
+
+  <div class="gallery">
+    <div class="auto-grid">
     {{- if gt $len 1 -}}
       {{- range $previousEpisodes -}}
       <a href="{{ .Permalink }}">
@@ -37,7 +79,16 @@
       </a>
       {{- end -}}
     {{- end -}}
+      </div>
+    </div>
+
+    <div class="verTodos">
+      <a class="button" href="/episodio" data-type="primary" >
+        Ver Todos os Podcasts
+      </a>
+    </div>
   </div>
+
   {{- end -}}
 </aside>
 <!-- /latest episodes -->

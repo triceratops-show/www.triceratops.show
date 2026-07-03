@@ -41,10 +41,43 @@ class EpisodesPreview extends React.Component {
   }
 }
 
+// TODO keep this in sync with layouts/videos/single.html
+class VideosPreview extends React.Component {
+  render() {
+    const { entry, widgetFor } = this.props;
+
+    return (
+      <div class="section prose">
+        <h1>
+          <a href="https://wwww.triceratops.show">
+            {entry.getIn(["data", "title"])}
+          </a>
+        </h1>
+
+        {widgetFor("body")}
+
+        <div class="all-center flow">
+          <div class="embed responsive-16by9 max-width">
+            <iframe
+              class="responsive-item"
+              src={`//www.youtube.com/embed/${entry.getIn([
+                "data",
+                "youtube",
+              ])}`}
+              allowFullScreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 if (window.CSS_PATH) {
   console.log("Configuring CSS Preview");
   CMS.registerPreviewStyle(window.CSS_PATH);
   CMS.registerPreviewTemplate("episodios", EpisodesPreview);
+  CMS.registerPreviewTemplate("videos", VideosPreview);
 }
 
 // Dirty but works
