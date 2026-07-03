@@ -62,7 +62,7 @@ menu:
     pre: <img width="20" height="20" src="/icons/twitter.svg" title="Twitter" alt="">
   - identifier: youtube
     name: YouTube
-    url: https://www.youtube.com/channel/UCZwUc2FBKoopD6v4Uhi_i-g
+    url: https://www.triceratops.show/youtube
     pre: <img width="20" height="20" src="/icons/youtube.svg" title="YouTube" alt="">
 
 # custom params
