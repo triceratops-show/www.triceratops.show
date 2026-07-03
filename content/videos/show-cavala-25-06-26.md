@@ -1,12 +1,13 @@
 ---
-episode: 0
-title: Show Cavala 25/06/26
-location: Lovers & Lollypops
-published: true
-publishDate: 2021-06-28T21:00:00.335Z
 youtube: f6saNk3pBHQ
+published: true
+location: Lovers & Lollypops
+title: Show Cavala 25/06/26
 artistas:
   - cavala
+image: /videos/capas/show-cavala-25-06-26/thumb.jpg
+episode: 0
+publishDate: 2026-06-29T16:14:00.000Z
 ---
 
 No dia 25/06/26 acompanhamos e entrevistamos a banda Cavala, do Porto.

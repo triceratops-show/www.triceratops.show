@@ -4,7 +4,7 @@
 # general
 title: "Tricerátops Show"
 baseURL: "https://www.triceratops.show"
-copyright: "© 2021-2025 Tricerátops Show"
+copyright: "© 2021-2026 Tricerátops Show"
 
 # i18n
 # using pt because dateFormat doesn't work with pt-br
@@ -28,8 +28,12 @@ removePathAccents: true # strip accents from auto-generated urls
 menu:
   main:
   - identifier: episodios
-    name: Episódios
+    name: Podcast
     url: /episodios/
+    weight: 1
+  - identifier: videos
+    name: Vídeos
+    url: /videos/
     weight: 1
   - identifier: artistas
     name: Artistas
@@ -94,7 +98,7 @@ params:
     spotify_country_of_origin: br
     language: pt-br
     explicit: true
-    copyright: "© 2021-2025 Tricerátops Show"
+    copyright: "© 2021-2026 Tricerátops Show"
 
 googleAnalytics: G-MEPFJYBLXC
 

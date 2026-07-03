@@ -9,19 +9,22 @@ locale: 'pt'
 collections:
   - name: 'videos'
     label: 'Vídeos'
+    media_folder: /static/videos/capas/{{title}}
+    public_folder: /videos/capas/{{title}}
     label_singular: 'Vídeo'
     summary: '{{title}}'
-    folder: 'content/video'
+    folder: 'content/videos'
     slug: '{{title}}'
     create: true
     delete: false
-    sortable_fields: ['episode', 'publishDate']
+    sortable_fields: ['publishDate']
     fields:
-      - { label: 'Título', name: 'title', widget: 'string', required: false }
-      - { label: 'Participações', hint: 'separadas por vírgula', name: 'participacoes', widget: 'list', required: false }
-      - { label: 'YouTube', name: 'youtube', widget: 'string', required: false }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Artistas', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
+      - { label: 'Capa', name: 'image', widget: 'image' }
+      - { label: 'YouTube', name: 'youtube', widget: 'string' }
       - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
-      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
+      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
       - label: 'Corpo'
         name: 'body'
         widget: 'markdown'
