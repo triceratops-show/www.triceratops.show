@@ -50,7 +50,7 @@ class VideosPreview extends React.Component {
       <div class="section prose">
         <h1>
           <a href="https://wwww.triceratops.show">
-            #{entry.getIn(["data", "title"])}
+            {entry.getIn(["data", "title"])}
           </a>
         </h1>
 
