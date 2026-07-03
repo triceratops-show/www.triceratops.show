@@ -7,6 +7,25 @@ media_folder: static/episodios
 locale: 'pt'
 
 collections:
+  - name: 'videos'
+    label: 'Vídeos'
+    label_singular: 'Vídeo'
+    summary: '{{title}}'
+    folder: 'content/video'
+    slug: '{{title}}'
+    create: true
+    delete: false
+    sortable_fields: ['episode', 'publishDate']
+    fields:
+      - { label: 'Título', name: 'title', widget: 'string', required: false }
+      - { label: 'Participações', hint: 'separadas por vírgula', name: 'participacoes', widget: 'list', required: false }
+      - { label: 'YouTube', name: 'youtube', widget: 'string', required: false }
+      - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
+      - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime', required: false }
+      - label: 'Corpo'
+        name: 'body'
+        widget: 'markdown'
+        required: false
   - name: 'episodios'
     label: 'Episódios'
     label_singular: 'Episódio'
