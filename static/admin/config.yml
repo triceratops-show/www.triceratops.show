@@ -23,6 +23,7 @@ collections:
       - { label: 'Artistas', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
       - { label: 'Capa', name: 'image', widget: 'image' }
       - { label: 'YouTube', name: 'youtube', widget: 'string' }
+      - { label: 'Video Local', hint: "começa com /videos/", name: 'video_local', widget: 'string' }
       - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
       - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
       - label: 'Corpo'

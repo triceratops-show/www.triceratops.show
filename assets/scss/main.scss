@@ -123,6 +123,16 @@ button:focus-visible,
   padding: 1rem;
 }
 
+dialog {
+  max-width: 32rem;
+  width: 80%;
+  justify-content: center;
+}
+dialog::backdrop {
+  background-color: rgba(0,0,0, 0.7);
+}
+
+
 // Compositions
 @import "compositions/auto-grid";
 @import "compositions/cover";

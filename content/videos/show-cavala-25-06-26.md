@@ -7,6 +7,7 @@ artistas:
   - cavala
 image: /videos/capas/show-cavala-25-06-26/thumb.jpg
 episode: 0
+video_local: /videos/assets/cavala-2026.mp4
 publishDate: 2026-06-29T16:14:00.000Z
 ---
 
