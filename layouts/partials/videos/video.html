@@ -17,23 +17,6 @@
 
   <!-- media & links -->
   <div class="all-center flow">
-    {{- if .Params.video_local }}
-    <h2 id="video">
-      <a href="#video">
-        Veja o vídeo aqui no site porque o YouTube deu copyright strike:
-      </a>
-    </h2>
-    <div class="embed responsive-1by1 max-width">
-      <video id="episode-video-player" controls>
-        <source
-          class="responsive-item"
-          src="{{ .Params.video_local }}"
-          type="video/mp4"
-        >
-      </video>
-    </div>
-    {{- else }}
-    {{- if .Params.youtube }}
     <div class="embed responsive-16by9 max-width">
       <iframe
         class="responsive-item"
@@ -41,8 +24,32 @@
         allowfullscreen
       ></iframe>
     </div>
-    {{- end }}
-    {{- end }}
+
+    {{- if .Params.video_local -}}
+    <div>
+      <h2>
+          Veja o vídeo aqui no site pra não dar views pro Youtube
+      </h2>
+
+      <button class="button" data-type="primary" popovertarget="video-dialog">Ver Vídeo</button>
+
+      <dialog class="dialog" id="video-dialog" popover>
+          <div class="embed responsive-1by1 max-width">
+            <video id="episode-video-player" controls>
+              <source
+                class="responsive-item"
+                src="{{ .Site.Params.media_prefix}}{{ .Params.video_local }}"
+                type="video/mp4"
+              >
+            </video>
+          </div>
+      </dialog>
+
+      <script>
+        {{ partial "videos/on_close.js" . | safeJS }}
+      </script>
+    </div>
+    {{- end -}}
   </div>
   <!-- /media & links -->
 

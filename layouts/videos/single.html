@@ -1,65 +1,7 @@
 {{ define "main" }}
 <main id="main">
   <section class="section prose">
-    <!-- header -->
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-
-    <small>Publicado em {{ dateFormat ":date_full" .Date }}</small>
-    <!-- /header -->
-
-    <!-- content -->
-    {{- if .Content }}
-      {{- if .Description }}
-      
-        <h2 id="cabeça" class="gap-top-space-xl"><a href="#cabeça">cabeça</a></h2>
-        <p>{{ .Description | markdownify }}</p>
-      {{- end }}
-        {{ .Content }}
-    {{- end }}
-    <!-- /content -->
-
-    <!-- media & links -->
-    <div class="all-center flow">
-      <div class="embed responsive-16by9 max-width">
-        <iframe
-          class="responsive-item"
-          src="//www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      {{- if .Params.video_local -}}
-      <div>
-        <h2>
-            Veja o vídeo aqui no site pra não dar views pro Youtube
-        </h2>
-
-        <button class="button" data-type="primary" popovertarget="video-dialog">Ver Vídeo</button>
-
-        <dialog class="dialog" id="video-dialog" popover>
-            <div class="embed responsive-1by1 max-width">
-              <video id="episode-video-player" controls>
-                <source
-                  class="responsive-item"
-                  src="{{ .Site.Params.media_prefix}}{{ .Params.video_local }}"
-                  type="video/mp4"
-                >
-              </video>
-            </div>
-          {{ partial "videos/close_button.html" . }}
-        </dialog>
-
-        <script>
-          {{ partial "videos/on_close.js" . | safeJS }}
-        </script>
-      </div>
-      {{- end -}}
-    </div>
-    <!-- /media & links -->
-
-    <!-- taxonomies -->
-    {{ partial "episodios/tags.html" . }}
-    <!-- /taxonomies -->
+    {{ partial "videos/video.html" . }}
   </section>
 </main>
 {{ end }}

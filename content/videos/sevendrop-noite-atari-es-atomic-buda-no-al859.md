@@ -8,7 +8,7 @@ image: /videos/capas/sevendrop-noite-atari-es-atomic-buda-no-al859/img_5486.jpg
 youtube: zCeGlzfwlpE
 published: true
 publishDate: 2026-07-14T14:54:25.123Z
-video_local: /videos/assets/Sevendtop_2026.mp4
+video_local: /videos/assets/Sevendrop_2026.mp4
 ---
 Estivemos no espaço AL859 no Porto para acompanhar 3 show de POP PUNK: Sevendrop, Noite Atari e Atomic Buda. 
 
