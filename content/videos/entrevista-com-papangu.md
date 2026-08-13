@@ -1,9 +1,9 @@
 ---
-title: ENTREVISTA COM PAPANGU
+title: Conheça Papangu, os criadores do hermetocore
 artistas:
   - papangu
 image: /videos/capas/entrevista-com-papangu/hermeto-core.png
-youtube: 8ig1KdPp-Nc
+youtube: 1FHuWEoS9qQ
 video_local: /videos/PAPANGU-RC-FINAL.mp4
 published: true
 publishDate: 2026-08-12T22:23:00.524Z
