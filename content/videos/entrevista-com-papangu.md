@@ -4,7 +4,7 @@ artistas:
   - papangu
 image: /videos/capas/entrevista-com-papangu/hermeto-core.png
 youtube: 1FHuWEoS9qQ
-video_local: /videos/PAPANGU-RC-FINAL.mp4
+video_local: /videos/PAPANGU-RC-5.mp4
 published: true
 publishDate: 2026-08-12T22:23:00.524Z
 ---
