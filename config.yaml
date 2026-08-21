@@ -145,3 +145,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+mediaTypes:
+  text/vtt:
+    suffixes:
+      - vtt

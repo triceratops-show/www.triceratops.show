@@ -6,6 +6,7 @@ image: /videos/capas/ni-hao-uma-banda-japonesa-de-cheer-punk/thumb5.png
 youtube: yEE0CPyCebs
 video_local: /videos/assets/NIHAO_BURNED_PTBR.mp4
 published: true
+hide: false
 publishDate: 2026-07-30T11:06:04.864Z
 ---
 Essa semana nós fomos ver as Ni-Hao!!! no Espaço AL859

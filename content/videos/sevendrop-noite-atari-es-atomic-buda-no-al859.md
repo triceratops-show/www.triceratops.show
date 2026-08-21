@@ -7,6 +7,7 @@ artistas:
 image: /videos/capas/sevendrop-noite-atari-es-atomic-buda-no-al859/img_5486.jpg
 youtube: zCeGlzfwlpE
 published: true
+hide: false
 publishDate: 2026-07-14T14:54:25.123Z
 video_local: /videos/assets/Sevendrop_2026.mp4
 ---

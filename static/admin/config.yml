@@ -15,15 +15,43 @@ collections:
     summary: '{{title}}'
     folder: 'content/videos'
     slug: '{{title}}'
+    path: "{{slug}}/index"
     create: true
     delete: false
     sortable_fields: ['publishDate']
+    filter:
+      field: hide
+      value: false
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
       - { label: 'Artistas', hint: 'separados por vírgula', name: 'artistas', widget: 'list', required: false }
+      - { label: 'Hide', name: 'hide', widget: 'hidden', default: false }
       - { label: 'Capa', name: 'image', widget: 'image' }
       - { label: 'YouTube', name: 'youtube', widget: 'string' }
       - { label: 'Video Local', hint: "começa com /videos/", name: 'video_local', widget: 'string' }
+      - label: 'Legendas (Local)'
+        name: 'subtitle_local'
+        widget: 'list'
+        fields:
+        - label: Arquivo Legenda
+          name: subtitle
+          widget: file
+          media_folder: /static/videos/{{title}}
+          public_folder: /videos/{{title}}
+          media_library:
+            config:
+              accept: "*.vtt"
+        - label: Linguagem
+          name: language
+          widget: relation
+          collection: languages
+          search_fields:
+            - code
+            - label
+          display_fields:
+            - label
+          value_field: code
+
       - { label: 'Publicado', name: 'published', widget: 'boolean', default: false }
       - { label: 'Data de publicação', name: 'publishDate', widget: 'datetime' }
       - label: 'Corpo'
@@ -130,6 +158,7 @@ collections:
 
   - name: "about"
     label: "Sobre"
+    hide: true
     create: true
     delete: false
     editor:
@@ -142,3 +171,39 @@ collections:
           - { label: Título, name: title, widget: string, required: false }
           - { label: Descrição, name: description, widget: string, required: false }
           - { label: 'Corpo', name: 'body', widget: 'markdown', required: false }
+
+  - name: languages
+    label: Languages
+    hide: true
+    editor:
+      preview: false
+    files:
+      - name: english
+        label: English
+        file: data/languages/en.yaml
+        fields:
+          - label: Code
+            name: code
+            widget: string
+            default: en
+
+          - label: Label
+            name: label
+            widget: string
+            default: English
+
+      - name: portuguese_brazil
+        label: Português (Brasil)
+        file: data/languages/pt-BR.yaml
+        fields:
+          - label: Code
+            name: code
+            widget: string
+            default: pt-BR
+
+          - label: Label
+            name: label
+            widget: string
+            default: Português (Brasil)
+
+

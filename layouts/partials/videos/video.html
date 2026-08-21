@@ -32,7 +32,6 @@
       </h2>
 
       <button class="button" data-type="primary" popovertarget="video-dialog">Ver Vídeo</button>
-
       <dialog class="dialog" id="video-dialog" popover>
           <div class="embed responsive-1by1 max-width">
             <video id="episode-video-player" controls>
@@ -41,6 +40,16 @@
                 src="{{ .Site.Params.media_prefix}}{{ .Params.video_local }}"
                 type="video/mp4"
               >
+
+                {{ range .Params.subtitle_local }}
+                  {{ $language := index site.Data.languages .language }}
+                  <track
+                    src="{{ .subtitle }}"
+                    kind="subtitles"
+                    srclang="{{ .language }}"
+                    label="{{ $language.label }}"
+                  >
+                {{ end }}
             </video>
           </div>
       </dialog>

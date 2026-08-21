@@ -3,6 +3,7 @@ youtube: f6saNk3pBHQ
 published: true
 location: Lovers & Lollypops
 title: Show Cavala 25/06/26
+hide: false
 artistas:
   - cavala
 image: /videos/capas/show-cavala-25-06-26/thumb.jpg

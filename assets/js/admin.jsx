@@ -47,28 +47,34 @@ class VideosPreview extends React.Component {
     const { entry, widgetFor } = this.props;
 
     return (
-      <div class="section prose">
-        <h1>
-          <a href="https://wwww.triceratops.show">
-            {entry.getIn(["data", "title"])}
-          </a>
-        </h1>
+      <>
+        <div class="section prose">
+          <h1>
+            <a href="https://wwww.triceratops.show">
+              {entry.getIn(["data", "title"])}
+            </a>
+          </h1>
 
-        {widgetFor("body")}
+          {widgetFor("body")}
 
-        <div class="all-center flow">
-          <div class="embed responsive-16by9 max-width">
-            <iframe
-              class="responsive-item"
-              src={`//www.youtube.com/embed/${entry.getIn([
-                "data",
-                "youtube",
-              ])}`}
-              allowFullScreen=""
-            ></iframe>
+          <div class="all-center flow">
+            <div class="embed responsive-16by9 max-width">
+              <iframe
+                class="responsive-item"
+                src={`//www.youtube.com/embed/${entry.getIn([
+                  "data",
+                  "youtube",
+                ])}`}
+                allowFullScreen=""
+              ></iframe>
+            </div>
           </div>
         </div>
-      </div>
+        <section class="section prose" data-type="image">
+          <span class="visually-hidden">Capa do episódio</span>
+          <img src={entry.getIn(["data", "image"])} loading="lazy" alt="" />
+        </section>
+      </>
     );
   }
 }

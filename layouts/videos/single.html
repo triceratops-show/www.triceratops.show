@@ -3,5 +3,14 @@
   <section class="section prose">
     {{ partial "videos/video.html" . }}
   </section>
+
+  <section class="section prose" data-type="image">
+    <span class="visually-hidden">Capa do episódio</span>
+    <img
+      src="{{ .Params.image | absURL }}"
+      loading="lazy"
+      alt=""
+    >
+  </section>
 </main>
 {{ end }}
