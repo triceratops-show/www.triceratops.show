@@ -11,7 +11,7 @@ subtitle_local:
     language: pt-BR
   - subtitle: /videos/concerto-trasgo-noise-rock-de-portugal-entrevista/trasgo_en.srt
     language: en
-published: false
+published: true
 publishDate: 2026-09-19T10:35:29.446Z
 ---
 Dessa vez castelamos a banda TRASGO (@trasgoband), os caras fazem um noise de alta qualidade, depois fizemos uma entrevista pra entender melhor qual é que é a deles.
