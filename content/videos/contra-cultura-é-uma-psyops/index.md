@@ -1,9 +1,9 @@
 ---
-title: CONTRA-CULTURA É UMA PSYOPS
+title: "CRÔNICA: CONTRA-CULTURA É UMA PSYOPS"
 artistas:
   - sunn o)))
 hide: false
-image: /videos/capas/contra-cultura-é-uma-psyops/capa-sunn.jpg
+image: /videos/capas/crônica-contra-cultura-é-uma-psyops/capa-sunn.jpg
 youtube: a3Eqiq-TR70
 video_local: /videos/sunn-serralves/RC-3.mp4
 subtitle_local:
