@@ -5,7 +5,7 @@ artistas:
 hide: false
 image: /videos/capas/os-japoneses-do-maya-ongaku-e-a-psicodelia-marítima/capa_test_1.png
 youtube: hiu-QF3Wt8Q
-video_local: /videos/2026-maya-ongaku/rc_2.mp4
+video_local: /videos/2026-maya-ongaku/RC_2.mp4
 subtitle_local:
   - subtitle: /videos/os-japoneses-do-maya-ongaku-e-a-psicodelia-marítima/maya_ongaku_ptbr.srt
     language: pt-BR
