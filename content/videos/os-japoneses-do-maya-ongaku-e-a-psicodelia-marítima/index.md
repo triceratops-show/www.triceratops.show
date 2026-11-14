@@ -11,7 +11,7 @@ subtitle_local:
     language: pt-BR
   - subtitle: /videos/os-japoneses-do-maya-ongaku-e-a-psicodelia-marítima/maya_ongaku_en.srt
     language: en
-published: false
+published: true
 publishDate: 2026-11-14T16:13:08.908Z
 ---
 Nós gravamos o show e entrevistamos os Maya Ongaku, banda do selo ‪@gurugurubrain3063‬ 
